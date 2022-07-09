@@ -1,2 +1,2 @@
 # Fritzfon-Solardisplay
-Images for the solar
+Icons downloaded from www.flaticon.com
