@@ -1,6 +1,6 @@
 
 # Fritzfon-Solardisplay
-If you use and like my work I would be glad to receive a small Donation www.paypal.me/TimOberle
+If you use and like my work I would be glad to receive a small donation www.paypal.me/TimOberle
 
 Icons downloaded from www.flaticon.com
 
