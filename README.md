@@ -1,9 +1,10 @@
+# Donationware: a small donation is gladly received and expected. 
+www.paypal.me/TimOberle
 
 # Fritzfon-Solardisplay
+
 This Project uses the ability to show webcam images (Live-Images) on Fritzfon's to display information about your solarsystem and powermeter.
 All processing is done inside [Node-Red](https://nodered.org/).
-
-If you use and like my work I would be glad to receive a small donation www.paypal.me/TimOberle
 
 Icons downloaded from www.flaticon.com
 
