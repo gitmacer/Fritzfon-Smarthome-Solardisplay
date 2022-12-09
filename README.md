@@ -1,3 +1,5 @@
+# Work in Progress: breaking/big changes are possible.
+
 # Donationware: a small donation is gladly received and expected. 
 www.paypal.me/TimOberle
 
