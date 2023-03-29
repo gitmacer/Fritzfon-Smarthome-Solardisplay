@@ -63,7 +63,8 @@ Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Frit
 Tipp: Du kannst Live-Bilder zu den Favoriten hinzufügen für schnelleren zugriff.   
 
 # Donationware:
-Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.
+Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
+www.paypal.me/TimOberle
 
 # Guide:
 You need to install
@@ -122,4 +123,5 @@ After applying you should be able to show the image on your Fritzfon under "Menu
 Tipp: you can add Live-Bild to favourites  for faster access.
 
 # Donationware:
-Feel free to try my Project first and decide how much it is worths to you afterwards.
+Feel free to try my Project first and decide how much it is worths to you afterwards.   
+www.paypal.me/TimOberle
