@@ -7,6 +7,7 @@ This Project uses the ability to show webcam images (Live-Images) on Fritzfons t
 All processing is done inside [Node-Red](https://nodered.org/).
 ![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
 
+[English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay/blob/main/README.md#guide)
 # Anleitung:
 Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
