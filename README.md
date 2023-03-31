@@ -115,12 +115,12 @@ Edit "Fritzfon solarimage". In this case for example change the "unit" to "W" an
 Then deploy the flow.   
 
 # config Fritzfon
-Navigate to "Telefonie"/Telefoniegeräte/Live-Bilder"   
-and click on "Neues Live-Bild hinzufügen"   
+Navigate to "Telephony"/Telephony Devices/Live Image"   
+and click on "Add New Live Image"   
 Set a unique name, url you chosed before (Add hostname or ip in front) and set intervall to 1 sec.
 ![Screenshot 2023-03-29 180119](https://user-images.githubusercontent.com/37345589/228598469-35785386-3213-4023-b37c-20af269b8c4d.png)
 
-After applying you should be able to show the image on your Fritzfon under "Menu/Heimnetz/Live-Bild".
+After applying you should be able to show the image on your Fritzfon under "Menu/Home Network/Live Image".
 Tipp: you can add Live-Bild to favourites  for faster access.
 
 # Donationware:
