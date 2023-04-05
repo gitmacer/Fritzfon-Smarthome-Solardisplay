@@ -1,3 +1,6 @@
+[Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay/edit/main/README.md#anleitung)   
+[English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay/blob/main/README.md#guide)
+
 # Donationware: a small donation is gladly received and expected. Nothing against trying out first 
 www.paypal.me/TimOberle
 # If you experience problems or need help feelfree to create a Github issue.
@@ -7,7 +10,6 @@ This Project uses the ability to show webcam images (Live-Images) on Fritzfons t
 All processing is done inside [Node-Red](https://nodered.org/).
 ![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
 
-[English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay/blob/main/README.md#guide)
 # Anleitung:
 Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
@@ -57,7 +59,7 @@ In diesem fall "unit" auf "W"... anschließend wird der Flow übernommen.
 # Fritzfon
 Navigiere in der Fritzbox Oberfläche (fritz.box) zu "Telefonie"/Telefoniegeräte/Live-Bilder"   
 und klicke auf "Neues Live-Bild hinzufügen"   
-Vergebe einen Namen, Adresse (Hostname oder Ip vor der vorhervergebenen Adresse) und setze den Abrufintervall auf z.B. 1 Sec.
+Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor der vorhervergebenen Adresse) und setze den Abrufintervall auf z.B. 1 Sec.
 ![Screenshot 2023-03-29 180119](https://user-images.githubusercontent.com/37345589/228598469-35785386-3213-4023-b37c-20af269b8c4d.png)
 
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
@@ -117,7 +119,7 @@ Then deploy the flow.
 # config Fritzfon
 Navigate to "Telephony"/Telephony Devices/Live Image"   
 and click on "Add New Live Image"   
-Set a unique name, url you chosed before (Add hostname or ip in front) and set intervall to 1 sec.
+Set a unique name, url you chosed before (Add hostname or fixed IP of the Node-Red server in front) and set intervall to 1 sec.
 ![Screenshot 2023-03-29 180119](https://user-images.githubusercontent.com/37345589/228598469-35785386-3213-4023-b37c-20af269b8c4d.png)
 
 After applying you should be able to show the image on your Fritzfon under "Menu/Home Network/Live Image".
