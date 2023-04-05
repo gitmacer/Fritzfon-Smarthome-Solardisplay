@@ -11,6 +11,8 @@ All processing is done inside [Node-Red](https://nodered.org/).
 ![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
 
 # Anleitung:
+Es sind viele Anleitungen zur Inbetriebnahme von Node-Red verfügbar daher wird dieser Schritt übersprungen.
+
 Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
@@ -70,6 +72,8 @@ Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.
 www.paypal.me/TimOberle
 
 # Guide:
+There are many guids how to install Node-Red available so this step is skipped here.
+
 You need to install
 [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools) before importing my subflow.
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
