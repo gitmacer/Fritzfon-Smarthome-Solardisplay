@@ -6,8 +6,7 @@ www.paypal.me/TimOberle
 # If you experience problems or need help feelfree to create a Github issue.
 # Fritzfon-Solardisplay
 
-This Project uses the ability to show webcam images (Live-Images) on Fritzfons to display information about your solarsystem and powermeter.
-All processing is done inside [Node-Red](https://nodered.org/).
+Show information about your solarsystem and powermeter on your Fritzfons by using the ability to show webcam images and Node-Red.   
 ![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
 
 # Anleitung:
