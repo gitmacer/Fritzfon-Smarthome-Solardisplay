@@ -34,19 +34,19 @@ Example querry: `SELECT last("Measurement") FROM "Database";`
 ![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)
 
 Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen `msg.payload.0.last`
- - msg.info (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
- - msg.house (Wenn nicht gesetzt wird errechnet)
- - msg.toHouse (Wenn nicht gesetzt wird errechnet)
- - msg.solar
- - msg.solarPercent
- - msg.fromGrid
- - msg.toGrid
- - msg.car
- - msg.carPercent
- - msg.heatPump
- - msg.fromBattery
- - msg.toBattery
- - msg.batteryPercent
+ - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
+ - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
+ - msg.toHouse (Solar zu Haus) (Wenn nicht gesetzt wird errechnet)
+ - msg.solar (Solar)
+ - msg.solarPercent (Solar-Prozent) (Wenn nicht gesetzt wird errechnet)
+ - msg.fromGrid (vom Stromnetz)
+ - msg.toGrid (zum Stromnetz)
+ - msg.car (zum Auto)
+ - msg.carPercent (Auto-Prozent)
+ - msg.heatPump (zur Wärmepumpe)
+ - msg.fromBattery (von der Batterie)
+ - msg.toBattery (zu der Batterie)
+ - msg.batteryPercent (Batterie-Prozent)
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
@@ -100,7 +100,7 @@ Add a "change" node to set the queried data to one of the following variables. `
  - msg.house (if not provided will get calculated)
  - msg.toHouse (if not provided will get calculated)
  - msg.solar
- - msg.solarPercent
+ - msg.solarPercent (if not provided will get calculated)
  - msg.fromGrid
  - msg.toGrid
  - msg.car
