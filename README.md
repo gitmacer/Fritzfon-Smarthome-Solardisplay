@@ -29,11 +29,25 @@ Füge ein "influxdb in" node hinzu.
 ![5  influxdb](https://user-images.githubusercontent.com/37345589/228587816-514134f8-7eae-494d-a043-812b902ed145.png)
 
 Setze Server und Querry.   
-Example querry: `SELECT last("Measurement") FROM "Database";`
+Beispiel query:   
+Influxdb 1.X (InfluxQL):
+```
+SELECT last("Measurement") FROM "Database";
+```
+Influxdb 2.X (flux):
+```
+from(bucket: "bucket")
+    |> range(start: -1d)
+    |> filter(fn: (r) => r._measurement == "Measurement")
+    |> last()
+```
 
 ![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)
 
-Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen `msg.payload.0.last`
+Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen.   
+Influxdb 1.X: `msg.payload.0.last`   
+Influxdb 2.X: `msg.payload[0]._value`
+
  - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
  - msg.toHouse (Solar zu Haus) (Wenn nicht gesetzt wird errechnet)
@@ -91,11 +105,25 @@ Add a "influxdb in" node.
 ![5  influxdb](https://user-images.githubusercontent.com/37345589/228587816-514134f8-7eae-494d-a043-812b902ed145.png)
 
 Configure Server and querry.   
-Example querry: `SELECT last("Measurement") FROM "Database";`
+Example querry: 
+Influxdb 1.X (InfluxQL):
+```
+SELECT last("Measurement") FROM "Database";
+```
+Influxdb 2.X (flux):
+```
+from(bucket: "bucket")
+    |> range(start: -1d)
+    |> filter(fn: (r) => r._measurement == "Measurement")
+    |> last()
+```
 
 ![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)
 
-Add a "change" node to set the queried data to one of the following variables. `msg.payload.0.last`
+Add a "change" node to set the queried data to one of the following variables.   
+Influxdb 1.X: `msg.payload.0.last`   
+Influxdb 2.X: `msg.payload[0]._value`
+
  - msg.info (if not provided clock will be shown)
  - msg.house (if not provided will get calculated)
  - msg.toHouse (if not provided will get calculated)
@@ -119,7 +147,7 @@ Repeat last 2 steps for all data you want to show. Then add the imported "Fritzf
 Edit "Fritzfon solarimage". In this case for example change the "unit" to "W" and Round mode to "To fixed".   
 Then deploy the flow.   
 
-# config Fritzfon
+# Config fritzfon
 Navigate to "Telephony"/Telephony Devices/Live Image"   
 and click on "Add New Live Image"   
 Set a unique name, url you chosed before (Add hostname or fixed IP of the Node-Red server in front) and set intervall to 1 sec.
