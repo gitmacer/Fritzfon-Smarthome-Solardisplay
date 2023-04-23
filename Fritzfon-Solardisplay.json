@@ -3,7 +3,7 @@
         "id": "774cc0ad6b18a8e3",
         "type": "subflow",
         "name": "Fritzfon solarimage",
-        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for calculations must be numbers\r\n - msg.info (if not provided clock will be shown)\r\n - msg.house (if not provided will get calculated)\r\n - msg.toHouse (if not provided will get calculated)\r\n - msg.solar\r\n - msg.solarPercent\r\n - msg.fromGrid\r\n - msg.toGrid\r\n - msg.car\r\n - msg.carPercent\r\n - msg.heatPump\r\n - msg.fromBattery\r\n - msg.toBattery\r\n - msg.batteryPercent\r\n - msg.outlet\r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.(var name)Unit   \r\n example: msg.houseUnit = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.(var name)OutUnit   \r\n example: msg.houseOutUnit = \"kWh\"\r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n\r\n # override Options\r\n - msg.solarMax",
+        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for calculations must be numbers\r\n - msg.info (if not provided clock will be shown)\r\n - msg.house (if not provided will get calculated)\r\n - msg.toHouse (if not provided will get calculated)\r\n - msg.solar\r\n - msg.solarPercent\r\n - msg.fromGrid\r\n - msg.toGrid\r\n - msg.car\r\n - msg.carPercent\r\n - msg.heatPump\r\n - msg.fromBattery\r\n - msg.toBattery\r\n - msg.batteryPercent\r\n - msg.outlet\r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.(var name)Unit   \r\n example: msg.houseUnit = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.(var name)OutUnit   \r\n example: msg.houseOutUnit = \"kWh\"\r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n\r\n # override Options\r\n - msg.solarMax\r\n - msg.label",
         "category": "image tools",
         "in": [
             {
@@ -141,6 +141,23 @@
                                 },
                                 "v": "Outlet"
                             }
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "1. multi icon label",
+                "type": "str",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-tag",
+                    "label": {
+                        "de": "1. multi icon Beschriftung"
+                    },
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "str"
                         ]
                     }
                 }
@@ -666,7 +683,7 @@
         ],
         "meta": {
             "module": "@gitmacer/node-red-fritzsolardisplay",
-            "version": "2.0.10",
+            "version": "2.0.12",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
             "keywords": "energy,live,image,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,gitmacer"
@@ -12002,7 +12019,7 @@
         "y": 100,
         "wires": [
             [
-                "16f07788910e0c87"
+                "5f8919b660a9e1e0"
             ]
         ]
     },
@@ -12081,6 +12098,13 @@
                 "pt": "flow",
                 "to": "Solardisplay.4IconsToUp",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.4IconsLabel",
+                "pt": "flow",
+                "to": "Solardisplay.4IconsLabel",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -12088,7 +12112,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1880,
+        "x": 2040,
         "y": 100,
         "wires": [
             []
@@ -12889,7 +12913,7 @@
         "y": 2300,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -12983,7 +13007,7 @@
         "y": 2380,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -13171,7 +13195,7 @@
         "y": 2420,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -13359,7 +13383,7 @@
         "y": 2460,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -13547,7 +13571,7 @@
         "y": 2500,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -13735,7 +13759,7 @@
         "y": 2540,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -13916,7 +13940,7 @@
         "y": 2580,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -14465,7 +14489,7 @@
         "y": 2680,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -14788,7 +14812,7 @@
         "y": 2800,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -16248,7 +16272,7 @@
         "y": 3100,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -16342,7 +16366,7 @@
         "y": 3180,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -16530,7 +16554,7 @@
         "y": 3240,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -16718,7 +16742,7 @@
         "y": 3280,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -16906,7 +16930,7 @@
         "y": 3320,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -17094,7 +17118,7 @@
         "y": 3360,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -17275,7 +17299,7 @@
         "y": 3400,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -17824,7 +17848,7 @@
         "y": 3480,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -18106,7 +18130,7 @@
         "y": 3620,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -29904,7 +29928,7 @@
         "y": 1900,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -29998,7 +30022,7 @@
         "y": 1980,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -30186,7 +30210,7 @@
         "y": 2060,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -30374,7 +30398,7 @@
         "y": 2100,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -30562,7 +30586,7 @@
         "y": 2140,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -30750,7 +30774,7 @@
         "y": 2180,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -30931,7 +30955,7 @@
         "y": 2220,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -38615,7 +38639,7 @@
         "y": 3960,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -38709,7 +38733,7 @@
         "y": 4040,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -38897,7 +38921,7 @@
         "y": 4100,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -39085,7 +39109,7 @@
         "y": 4140,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -39273,7 +39297,7 @@
         "y": 4180,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -39461,7 +39485,7 @@
         "y": 4220,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -39642,7 +39666,7 @@
         "y": 4260,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -44631,7 +44655,7 @@
         "y": 2260,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -44928,7 +44952,7 @@
         "y": 2620,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -45522,7 +45546,7 @@
         "y": 3440,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -46413,7 +46437,7 @@
         "y": 4300,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -48795,7 +48819,7 @@
         "type": "switch",
         "z": "774cc0ad6b18a8e3",
         "name": "Unit",
-        "property": "carUnit",
+        "property": "outletUnit",
         "propertyType": "msg",
         "rules": [
             {
@@ -48866,7 +48890,7 @@
         "type": "switch",
         "z": "774cc0ad6b18a8e3",
         "name": "Unit",
-        "property": "carUnit",
+        "property": "outletUnit",
         "propertyType": "msg",
         "rules": [
             {
@@ -49099,7 +49123,7 @@
         "y": 4480,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -49193,7 +49217,7 @@
         "y": 4560,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -49381,7 +49405,7 @@
         "y": 4600,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -49568,7 +49592,9 @@
         "x": 1060,
         "y": 4640,
         "wires": [
-            []
+            [
+                "ccd8a5bf2628df5d"
+            ]
         ]
     },
     {
@@ -49755,7 +49781,7 @@
         "y": 4680,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -49943,7 +49969,7 @@
         "y": 4720,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -50124,7 +50150,7 @@
         "y": 4760,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -50327,7 +50353,7 @@
         "y": 4800,
         "wires": [
             [
-                "277f290c8f347fc5"
+                "ccd8a5bf2628df5d"
             ]
         ]
     },
@@ -50422,6 +50448,440 @@
         "wires": [
             [
                 "34044e40d99210cf"
+            ]
+        ]
+    },
+    {
+        "id": "5f8919b660a9e1e0",
+        "type": "jimp-image",
+        "z": "774cc0ad6b18a8e3",
+        "name": "4IconsLabel",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAMBAMAAACQIoDIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURf///6fEG8gAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBjTYxhwwMAAAACEAAGtvXXXAAAAAElFTkSuQmCC",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.4IconsLabel",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1870,
+        "y": 100,
+        "wires": [
+            [
+                "16f07788910e0c87"
+            ]
+        ]
+    },
+    {
+        "id": "70f26ead896595f0",
+        "type": "jimp-image",
+        "z": "774cc0ad6b18a8e3",
+        "name": "Label >1",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "Solardisplay.4IconsLabel",
+        "parameter1Type": "flow",
+        "parameter2": "21",
+        "parameter2Type": "num",
+        "parameter3": "56",
+        "parameter3Type": "num",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 1780,
+        "y": 3000,
+        "wires": [
+            [
+                "071bdeb5a93ddae9"
+            ]
+        ]
+    },
+    {
+        "id": "c33f67d27c1b1ee3",
+        "type": "jimp-image",
+        "z": "774cc0ad6b18a8e3",
+        "name": "Label == 1",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "Solardisplay.4IconsLabel",
+        "parameter1Type": "flow",
+        "parameter2": "31",
+        "parameter2Type": "num",
+        "parameter3": "56",
+        "parameter3Type": "num",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 1790,
+        "y": 2960,
+        "wires": [
+            [
+                "3184256ba3d16e80"
+            ]
+        ]
+    },
+    {
+        "id": "ccd8a5bf2628df5d",
+        "type": "function",
+        "z": "774cc0ad6b18a8e3",
+        "name": "Label",
+        "func": "var envLabel = env.get(\"1. multi icon label\");\n\nif (msg.label === undefined) {\n    msg.label = envLabel;\n}\n\nif (msg.label?.length >= 2){\n    return [null, null, msg];\n}\nelse if (msg.label?.length == 1){\n    return [null, msg, null];\n}\nelse{\n    return [msg, null, null];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 2960,
+        "wires": [
+            [
+                "277f290c8f347fc5"
+            ],
+            [
+                "c33f67d27c1b1ee3"
+            ],
+            [
+                "70f26ead896595f0"
+            ]
+        ],
+        "outputLabels": [
+            "No description",
+            "lenght = 1",
+            "lenght > 1"
+        ]
+    },
+    {
+        "id": "071bdeb5a93ddae9",
+        "type": "jimp-image",
+        "z": "774cc0ad6b18a8e3",
+        "name": "label",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "FONT_SANS_16_BLACK",
+        "parameter1Type": "jimpFont",
+        "parameter2": "22",
+        "parameter2Type": "num",
+        "parameter3": "54",
+        "parameter3Type": "num",
+        "parameter4": "label",
+        "parameter4Type": "msg",
+        "parameter5": "HORIZONTAL_ALIGN_LEFT",
+        "parameter5Type": "AlignX",
+        "parameter6": "VERTICAL_ALIGN_TOP",
+        "parameter6Type": "AlignY",
+        "parameter7": "210",
+        "parameter7Type": "num",
+        "parameter8": "230",
+        "parameter8Type": "num",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 8,
+        "jimpFunction": "print2",
+        "selectedJimpFunction": {
+            "name": "print aligned",
+            "fn": "print",
+            "description": "Print text to the image",
+            "parameters": [
+                {
+                    "name": "font|str",
+                    "type": "jimpFont",
+                    "required": true,
+                    "hint": "font to print. NOTE: This can be one of the presets or the path to a fnt file"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "x coordinate to print text"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "y coordinate to print text"
+                },
+                {
+                    "name": "text",
+                    "group": "options",
+                    "type": "str",
+                    "required": true,
+                    "hint": "text to print"
+                },
+                {
+                    "name": "alignmentX",
+                    "group": "options",
+                    "type": "AlignX",
+                    "required": false,
+                    "hint": "X Alignment"
+                },
+                {
+                    "name": "alignmentY",
+                    "group": "options",
+                    "type": "AlignY",
+                    "required": false,
+                    "hint": "Y Alignment"
+                },
+                {
+                    "name": "maxWidth",
+                    "type": "auto|num",
+                    "required": false,
+                    "hint": "wrap text at maxWidth"
+                },
+                {
+                    "name": "maxHeight",
+                    "type": "auto|num",
+                    "required": false,
+                    "hint": "max height"
+                }
+            ]
+        },
+        "x": 1910,
+        "y": 3000,
+        "wires": [
+            [
+                "277f290c8f347fc5"
+            ]
+        ]
+    },
+    {
+        "id": "3184256ba3d16e80",
+        "type": "jimp-image",
+        "z": "774cc0ad6b18a8e3",
+        "name": "label",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "FONT_SANS_16_BLACK",
+        "parameter1Type": "jimpFont",
+        "parameter2": "31",
+        "parameter2Type": "num",
+        "parameter3": "54",
+        "parameter3Type": "num",
+        "parameter4": "label",
+        "parameter4Type": "msg",
+        "parameter5": "HORIZONTAL_ALIGN_LEFT",
+        "parameter5Type": "AlignX",
+        "parameter6": "VERTICAL_ALIGN_TOP",
+        "parameter6Type": "AlignY",
+        "parameter7": "210",
+        "parameter7Type": "num",
+        "parameter8": "230",
+        "parameter8Type": "num",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 8,
+        "jimpFunction": "print2",
+        "selectedJimpFunction": {
+            "name": "print aligned",
+            "fn": "print",
+            "description": "Print text to the image",
+            "parameters": [
+                {
+                    "name": "font|str",
+                    "type": "jimpFont",
+                    "required": true,
+                    "hint": "font to print. NOTE: This can be one of the presets or the path to a fnt file"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "x coordinate to print text"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "y coordinate to print text"
+                },
+                {
+                    "name": "text",
+                    "group": "options",
+                    "type": "str",
+                    "required": true,
+                    "hint": "text to print"
+                },
+                {
+                    "name": "alignmentX",
+                    "group": "options",
+                    "type": "AlignX",
+                    "required": false,
+                    "hint": "X Alignment"
+                },
+                {
+                    "name": "alignmentY",
+                    "group": "options",
+                    "type": "AlignY",
+                    "required": false,
+                    "hint": "Y Alignment"
+                },
+                {
+                    "name": "maxWidth",
+                    "type": "auto|num",
+                    "required": false,
+                    "hint": "wrap text at maxWidth"
+                },
+                {
+                    "name": "maxHeight",
+                    "type": "auto|num",
+                    "required": false,
+                    "hint": "max height"
+                }
+            ]
+        },
+        "x": 1930,
+        "y": 2960,
+        "wires": [
+            [
+                "277f290c8f347fc5"
             ]
         ]
     }
