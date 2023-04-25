@@ -11,7 +11,7 @@
                 "y": 140,
                 "wires": [
                     {
-                        "id": "63fc5dfacf242fc0"
+                        "id": "96c080c3c196de2a"
                     }
                 ]
             }
@@ -391,6 +391,35 @@
                 }
             },
             {
+                "name": "To battery input",
+                "type": "str",
+                "value": "NotInverted",
+                "ui": {
+                    "label": {
+                        "de": "Zu Batterie eingang"
+                    },
+                    "type": "select",
+                    "opts": {
+                        "opts": [
+                            {
+                                "l": {
+                                    "de": "Nicht invertiert",
+                                    "en-US": "Not Inverted"
+                                },
+                                "v": "NotInverted"
+                            },
+                            {
+                                "l": {
+                                    "de": "Invertiert",
+                                    "en-US": "Inverted"
+                                },
+                                "v": "Inverted"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
                 "name": "Grid cost €/kWh",
                 "type": "num",
                 "value": "0.40",
@@ -683,7 +712,7 @@
         ],
         "meta": {
             "module": "@gitmacer/node-red-fritzsolardisplay",
-            "version": "2.0.12",
+            "version": "2.0.13",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
             "keywords": "energy,live,image,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,gitmacer"
@@ -692,7 +721,7 @@
         "inputLabels": [
             "\"http in\" (Get) node"
         ],
-        "icon": "node-red-contrib-image-tools/image.png"
+        "icon": "font-awesome/fa-image"
     },
     {
         "id": "ad33ec7fbe1401a4",
@@ -705,7 +734,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1630,
+        "x": 1810,
         "y": 140,
         "wires": [
             [
@@ -724,7 +753,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1380,
+        "x": 1560,
         "y": 140,
         "wires": [
             [
@@ -794,7 +823,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
+        "x": 1220,
         "y": 140,
         "wires": [
             [
@@ -813,7 +842,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 860,
         "y": 140,
         "wires": [
             [
@@ -832,7 +861,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
+        "x": 1050,
         "y": 140,
         "wires": [
             [
@@ -851,7 +880,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 120,
+        "x": 300,
         "y": 140,
         "wires": [
             [
@@ -27077,7 +27106,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
+        "x": 650,
         "y": 140,
         "wires": [
             [
@@ -36723,7 +36752,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 270,
+        "x": 450,
         "y": 140,
         "wires": [
             [
@@ -36742,7 +36771,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1170,
+        "x": 1350,
         "y": 140,
         "wires": [
             [
@@ -48929,7 +48958,7 @@
         "type": "function",
         "z": "774cc0ad6b18a8e3",
         "name": "Add unit",
-        "func": "msg.car = msg.car + msg.carUnit;\nreturn msg;",
+        "func": "msg.outlet = msg.outlet + msg.outletUnit;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -50159,7 +50188,7 @@
         "type": "function",
         "z": "774cc0ad6b18a8e3",
         "name": "T(€)",
-        "func": "msg.car = msg.car + \"T\";\nreturn msg;",
+        "func": "msg.outlet = msg.outlet + \"T\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -50692,7 +50721,7 @@
             ]
         ],
         "outputLabels": [
-            "No description",
+            "No label",
             "lenght = 1",
             "lenght > 1"
         ]
@@ -50882,6 +50911,25 @@
         "wires": [
             [
                 "277f290c8f347fc5"
+            ]
+        ]
+    },
+    {
+        "id": "96c080c3c196de2a",
+        "type": "function",
+        "z": "774cc0ad6b18a8e3",
+        "name": "Invert toBattery",
+        "func": "if (Number.isFinite(msg.toBattery) && env.get(\"To battery input\") == \"Inverted\"){\n    msg.toBattery = msg.toBattery * -1;\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "63fc5dfacf242fc0"
             ]
         ]
     }
