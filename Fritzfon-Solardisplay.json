@@ -712,7 +712,7 @@
         ],
         "meta": {
             "module": "@gitmacer/node-red-fritzsolardisplay",
-            "version": "2.0.13",
+            "version": "2.1.0",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
             "keywords": "energy,live,image,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,gitmacer"
