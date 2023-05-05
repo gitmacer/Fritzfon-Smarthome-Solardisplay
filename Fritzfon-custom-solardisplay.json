@@ -141,6 +141,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Thermometer"
+                                },
+                                "v": "Thermometer"
+                            },
+                            {
+                                "l": {
                                     "de": "Von/Zu Batterie",
                                     "en-US": "From/To battery"
                                 },
@@ -239,6 +245,12 @@
                                     "en-US": "Grid"
                                 },
                                 "v": "Grid"
+                            },
+                            {
+                                "l": {
+                                    "de": "Thermometer"
+                                },
+                                "v": "Thermometer"
                             },
                             {
                                 "l": {
@@ -343,6 +355,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Thermometer"
+                                },
+                                "v": "Thermometer"
+                            },
+                            {
+                                "l": {
                                     "de": "Von/Zu Batterie",
                                     "en-US": "From/To battery"
                                 },
@@ -441,6 +459,12 @@
                                     "en-US": "Grid"
                                 },
                                 "v": "Grid"
+                            },
+                            {
+                                "l": {
+                                    "de": "Thermometer"
+                                },
+                                "v": "Thermometer"
                             },
                             {
                                 "l": {
@@ -2709,7 +2733,7 @@
             }
         ],
         "meta": {
-            "version": "0.0.5",
+            "version": "0.0.6",
             "author": "Tim Oberle",
             "desc": "Show power and energy information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -2827,7 +2851,7 @@
         "y": 60,
         "wires": [
             [
-                "e02171eb26962ba4"
+                "02aeb246926dc841"
             ]
         ]
     },
@@ -2837,6 +2861,13 @@
         "z": "54696d142bf83afc",
         "name": "Images to flow",
         "rules": [
+            {
+                "t": "set",
+                "p": "Solardisplay.3IconsThermometer",
+                "pt": "flow",
+                "to": "Solardisplay.3IconsThermometer",
+                "tot": "msg"
+            },
             {
                 "t": "set",
                 "p": "Solardisplay.3IconsLightbulb",
@@ -2962,7 +2993,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3060,
+        "x": 3280,
         "y": 60,
         "wires": [
             []
@@ -3002,7 +3033,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1110,
+        "x": 1330,
         "y": 60,
         "wires": [
             [
@@ -3044,7 +3075,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1270,
+        "x": 1490,
         "y": 60,
         "wires": [
             [
@@ -3086,7 +3117,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1890,
+        "x": 2110,
         "y": 60,
         "wires": [
             [
@@ -3128,7 +3159,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1430,
+        "x": 1650,
         "y": 60,
         "wires": [
             [
@@ -3170,7 +3201,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2150,
+        "x": 2370,
         "y": 60,
         "wires": [
             [
@@ -3212,7 +3243,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2270,
+        "x": 2490,
         "y": 60,
         "wires": [
             [
@@ -3254,7 +3285,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1590,
+        "x": 1810,
         "y": 60,
         "wires": [
             [
@@ -3296,7 +3327,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1740,
+        "x": 1960,
         "y": 60,
         "wires": [
             [
@@ -3319,7 +3350,7 @@
         "y": 100,
         "wires": [
             [
-                "fd53a88d0bebc488"
+                "4f6ab940bbd64b1a"
             ]
         ]
     },
@@ -3357,7 +3388,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 610,
+        "x": 830,
         "y": 100,
         "wires": [
             [
@@ -3399,7 +3430,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 780,
+        "x": 1000,
         "y": 100,
         "wires": [
             [
@@ -3441,7 +3472,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1110,
+        "x": 1330,
         "y": 100,
         "wires": [
             [
@@ -3483,7 +3514,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1270,
+        "x": 1490,
         "y": 100,
         "wires": [
             [
@@ -3525,7 +3556,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1430,
+        "x": 1650,
         "y": 100,
         "wires": [
             [
@@ -3567,7 +3598,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1590,
+        "x": 1810,
         "y": 100,
         "wires": [
             [
@@ -3609,7 +3640,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1740,
+        "x": 1960,
         "y": 100,
         "wires": [
             [
@@ -3651,7 +3682,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 1890,
+        "x": 2110,
         "y": 100,
         "wires": [
             [
@@ -3665,6 +3696,13 @@
         "z": "54696d142bf83afc",
         "name": "Images to flow",
         "rules": [
+            {
+                "t": "set",
+                "p": "Solardisplay.4IconsThermometer",
+                "pt": "flow",
+                "to": "Solardisplay.4IconsThermometer",
+                "tot": "msg"
+            },
             {
                 "t": "set",
                 "p": "Solardisplay.4IconsLightbulb",
@@ -3769,7 +3807,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2700,
+        "x": 2920,
         "y": 100,
         "wires": [
             []
@@ -3809,7 +3847,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2030,
+        "x": 2250,
         "y": 60,
         "wires": [
             [
@@ -3851,7 +3889,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 430,
+        "x": 650,
         "y": 100,
         "wires": [
             [
@@ -3893,7 +3931,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 950,
+        "x": 1170,
         "y": 100,
         "wires": [
             [
@@ -3935,7 +3973,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2050,
+        "x": 2270,
         "y": 100,
         "wires": [
             [
@@ -4040,6 +4078,11 @@
             },
             {
                 "t": "eq",
+                "v": "Thermometer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "FromToBattery",
                 "vt": "str"
             },
@@ -4061,7 +4104,7 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 13,
+        "outputs": 14,
         "x": 2050,
         "y": 1400,
         "wires": [
@@ -4091,6 +4134,9 @@
             ],
             [
                 "1363699a55a7fe50"
+            ],
+            [
+                "df07500c4b21a4dc"
             ],
             [
                 "36e0c2c4807fb7d1"
@@ -4212,7 +4258,7 @@
             ]
         },
         "x": 2250,
-        "y": 1380,
+        "y": 1340,
         "wires": [
             [
                 "f619067541f9d745"
@@ -4299,7 +4345,7 @@
             ]
         },
         "x": 2270,
-        "y": 1460,
+        "y": 1420,
         "wires": [
             [
                 "f619067541f9d745"
@@ -6381,7 +6427,7 @@
         "type": "function",
         "z": "54696d142bf83afc",
         "name": "y",
-        "func": "var spacing = 52;\nvar subSpacing = 13;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar heatPumpIconBaseY = 33;\nvar batteryIconBaseY = 28;\nvar solarIconBaseY = 30;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nvar valueBaseY = 30;\nvar smallUnitBaseY = 44;\nvar smallEurBaseY = 47;\nvar bigEurBaseY = 35;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"Outlet\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nif (msg.icon == \"Lightbulb\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nif (msg.icon == \"Car\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Battery\") {\n    msg.yIcon = batteryIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"House\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Grid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"FromToBattery\") {\n    msg.yIcon = batteryIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"FromToGrid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"SolarToHouseGrid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"SolarGridToHouse\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.label = env.get(msg.iconNumber.toString() + \". icon label\");\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yValue = valueBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.ySmallUnit = smallUnitBaseY + (spacing * (msg.iconNumber - 1));\nmsg.ySmallEur = smallEurBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yBigEur = bigEurBaseY + (spacing * (msg.iconNumber - 1));\n\nif (env.get(\"Rows\" + msg.iconNumber.toString()) == \"2\") {\n    msg.yValue1 = msg.yValue - subSpacing;\n    msg.ySmallUnit1 = msg.ySmallUnit - subSpacing;\n    msg.ySmallEur1 = msg.ySmallEur - subSpacing;\n    msg.yBigEur1 = msg.yBigEur - subSpacing;\n\n    msg.yValue2 = msg.yValue + subSpacing;\n    msg.ySmallUnit2 = msg.ySmallUnit + subSpacing;\n    msg.ySmallEur2 = msg.ySmallEur + subSpacing;\n    msg.yBigEur2 = msg.yBigEur + subSpacing;\n}\n\nreturn msg;",
+        "func": "var spacing = 52;\nvar subSpacing = 13;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar heatPumpIconBaseY = 33;\nvar solarIconBaseY = 30;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nvar valueBaseY = 30;\nvar smallUnitBaseY = 44;\nvar smallEurBaseY = 47;\nvar bigEurBaseY = 35;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.label = env.get(msg.iconNumber.toString() + \". icon label\");\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yValue = valueBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.ySmallUnit = smallUnitBaseY + (spacing * (msg.iconNumber - 1));\nmsg.ySmallEur = smallEurBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yBigEur = bigEurBaseY + (spacing * (msg.iconNumber - 1));\n\nif (env.get(\"Rows\" + msg.iconNumber.toString()) == \"2\") {\n    msg.yValue1 = msg.yValue - subSpacing;\n    msg.ySmallUnit1 = msg.ySmallUnit - subSpacing;\n    msg.ySmallEur1 = msg.ySmallEur - subSpacing;\n    msg.yBigEur1 = msg.yBigEur - subSpacing;\n\n    msg.yValue2 = msg.yValue + subSpacing;\n    msg.ySmallUnit2 = msg.ySmallUnit + subSpacing;\n    msg.ySmallEur2 = msg.ySmallEur + subSpacing;\n    msg.yBigEur2 = msg.yBigEur + subSpacing;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6589,7 +6635,7 @@
             ]
         },
         "x": 2250,
-        "y": 1420,
+        "y": 1380,
         "wires": [
             [
                 "f619067541f9d745"
@@ -6752,7 +6798,7 @@
             ]
         },
         "x": 2260,
-        "y": 1500,
+        "y": 1460,
         "wires": [
             [
                 "f619067541f9d745"
@@ -7040,7 +7086,7 @@
             ]
         },
         "x": 2250,
-        "y": 1540,
+        "y": 1500,
         "wires": [
             [
                 "f619067541f9d745"
@@ -7127,7 +7173,7 @@
             ]
         },
         "x": 2250,
-        "y": 1580,
+        "y": 1540,
         "wires": [
             [
                 "f619067541f9d745"
@@ -7214,7 +7260,7 @@
             ]
         },
         "x": 2250,
-        "y": 1620,
+        "y": 1580,
         "wires": [
             [
                 "f619067541f9d745"
@@ -7913,7 +7959,7 @@
         "type": "function",
         "z": "54696d142bf83afc",
         "name": "y",
-        "func": "var spacing = 70;\nvar subSpacing = 15; //18 == even\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nvar valueBaseY = 37;\nvar smallUnitBaseY = 52;\nvar smallEurBaseY = 54;\nvar bigEurBaseY = 42;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"Outlet\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nif (msg.icon == \"Lightbulb\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nif (msg.icon == \"Car\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Battery\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"House\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Grid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"FromToBattery\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"FromToGrid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"SolarToHouseGrid\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"SolarGridToHouse\") {\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\n\nmsg.label = env.get(msg.iconNumber.toString() + \". icon label\");\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yValue = valueBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.ySmallUnit = smallUnitBaseY + (spacing * (msg.iconNumber - 1));\nmsg.ySmallEur = smallEurBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yBigEur = bigEurBaseY + (spacing * (msg.iconNumber - 1));\n\nif (env.get(\"Rows\" + msg.iconNumber.toString()) == \"2\") {\n    msg.yValue1 = msg.yValue - subSpacing;\n    msg.ySmallUnit1 = msg.ySmallUnit - subSpacing;\n    msg.ySmallEur1 = msg.ySmallEur - subSpacing;\n    msg.yBigEur1 = msg.yBigEur - subSpacing;\n\n    msg.yValue2 = msg.yValue + subSpacing;\n    msg.ySmallUnit2 = msg.ySmallUnit + subSpacing;\n    msg.ySmallEur2 = msg.ySmallEur + subSpacing;\n    msg.yBigEur2 = msg.yBigEur + subSpacing;\n}\n\nreturn msg;",
+        "func": "var spacing = 70;\nvar subSpacing = 15; //18 == even\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nvar valueBaseY = 37;\nvar smallUnitBaseY = 52;\nvar smallEurBaseY = 54;\nvar bigEurBaseY = 42;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\n\nmsg.label = env.get(msg.iconNumber.toString() + \". icon label\");\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yValue = valueBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.ySmallUnit = smallUnitBaseY + (spacing * (msg.iconNumber - 1));\nmsg.ySmallEur = smallEurBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yBigEur = bigEurBaseY + (spacing * (msg.iconNumber - 1));\n\nif (env.get(\"Rows\" + msg.iconNumber.toString()) == \"2\") {\n    msg.yValue1 = msg.yValue - subSpacing;\n    msg.ySmallUnit1 = msg.ySmallUnit - subSpacing;\n    msg.ySmallEur1 = msg.ySmallEur - subSpacing;\n    msg.yBigEur1 = msg.yBigEur - subSpacing;\n\n    msg.yValue2 = msg.yValue + subSpacing;\n    msg.ySmallUnit2 = msg.ySmallUnit + subSpacing;\n    msg.ySmallEur2 = msg.ySmallEur + subSpacing;\n    msg.yBigEur2 = msg.yBigEur + subSpacing;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -8020,6 +8066,11 @@
             },
             {
                 "t": "eq",
+                "v": "Thermometer",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "FromToBattery",
                 "vt": "str"
             },
@@ -8041,7 +8092,7 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 13,
+        "outputs": 14,
         "x": 1990,
         "y": 320,
         "wires": [
@@ -8071,6 +8122,9 @@
             ],
             [
                 "418ed3909e01e81e"
+            ],
+            [
+                "c45b472f40e59c23"
             ],
             [
                 "9a05c7a3763ba4ac"
@@ -10382,7 +10436,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 430,
+        "x": 650,
         "y": 60,
         "wires": [
             [
@@ -10424,7 +10478,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 610,
+        "x": 830,
         "y": 60,
         "wires": [
             [
@@ -10466,7 +10520,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 780,
+        "x": 1000,
         "y": 60,
         "wires": [
             [
@@ -10508,7 +10562,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 950,
+        "x": 1170,
         "y": 60,
         "wires": [
             [
@@ -10596,7 +10650,7 @@
             ]
         },
         "x": 2210,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -10637,7 +10691,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2410,
+        "x": 2630,
         "y": 60,
         "wires": [
             [
@@ -10906,7 +10960,7 @@
             ]
         },
         "x": 2210,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -10993,7 +11047,7 @@
             ]
         },
         "x": 2210,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -11080,7 +11134,7 @@
             ]
         },
         "x": 2230,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -11167,7 +11221,7 @@
             ]
         },
         "x": 2220,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -11254,7 +11308,7 @@
             ]
         },
         "x": 2210,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -11341,7 +11395,7 @@
             ]
         },
         "x": 2210,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -19439,7 +19493,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2610,
+        "x": 2830,
         "y": 60,
         "wires": [
             [
@@ -19568,7 +19622,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2250,
+        "x": 2470,
         "y": 100,
         "wires": [
             [
@@ -19697,7 +19751,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2850,
+        "x": 3070,
         "y": 60,
         "wires": [
             [
@@ -19826,7 +19880,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 2490,
+        "x": 2710,
         "y": 100,
         "wires": [
             [
@@ -19993,7 +20047,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 240,
+        "x": 460,
         "y": 60,
         "wires": [
             [
@@ -20035,7 +20089,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 240,
+        "x": 460,
         "y": 100,
         "wires": [
             [
@@ -20123,7 +20177,7 @@
             ]
         },
         "x": 2220,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "db0fc72c76a1d3bc"
@@ -20210,7 +20264,265 @@
             ]
         },
         "x": 2260,
-        "y": 1340,
+        "y": 1300,
+        "wires": [
+            [
+                "f619067541f9d745"
+            ]
+        ]
+    },
+    {
+        "id": "02aeb246926dc841",
+        "type": "jimp-image",
+        "z": "54696d142bf83afc",
+        "name": "3IconsThermometer",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAYAAADhu0ooAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAATdSURBVGhD7ZtXqB1FGICvNVFswQSxYo2xEnvFAopgFDUi8SEGRaMI5sE86IM+KIgFREQfLOiDiKAiYoFEhcSIEksiajSKmCgGFAv23v2+c3aSzTLn3LN7du/OhfvBx+zObi77n5mdmZ2ZjDTElngRPouf4b/4DS7DhbgjjnsOw5X4Xx/X4bk4bjkev0eD+RufwEvwDLwQ78NwXb027piGn2AosZMxxn64HL3vDzwKG2eTLK2D2/Aa/BEN8m3sxRR8BQ/EF9ASF5/nfNwf/zGjgNefw7c6Zy2wHVqKltINZgzAOej9VvFDzMhS8/r5JrbGMehD/ImWUp7N8FDcunO2Ac9DVb/cDNgWH8I38NWI5l+FrXEe+sB2JdubkeNS9NrdnbONWYpeu6lz1iCbZumwbJ6lVsPiuzUjS4slLdYACf++MeoKtB8hcH+EIqExtFQbZSwCbTyIQRiLQMswGX1fn8THMx10PII2aK1zAVpyn+I2ZuS4Bb32fOdsY8zzmveIwXge8w6sTGol+gE66H8A7828H+/Ce7B16irRxkitRBtjItCW8cN9ix5WIrVA/apxVuI9fCfi+3gdlia1QHfGs9Bv1gMi7otnY2lSC9QSOw2vwPkR/cpxLqo1JrqXVJgItEV2wL1xr5y74VCkFqgBrUDHvKtzrsUw3VKJ1AJ1oGBfarpVTs+dT6pMaoF+jIfjsXh0phNvM/FOrEyK76jTpq+jVVid+XNUFJvnHZgUA22EiUBbxOkUx7tn9nAnbI26hoDT0YUn83q5BEuTWon+gDY8Lhp/FfE7XIWlqStQf+k6+BJPRFfTYp9p++DVWJq6Ag1/x5n3MkuR4V4XogIuU1ii30a0RCtRR6B74vXdw85ehdjSQy/+ytKL8ZTuYZq46eJdtOr+jnOxSL/GyBGQK3Bet7Tc/5Akj2EI0qY/xs3oPa5Ux3C1LSwi29AUW+3WcVeJD6dOffTCpQTvcS20FzZAoVu50YxUsBEJGy4WmxHBavkM/oTeZyPjvoXZGONW9D67kVYHBXnCUr6eakaBeWhDE+4palBFdkVbVq87EZYEtrI+kPOvxUnlI9HSywcW0x+jyKPoNZcNa6Vq93JElr6GoYsIuAVnkBn1a3FS93A9L2XpQehaaW1UDdRqJh9macD5nhO6h6PiSKe4r2FNlk7F4qaPoagSqBsrnN4QG5o8Tne452gQbNAMKM/PWerUSbG0h6JKoH7p229Ksc/zQcPDDoKNT56wF8nXIexYqYUqgdpYfN497KyF5HF049THIFhNne3L4zSnONb1S6Y2qr6jYS+efWV+QC63Z+loOJD4tXu4nrBR0jWY37qH7eJ21dBNOKopsgDD9Zix/QgOEr5Gr19pRgpYE6yiPtRTZkRwx+bLaKl5n++c/e5lGMOhn/dZbXcxIxXmoA+m/Zby/Fh2JGV3Ymsaw375F/RvNb6yVoWn0YezmznJjArsgfbH/h1T++LkcIX6I/QhbSWdJCuDM/Hh31uix2GyWCVdSvBh9WE8GPvhYpJV1JY1BDkLG6PM/E4/dscH8fTO2YZPshfR6uj2c0dT9pO20n7xhCpqX+p/InAZYlzgj+bnVXjfRvMLdFv6UKtkg1JXieZxGOeGC2fbnQOyFF0KtHq6tdwuxvmjRWi/OQaMjPwPbuFaxtYuzW4AAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.3IconsThermometer",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "e02171eb26962ba4"
+            ]
+        ]
+    },
+    {
+        "id": "4f6ab940bbd64b1a",
+        "type": "jimp-image",
+        "z": "54696d142bf83afc",
+        "name": "4IconsThermometer",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAANOSURBVFhH5ZhdyI5nHMAf36Y0WkaIzVfNFJLvlbJshVpNjnCkrc1Wi8mBkiKOUBw4WGYHhgMWtVhJIdZ8JearGEOkZc1nMYb9fvdzXbl7Pe/z3o/3ud73wK9+3fd1vU/P83+v6399lppBL1yFV/A53sGfcDy2OiPwBhrYAVyH2/BhqPsSW4038RI+wClW5OiHB9EgJ1sRaIcdsUPQ92TMRwP4NCu9TE/8B/dnpVJpOF5AU+HP4HW0xdtiVZr8QAWm4VX8OSuVv+MD7J6VSqW/cAtOwB5obp7GsznPoEH7j9ad39FujAxEf2heVioTW/m9rNQMXqUFG9IpPDuHZ12pR4Cxmyp1V6wzD8cER2LhQVKPAKvxGMfhSTwSPIEfYSFSB+iUYnCzcG5wDv6KhUgdoN//CB3VG4M/4m0sROoAm03qAJ9iN1yMy3FZcCXa7UloOA861zlanfsicR4cgKPxSSgbsPp+GNtjVVK3oHPkMXSNfgffDfr+Mf6HVWmpHLyJLo/Xgr7fxSZ57QeJuTcEj6MbBnVedEUpREu0oHlmd+Z1hSlE6gBdSS7jh+iWTCehrViI1z4HI+4Zh6Jzpr6P7rybJHWA/+JY/APdSZ8LuqP+BZNM1M/CswgelgzmK/wWFwQX4VJscqKulTboWeK3rFSm0lK3EK3zeNosam3BNTgYXb6qYTfKBnyr/Jqez9FW+R7z/5gbAuu/zkovmI3W78xKiXHEeXy05cyriEn+BRrIJvSYmcetlX9r7AxdN75Bfyh/k9AHzUXro3/jdIx0Rc/J+7JSQvaiO5D8aWwX5oOLeqvQHyPr0aWtd1aqkSKDxD2dA8ONalxDnWjdz1XCG4YZ5deMo+iS556wZooE6Je/gfn929uYz8WG9A1PuReeXcKzJooE6GpwHw0qYnd71dYY58NT4sDJ/4N1ZwfeQpM+8h1WykEn8niRJJvRVkw6H8Y5zWfEbvecGw9Ear4Nw4hd7bl4e1ZKiPlzEb1VbTjXuUv5BCei+ZrHudHAvYpLjqPWHzuERbprBfr51VmphYjLnSezmVjpym0U7kY/txWrjfYkTMV4s+9Vrvm1Fn/AU2i926gl2Go4mj/DPejoNiinHU9vXnEMwjpQKv0PZfXG7gKtnwQAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.4IconsThermometer",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "fd53a88d0bebc488"
+            ]
+        ]
+    },
+    {
+        "id": "c45b472f40e59c23",
+        "type": "jimp-image",
+        "z": "54696d142bf83afc",
+        "name": "3IconsThermometer",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "Solardisplay.3IconsThermometer",
+        "parameter1Type": "flow",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2240,
+        "y": 500,
+        "wires": [
+            [
+                "db0fc72c76a1d3bc"
+            ]
+        ]
+    },
+    {
+        "id": "df07500c4b21a4dc",
+        "type": "jimp-image",
+        "z": "54696d142bf83afc",
+        "name": "4IconsThermometer",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "Solardisplay.4IconsThermometer",
+        "parameter1Type": "flow",
+        "parameter2": "1",
+        "parameter2Type": "num",
+        "parameter3": "yIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2280,
+        "y": 1620,
         "wires": [
             [
                 "f619067541f9d745"
