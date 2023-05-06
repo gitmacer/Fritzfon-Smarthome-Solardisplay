@@ -12,20 +12,20 @@ Show information about your solarsystem and powermeter on your Fritzfons by usin
 # Anleitung:
 Es sind viele Anleitungen zur Inbetriebnahme von Node-Red verfügbar daher wird dieser Schritt übersprungen.
 
-Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).
+Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).   
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
-Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay/releases) herunter.
+Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay/releases) herunter.   
 ![2  import](https://user-images.githubusercontent.com/37345589/228585979-1c44dbf8-88cb-423e-a701-2452e1fb4e81.gif)
 
-Füge ein "http in" node hinzu und vergebe eine Adresse.
+Füge ein "http in" node hinzu und vergebe eine Adresse.   
 ![3  SolarPower](https://user-images.githubusercontent.com/37345589/228586648-7bfe8aad-392e-4944-a9c8-b1b907f3c9d0.gif)
 
 # Daten von InfluxDB:
-Installiere InfluxDB nodes.
+Installiere InfluxDB nodes.   
 ![4  influxdb installation](https://user-images.githubusercontent.com/37345589/228587498-278a7f3d-b5b7-4b83-9a84-1a09f5d58356.gif)
 
-Füge ein "influxdb in" node hinzu.
+Füge ein "influxdb in" node hinzu.   
 ![5  influxdb](https://user-images.githubusercontent.com/37345589/228587816-514134f8-7eae-494d-a043-812b902ed145.png)
 
 Setze Server und Querry.   
@@ -46,8 +46,11 @@ from(bucket: "bucket")
 
 Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen.   
 Influxdb 1.X: `msg.payload.0.last`   
-Influxdb 2.X: `msg.payload[0]._value`
+Influxdb 2.X: `msg.payload[0]._value`   
 
+Es wird empfohlen das normale solarimage zubenutzen wenn nur Batterie, Haus, Solar, Netz oder nur solar angezeigt werden soll ansonsten kann das anpassungsfähigere "custom solarimage" subflow benutzt werden.   
+
+Solarimage:   
  - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
  - msg.toHouse (Solar zu Haus) (Wenn nicht gesetzt wird errechnet)
@@ -61,6 +64,17 @@ Influxdb 2.X: `msg.payload[0]._value`
  - msg.fromBattery (von der Batterie)
  - msg.toBattery (zu der Batterie)
  - msg.batteryPercent (Batterie-Prozent)
+ 
+ Custom solarimage:   
+ - msg.info (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
+ - msg.value11   
+ - msg.value12   
+ - msg.value21   
+ - msg.value22   
+ - msg.value31   
+ - msg.value32   
+ - msg.value41   
+ - msg.value42   
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
@@ -85,23 +99,23 @@ Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.
 www.paypal.me/TimOberle
 
 # Guide:
-There are many guids how to install Node-Red available so this step is skipped here.
+There are many guids how to install Node-Red available so this step is skipped here.   
 
 You need to install
-[Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools) before importing my subflow.
+[Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools) before importing my subflow.   
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
-Import the latest version from [Releases](https://github.com/gitmacer/Fritzfon-Solardisplay/releases).
+Import the latest version from [Releases](https://github.com/gitmacer/Fritzfon-Solardisplay/releases).   
 ![2  import](https://user-images.githubusercontent.com/37345589/228585979-1c44dbf8-88cb-423e-a701-2452e1fb4e81.gif)
 
-Add a "http in" node and give it a unique url.
+Add a "http in" node and give it a unique url.   
 ![3  SolarPower](https://user-images.githubusercontent.com/37345589/228586648-7bfe8aad-392e-4944-a9c8-b1b907f3c9d0.gif)
 
 # Get data from InfluxDB:
-Install InfluxDB nodes.
+Install InfluxDB nodes.   
 ![4  influxdb installation](https://user-images.githubusercontent.com/37345589/228587498-278a7f3d-b5b7-4b83-9a84-1a09f5d58356.gif)
 
-Add a "influxdb in" node.
+Add a "influxdb in" node.   
 ![5  influxdb](https://user-images.githubusercontent.com/37345589/228587816-514134f8-7eae-494d-a043-812b902ed145.png)
 
 Configure Server and querry.   
@@ -122,8 +136,11 @@ from(bucket: "bucket")
 
 Add a "change" node to set the queried data to one of the following variables.   
 Influxdb 1.X: `msg.payload.0.last`   
-Influxdb 2.X: `msg.payload[0]._value`
+Influxdb 2.X: `msg.payload[0]._value`   
 
+It is advised to use the normal soalrimage if you want to stick with battery, house, solar, grid or solar only else use the custom solarimage.
+
+Solarimage:   
  - msg.info (if not provided clock will be shown)
  - msg.house (if not provided will get calculated)
  - msg.toHouse (if not provided will get calculated)
@@ -137,6 +154,17 @@ Influxdb 2.X: `msg.payload[0]._value`
  - msg.fromBattery
  - msg.toBattery
  - msg.batteryPercent
+ 
+Custom solarimage:   
+ - msg.info (if not provided clock will be shown)
+ - msg.value11   
+ - msg.value12   
+ - msg.value21   
+ - msg.value22   
+ - msg.value31   
+ - msg.value32   
+ - msg.value41   
+ - msg.value42  
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
