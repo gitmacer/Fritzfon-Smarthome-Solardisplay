@@ -2,7 +2,7 @@
     {
         "id": "774cc0ad6b18a8e3",
         "type": "subflow",
-        "name": "Fritzfon solarimage",
+        "name": "Fritzfon solar image",
         "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for calculations must be numbers\r\n - msg.info (if not provided clock will be shown)\r\n - msg.house (if not provided will get calculated)\r\n - msg.toHouse (if not provided will get calculated)\r\n - msg.solar\r\n - msg.solarPercent\r\n - msg.fromGrid\r\n - msg.toGrid\r\n - msg.car\r\n - msg.carPercent\r\n - msg.heatPump\r\n - msg.fromBattery\r\n - msg.toBattery\r\n - msg.batteryPercent\r\n - msg.outlet\r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.(var name)Unit   \r\n example: msg.houseUnit = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.(var name)OutUnit   \r\n example: msg.houseOutUnit = \"kWh\"\r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n\r\n # override Options\r\n - msg.solarMax\r\n - msg.label",
         "category": "image tools",
         "in": [
@@ -522,7 +522,7 @@
                 "ui": {
                     "icon": "font-awesome/fa-arrows-h",
                     "label": {
-                        "de": "Spannweite"
+                        "de": "% Spannweite"
                     },
                     "type": "select",
                     "opts": {
@@ -598,7 +598,7 @@
             {
                 "name": "Fraction symbol",
                 "type": "str",
-                "value": "Dot",
+                "value": "Auto",
                 "ui": {
                     "icon": "font-awesome/fa-flag",
                     "label": {
@@ -712,7 +712,7 @@
         ],
         "meta": {
             "module": "@gitmacer/node-red-fritzsolardisplay",
-            "version": "2.1.0",
+            "version": "2.1.3",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
