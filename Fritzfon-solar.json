@@ -291,7 +291,7 @@
             {
                 "name": "Unit size",
                 "type": "str",
-                "value": "Big",
+                "value": "Small",
                 "ui": {
                     "icon": "font-awesome/fa-font",
                     "label": {
@@ -715,7 +715,7 @@
             "version": "2.1.0",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
-            "keywords": "energy,live,image,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,gitmacer"
+            "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
         },
         "color": "#C0C0C0",
         "inputLabels": [
