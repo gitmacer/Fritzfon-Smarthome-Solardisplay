@@ -21,6 +21,8 @@ Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay
 Füge ein "http in" node hinzu und vergebe eine Adresse.   
 ![3  SolarPower](https://user-images.githubusercontent.com/37345589/228586648-7bfe8aad-392e-4944-a9c8-b1b907f3c9d0.gif)
 
+
+
 # Daten von InfluxDB:
 Installiere InfluxDB nodes.   
 ![4  influxdb installation](https://user-images.githubusercontent.com/37345589/228587498-278a7f3d-b5b7-4b83-9a84-1a09f5d58356.gif)
@@ -46,10 +48,25 @@ from(bucket: "bucket")
 
 Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen.   
 Influxdb 1.X: `msg.payload.0.last`   
-Influxdb 2.X: `msg.payload[0]._value`   
+Influxdb 2.X: `msg.payload[0]._value`    
 
-Es wird empfohlen das normale solarimage zubenutzen wenn nur Batterie, Haus, Solar, Netz oder nur solar angezeigt werden soll ansonsten kann das anpassungsfähigere "custom solarimage" subflow benutzt werden.   
+# Solar image vs smart-home image:   
+Solar:
+- Nur Solar anzeige kann gewählt werden   
+![Solar-Power](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/9f91daf3-7c41-4d00-b749-84b94d2290a1)
+- Solar zu Haus Anzeige   
+![SolarToHouse Marked](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ee503f7c-7d6a-434d-b161-d5f1fe88661e)
+- Zu Haus und Haus berechnung
+- Kwh zu € berechnung
 
+Smart-home image:
+- Mehr und freie icon auswahl
+- Freie Zeilen möglich
+- Beschriftung/Überschrift für jede Zeile
+- Einheit pro Wert   
+![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
+
+# Eingangs Variabeln
 Solar image:   
  - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
@@ -65,7 +82,7 @@ Solar image:
  - msg.toBattery (zu der Batterie)
  - msg.batteryPercent (Batterie-Prozent)
  
- Smat-home image:   
+ Smart-home image:   
  - msg.info (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.value11   
  - msg.value12   
@@ -142,8 +159,23 @@ Add a "change" node to set the queried data to one of the following variables.
 Influxdb 1.X: `msg.payload.0.last`   
 Influxdb 2.X: `msg.payload[0]._value`   
 
-It is advised to use the normal soalrimage if you want to stick with battery, house, solar, grid or solar only else use the custom solarimage.
+# Solar image vs smart-home image:   
+Solar:
+- Solar only is available   
+![Solar-Power](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/9f91daf3-7c41-4d00-b749-84b94d2290a1)
+- Solar to home available   
+![SolarToHouse Marked](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ee503f7c-7d6a-434d-b161-d5f1fe88661e)
+- To home and home calculation
+- Kwh to € calculation
 
+Smart-home image:
+- bigger and freely selectable icons   
+- Empty Rows possible   
+- label/headline for each icon   
+- unit per value   
+![Smat-home demo en](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/89de392b-c63c-4eef-9179-69108929e395)
+
+# Input variables
 Solar image:   
  - msg.info (if not provided clock will be shown)
  - msg.house (if not provided will get calculated)
