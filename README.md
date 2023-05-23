@@ -50,7 +50,7 @@ Influxdb 2.X: `msg.payload[0]._value`
 
 Es wird empfohlen das normale solarimage zubenutzen wenn nur Batterie, Haus, Solar, Netz oder nur solar angezeigt werden soll ansonsten kann das anpassungsfähigere "custom solarimage" subflow benutzt werden.   
 
-Solarimage:   
+Solar image:   
  - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
  - msg.toHouse (Solar zu Haus) (Wenn nicht gesetzt wird errechnet)
@@ -65,16 +65,20 @@ Solarimage:
  - msg.toBattery (zu der Batterie)
  - msg.batteryPercent (Batterie-Prozent)
  
- Custom solarimage:   
+ Smat-home image:   
  - msg.info (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
  - msg.value11   
  - msg.value12   
+ - msg.value13   
  - msg.value21   
  - msg.value22   
+ - msg.value23   
  - msg.value31   
  - msg.value32   
+ - msg.value33  
  - msg.value41   
  - msg.value42   
+ - msg.value43   
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
@@ -140,7 +144,7 @@ Influxdb 2.X: `msg.payload[0]._value`
 
 It is advised to use the normal soalrimage if you want to stick with battery, house, solar, grid or solar only else use the custom solarimage.
 
-Solarimage:   
+Solar image:   
  - msg.info (if not provided clock will be shown)
  - msg.house (if not provided will get calculated)
  - msg.toHouse (if not provided will get calculated)
@@ -155,16 +159,20 @@ Solarimage:
  - msg.toBattery
  - msg.batteryPercent
  
-Custom solarimage:   
+Smart-home image:   
  - msg.info (if not provided clock will be shown)
  - msg.value11   
  - msg.value12   
+ - msg.value13   
  - msg.value21   
  - msg.value22   
+ - msg.value23   
  - msg.value31   
  - msg.value32   
+ - msg.value33   
  - msg.value41   
- - msg.value42  
+ - msg.value42   
+ - msg.value43   
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
