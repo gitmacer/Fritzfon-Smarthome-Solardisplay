@@ -63,8 +63,12 @@ Smart-home image:
 - Mehr und freie icon auswahl
 - Freie Zeilen möglich
 - Beschriftung/Überschrift für jede Zeile
+- 3 Zeilen pro icon wenn wert und einheit auf klein gesetzt ist   
 - Einheit pro Wert   
 ![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
+- Bunte Kreise   
+![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
+
 
 # Eingangs Variabeln
 Solar image:   
@@ -114,6 +118,10 @@ Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor de
 
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
 Tipp: Du kannst Live-Bilder zu den Favoriten hinzufügen für schnelleren zugriff.   
+
+# Extra Funktionen:   
+- msg.circleX als String auf blue, green, grey, orange, red, white oder yellow setzen.  
+Beispiel: msg.circle1 = "green"
 
 # Donationware:
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
@@ -172,8 +180,11 @@ Smart-home image:
 - bigger and freely selectable icons   
 - Empty Rows possible   
 - label/headline for each icon   
+- 3 rows per icon if small value and unit is selected
 - unit per value   
 ![Smat-home demo en](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/89de392b-c63c-4eef-9179-69108929e395)
+- colored circles   
+![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
 
 # Input variables
 Solar image:   
@@ -223,6 +234,10 @@ Set a unique name, url you chosed before (Add hostname or fixed IP of the Node-R
 
 After applying you should be able to show the image on your Fritzfon under "Menu/Home Network/Live Image".
 Tipp: you can add Live-Bild to favourites  for faster access.
+
+# Extra features:   
+- set msg.circleX as String to blue, green, grey, orange, red, white or yellow   
+example: msg.circle1 = "green"
 
 # Donationware:
 Feel free to try my Project first and decide how much it is worths to you afterwards.   
