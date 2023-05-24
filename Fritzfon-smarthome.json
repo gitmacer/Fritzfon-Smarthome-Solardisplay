@@ -3,12 +3,12 @@
         "id": "9c8ed30fb778bd08",
         "type": "subflow",
         "name": "Fritzfon smarthome image",
-        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for unit conversation must be numbers   \r\n- msg.info\r\n- msg.value11\r\n- msg.value12\r\n- msg.value13   \r\n- msg.value21\r\n- msg.value22\r\n- msg.value23   \r\n- msg.value31\r\n- msg.value32\r\n- msg.value33   \r\n- msg.value41\r\n- msg.value42\r\n- msg.value43   \r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.unitXX  \r\n example: msg.unit11 = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.outUnitXX   \r\n example: msg.outUnit11 = \"kWh\"   \r\n\r\n ## Override label (as String)   \r\nmsg.labelX   \r\nexample: msg.label1 = TV\r\n\r\n ## Override headline (as String)   \r\nmsg.headlineX   \r\nexample: msg.headline2 = TV\r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode (\"\", \"Round\" or \"To fixed\" as string)   \r\nmsg.roundModeXX   \r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
+        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for unit conversation must be numbers   \r\n- msg.info\r\n- msg.value11\r\n- msg.value12\r\n- msg.value13   \r\n- msg.value21\r\n- msg.value22\r\n- msg.value23   \r\n- msg.value31\r\n- msg.value32\r\n- msg.value33   \r\n- msg.value41\r\n- msg.value42\r\n- msg.value43   \r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.unitXX  \r\n example: msg.unit11 = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.outUnitXX   \r\n example: msg.outUnit11 = \"kWh\"   \r\n\r\n ## Override label (as String)   \r\nmsg.labelX   \r\nexample: msg.label1 = \"TV\"\r\n\r\n ## Override headline (as String)   \r\nmsg.headlineX   \r\nexample: msg.headline2 = \"TV\"\r\n\r\n ## color circle   \r\nmsg.circleX   \r\navailable colors:   \r\nblue, green, grey, orange, red, white and yellow   \r\nexample: circle1 = \"green\"   \r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode (\"\", \"Round\" or \"To fixed\" as string)   \r\nmsg.roundModeXX   \r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
         "category": "image tools",
         "in": [
             {
-                "x": 40,
-                "y": 580,
+                "x": 20,
+                "y": 860,
                 "wires": [
                     {
                         "id": "39ef3745791f7551"
@@ -4331,7 +4331,7 @@
             }
         ],
         "meta": {
-            "version": "0.1.0",
+            "version": "0.1.1",
             "author": "Tim Oberle",
             "desc": "Show power and energy information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -5673,8 +5673,8 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 130,
-        "y": 580,
+        "x": 110,
+        "y": 860,
         "wires": [
             [
                 "57626b9c14b42dbc"
@@ -5763,7 +5763,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 14,
-        "x": 1790,
+        "x": 1510,
         "y": 1780,
         "wires": [
             [
@@ -5821,7 +5821,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1230,
+        "x": 950,
         "y": 1780,
         "wires": [
             [
@@ -5911,7 +5911,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 1720,
         "wires": [
             [
@@ -5998,7 +5998,7 @@
                 }
             ]
         },
-        "x": 2010,
+        "x": 1730,
         "y": 1800,
         "wires": [
             [
@@ -6017,7 +6017,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
+        "x": 1970,
         "y": 1780,
         "wires": [
             [
@@ -6115,7 +6115,7 @@
                 }
             ]
         },
-        "x": 2390,
+        "x": 2110,
         "y": 1780,
         "wires": [
             [
@@ -6209,7 +6209,7 @@
                 }
             ]
         },
-        "x": 2530,
+        "x": 2250,
         "y": 1780,
         "wires": [
             [
@@ -6303,7 +6303,7 @@
                 }
             ]
         },
-        "x": 2510,
+        "x": 2230,
         "y": 1820,
         "wires": [
             [
@@ -6390,7 +6390,7 @@
                 }
             ]
         },
-        "x": 2380,
+        "x": 2100,
         "y": 1820,
         "wires": [
             [
@@ -8105,13 +8105,13 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "y 1.",
-        "func": "var spacing = 52;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar headlineBaseY = 13;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\nvar heatPumpIconBaseY = 33;\nvar solarIconBaseY = 30;\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
+        "func": "var spacing = 52;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar headlineBaseY = 13;\n\nvar circleBaseY = 56;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\nvar heatPumpIconBaseY = 33;\nvar solarIconBaseY = 30;\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
+        "x": 1090,
         "y": 1780,
         "wires": [
             [
@@ -8130,8 +8130,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 580,
+        "x": 1130,
+        "y": 860,
         "wires": [
             [
                 "97c70253fbd8ded1"
@@ -8217,7 +8217,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 1760,
         "wires": [
             [
@@ -8236,8 +8236,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 580,
+        "x": 500,
+        "y": 860,
         "wires": [
             [
                 "69bb69d7f3b21d53"
@@ -8255,8 +8255,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
-        "y": 580,
+        "x": 240,
+        "y": 860,
         "wires": [
             [
                 "8a80e1a6e47395da"
@@ -8342,7 +8342,7 @@
                 }
             ]
         },
-        "x": 2000,
+        "x": 1720,
         "y": 1840,
         "wires": [
             [
@@ -8617,7 +8617,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 1880,
         "wires": [
             [
@@ -8704,7 +8704,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 1920,
         "wires": [
             [
@@ -8791,7 +8791,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 1960,
         "wires": [
             [
@@ -8878,7 +8878,7 @@
                 }
             ]
         },
-        "x": 2000,
+        "x": 1720,
         "y": 2040,
         "wires": [
             [
@@ -8965,7 +8965,7 @@
                 }
             ]
         },
-        "x": 2170,
+        "x": 1890,
         "y": 2040,
         "wires": [
             [
@@ -9052,7 +9052,7 @@
                 }
             ]
         },
-        "x": 2320,
+        "x": 2040,
         "y": 2040,
         "wires": [
             [
@@ -9139,7 +9139,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1710,
         "y": 2080,
         "wires": [
             [
@@ -9226,7 +9226,7 @@
                 }
             ]
         },
-        "x": 2170,
+        "x": 1890,
         "y": 2080,
         "wires": [
             [
@@ -9313,7 +9313,7 @@
                 }
             ]
         },
-        "x": 2320,
+        "x": 2040,
         "y": 2080,
         "wires": [
             [
@@ -9341,8 +9341,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1310,
-        "y": 580,
+        "x": 1290,
+        "y": 860,
         "wires": [
             [
                 "f7010be8cd5175fd"
@@ -9363,7 +9363,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
+        "x": 870,
         "y": 320,
         "wires": [
             [
@@ -9379,13 +9379,13 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "y 1.",
-        "func": "var spacing = 70;\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar headlineBaseY = 11;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
+        "func": "var spacing = 70;\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar headlineBaseY = 11;\n\nvar circleBaseY = 71;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1330,
+        "x": 1010,
         "y": 320,
         "wires": [
             [
@@ -9475,7 +9475,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 14,
-        "x": 1750,
+        "x": 1430,
         "y": 320,
         "wires": [
             [
@@ -9533,7 +9533,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2330,
+        "x": 2010,
         "y": 320,
         "wires": [
             [
@@ -9635,7 +9635,7 @@
                 }
             ]
         },
-        "x": 2490,
+        "x": 2170,
         "y": 320,
         "wires": [
             [
@@ -9729,7 +9729,7 @@
                 }
             ]
         },
-        "x": 2630,
+        "x": 2310,
         "y": 320,
         "wires": [
             [
@@ -9823,7 +9823,7 @@
                 }
             ]
         },
-        "x": 2610,
+        "x": 2290,
         "y": 360,
         "wires": [
             [
@@ -9910,7 +9910,7 @@
                 }
             ]
         },
-        "x": 2480,
+        "x": 2160,
         "y": 360,
         "wires": [
             [
@@ -12055,7 +12055,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 380,
         "wires": [
             [
@@ -12184,7 +12184,7 @@
                 }
             ]
         },
-        "x": 2480,
+        "x": 2160,
         "y": 400,
         "wires": [
             [
@@ -12278,7 +12278,7 @@
                 }
             ]
         },
-        "x": 2610,
+        "x": 2290,
         "y": 400,
         "wires": [
             [
@@ -12365,7 +12365,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 220,
         "wires": [
             [
@@ -12452,7 +12452,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 260,
         "wires": [
             [
@@ -12539,7 +12539,7 @@
                 }
             ]
         },
-        "x": 1990,
+        "x": 1670,
         "y": 300,
         "wires": [
             [
@@ -12626,7 +12626,7 @@
                 }
             ]
         },
-        "x": 1980,
+        "x": 1660,
         "y": 340,
         "wires": [
             [
@@ -12713,7 +12713,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 420,
         "wires": [
             [
@@ -12800,7 +12800,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 460,
         "wires": [
             [
@@ -12887,7 +12887,7 @@
                 }
             ]
         },
-        "x": 1980,
+        "x": 1660,
         "y": 540,
         "wires": [
             [
@@ -12974,7 +12974,7 @@
                 }
             ]
         },
-        "x": 2150,
+        "x": 1830,
         "y": 540,
         "wires": [
             [
@@ -13061,7 +13061,7 @@
                 }
             ]
         },
-        "x": 2300,
+        "x": 1980,
         "y": 540,
         "wires": [
             [
@@ -13148,7 +13148,7 @@
                 }
             ]
         },
-        "x": 1970,
+        "x": 1650,
         "y": 580,
         "wires": [
             [
@@ -13235,7 +13235,7 @@
                 }
             ]
         },
-        "x": 2150,
+        "x": 1830,
         "y": 580,
         "wires": [
             [
@@ -13322,7 +13322,7 @@
                 }
             ]
         },
-        "x": 2300,
+        "x": 1980,
         "y": 580,
         "wires": [
             [
@@ -13341,8 +13341,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 580,
+        "x": 940,
+        "y": 860,
         "wires": [
             [
                 "d374a59e8a6c2f75"
@@ -13470,7 +13470,7 @@
                 }
             ]
         },
-        "x": 2010,
+        "x": 1690,
         "y": 620,
         "wires": [
             [
@@ -13599,7 +13599,7 @@
                 }
             ]
         },
-        "x": 2030,
+        "x": 1750,
         "y": 2120,
         "wires": [
             [
@@ -13728,7 +13728,7 @@
                 }
             ]
         },
-        "x": 2010,
+        "x": 1690,
         "y": 660,
         "wires": [
             [
@@ -13857,7 +13857,7 @@
                 }
             ]
         },
-        "x": 2030,
+        "x": 1750,
         "y": 2160,
         "wires": [
             [
@@ -13876,8 +13876,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 580,
+        "x": 770,
+        "y": 860,
         "wires": [
             [
                 "fee83ea36dde3c43"
@@ -13895,8 +13895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 580,
+        "x": 630,
+        "y": 860,
         "wires": [
             [
                 "c76ae7901c418b73"
@@ -14066,7 +14066,7 @@
                 }
             ]
         },
-        "x": 1980,
+        "x": 1660,
         "y": 180,
         "wires": [
             [
@@ -14153,7 +14153,7 @@
                 }
             ]
         },
-        "x": 2000,
+        "x": 1720,
         "y": 1680,
         "wires": [
             [
@@ -14324,7 +14324,7 @@
                 }
             ]
         },
-        "x": 2000,
+        "x": 1680,
         "y": 500,
         "wires": [
             [
@@ -14411,7 +14411,7 @@
                 }
             ]
         },
-        "x": 2020,
+        "x": 1740,
         "y": 2000,
         "wires": [
             [
@@ -15558,7 +15558,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1460,
+        "x": 1140,
         "y": 320,
         "wires": [
             [
@@ -15577,7 +15577,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1500,
+        "x": 1220,
         "y": 1780,
         "wires": [
             [
@@ -15671,11 +15671,11 @@
                 }
             ]
         },
-        "x": 2920,
+        "x": 2600,
         "y": 300,
         "wires": [
             [
-                "5833f7f8341ea4dd"
+                "298039377051edac"
             ]
         ]
     },
@@ -15690,7 +15690,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1610,
+        "x": 1290,
         "y": 320,
         "wires": [
             [
@@ -15784,11 +15784,11 @@
                 }
             ]
         },
-        "x": 2820,
+        "x": 2540,
         "y": 1760,
         "wires": [
             [
-                "8cf9a97aeb579219"
+                "4be09e59bb01dcb7"
             ]
         ]
     },
@@ -15803,7 +15803,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1370,
         "y": 1780,
         "wires": [
             [
@@ -15833,7 +15833,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2670,
+        "x": 2390,
         "y": 1760,
         "wires": [
             [
@@ -15930,11 +15930,11 @@
                 }
             ]
         },
-        "x": 2820,
+        "x": 2540,
         "y": 1800,
         "wires": [
             [
-                "8cf9a97aeb579219"
+                "4be09e59bb01dcb7"
             ]
         ]
     },
@@ -15960,7 +15960,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2790,
+        "x": 2470,
         "y": 300,
         "wires": [
             [
@@ -16057,11 +16057,11 @@
                 }
             ]
         },
-        "x": 2920,
+        "x": 2600,
         "y": 340,
         "wires": [
             [
-                "5833f7f8341ea4dd"
+                "298039377051edac"
             ]
         ]
     },
@@ -21646,11 +21646,610 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
-        "y": 580,
+        "x": 370,
+        "y": 860,
         "wires": [
             [
                 "0dbd01a1e3e46319"
+            ]
+        ]
+    },
+    {
+        "id": "2651ada576e2afe3",
+        "type": "inject",
+        "z": "9c8ed30fb778bd08",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "19abbf87e31ee486"
+            ]
+        ]
+    },
+    {
+        "id": "bc5f1df5de93e93d",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "RedCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVChTlZJRCoJQEEVv4U9QO4neCoSi9tPq6i9qCy4i/4usjwSb42SaqOCFq29mzjydpxP9KzKvzaGMpMR8Medl1FI8l65L6b6X3pg1OWqO1AJ+HKSiaJkcNRhH7TXYpQuuTG0hpbA07Hh0F9j0yhjYqV3CVprROaSNM4GGUaIhOUkvD/t1lp5245gVMdDQ0Edzc2gUWyKj0ANnMI7WoinlNKoPZ+vbd+cfPPLXkD6Sa2vqe2EEzgAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.redCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 880,
+        "y": 140,
+        "wires": [
+            [
+                "b653cd2479c7bcbf"
+            ]
+        ]
+    },
+    {
+        "id": "c29adb54bd2ad773",
+        "type": "change",
+        "z": "9c8ed30fb778bd08",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Solardisplay.blueCircle",
+                "pt": "flow",
+                "to": "Solardisplay.blueCircle",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.greenCircle",
+                "pt": "flow",
+                "to": "Solardisplay.greenCircle",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.orangeCircle",
+                "pt": "flow",
+                "to": "Solardisplay.orangeCircle",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.redCircle",
+                "pt": "flow",
+                "to": "Solardisplay.redCircle",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.whiteCircle",
+                "pt": "flow",
+                "to": "Solardisplay.whiteCircle",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.yellowCircle",
+                "pt": "flow",
+                "to": "Solardisplay.yellowCircle",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1370,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa6af9d4bb619e80",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "draw circle",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "circleImage",
+        "parameter1Type": "msg",
+        "parameter2": "1",
+        "parameter2Type": "num",
+        "parameter3": "yCircle",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2890,
+        "y": 280,
+        "wires": [
+            [
+                "5833f7f8341ea4dd"
+            ]
+        ]
+    },
+    {
+        "id": "298039377051edac",
+        "type": "function",
+        "z": "9c8ed30fb778bd08",
+        "name": "circle",
+        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string'){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2730,
+        "y": 300,
+        "wires": [
+            [
+                "fa6af9d4bb619e80"
+            ],
+            [
+                "5833f7f8341ea4dd"
+            ]
+        ],
+        "outputLabels": [
+            "draw circle",
+            "no circle"
+        ]
+    },
+    {
+        "id": "638685f06354c031",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "OrangeCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADqSURBVChTlVKxDgFBFBwiEeEqKoXQ0EjuCyQnKn7g9H6Lnh+gEpf4gksoaFBpqHAiucLMuUuc5IhJXnbn7czmvbebQhwZhsUwAwa4DIfhB4x4N7QKWYyrRRidBnJKzDe478+4XB/oky6ViwwSzyYD5HvNMBNiugLsEW40dUmXMmQoPlBc/hRHkKk/wvHyQCVNbqmMJLGgs1oJBW4tGcyo5m9o1wONKcNfkMHVNF40GYstPC6uDM7hjKsaS8JsDexOuHHryOCze5tT8HTwCeXsITxpSP3YwxlZTDSNsMGgDN0cimMPF+HH1wCeY4BMhbKUdzEAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.orangeCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "bc5f1df5de93e93d"
+            ]
+        ]
+    },
+    {
+        "id": "19abbf87e31ee486",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "BlueCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVChTlVJRCoJAFByjHyFvInqCoMj7dDr7i7yCh8j/xOojwWZ8qSnLggOz+Hbmvd331gBzbMkDmfYRUJIF2fbRAntgdwfiGjh/jPrWnrQ5ZG6AvAO6BbUnbUriNVTFZR4oLarMC2R2tMv4z4QeZBsubPAUKtOPozypElZBCRzd9W2hD7cXF41ZjaghX9MXcmpa4MiipwlOMzXnW6iKpjE8XPL4VR7NK38N4AtEi2vqIvOgGwAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.blueCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "8cfcf505f9599137"
+            ]
+        ]
+    },
+    {
+        "id": "8cfcf505f9599137",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "GreenCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVChTlVK9DsFQGD2kA8FMDKQvoBZjk64mo2fxBLyRtYnRot7A4Cc2Qkl0cM7VJlSrcZJz893vO6f33u9rCZ+wSI90zA4ISJ+MzC4FFxVs0cUZIzwMFSunWozkBInnmKCGQZxJsCSnuOKOIaOFDBbFG4rbX+IEMs2wxw2dMkMPTTRyxYJqLdS5ejI46KOq/E/0jMaR4S/IEGDF2xVhjZBrIIOPIy7mYXlQ7cBOUStDxO+P2YUw0/TqUGg0qQG6fNYO9tvgbJxMLmNwCQp+DeAJr+g2WKtfpewAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.greenCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "3ff82a9ad618f04c"
+            ]
+        ]
+    },
+    {
+        "id": "3ff82a9ad618f04c",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "GreyCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD4SURBVChTlZK/a4NAHMUvrRFKE1BcJENBB1f/goBrtw5C8iem6J5VyNbNUQVtpowK+QUSQ94zHiQBU/qBr967e0/uvudA3KOgPJTbKiFiVIQ6tQrcBqaqqi40TRvbtv3GiTzPj1VVbeu6nkOuOCcDNC993393HKebupKmqQjDcI/QJ+SKAQXmNcyTR7OkC20Q+niB9riNPjPhmq7rIww9Bly552dYlkWPy8C/YCBmN66yn6IoDnjFDERo3Y4H6yPLMlGW5R7D6BWPc9M0P0mSzEzTHBqG0ZokNAdBcECHviB/Hy/um93oDthug1+GeQZ5d3GSP34NIS5cVmLp4tlXVAAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.greyCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "638685f06354c031"
+            ]
+        ]
+    },
+    {
+        "id": "b653cd2479c7bcbf",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "WhiteCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVChTlZJBCsIwEEWjdCMkd2j2pT1BwVDvoEfUA7S7UsETeIJmY/c2iW4EnV9TsEWL/TCF+f8NzJAu2FAB1Zoq6TrGzlRHqkfXkT4HUs75PgxDkWXZCkZZlnettbHW7qg9wesF2OZ5/hwLHjIwb5TWIOPyDe6FTAjRgMXAJoqi1mc/FcdxC3ZJn6TfeUpKKTAJBmbr35WuYDEQ4KCpo4uiGBwNpWQ4BGN52IEBOHg4Cg5SSu4PZFVV3eq6dsaYLbXdw838NRh7AZ0l2v2LJmYlAAAAAElFTkSuQmCC",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.whiteCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "484821ac8cf93ce7"
+            ]
+        ]
+    },
+    {
+        "id": "484821ac8cf93ce7",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "YellowCircle",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADDSURBVChTlZJBCoJgEIVf4SbQO+he9ARCYneoI9YBdCcGnaAT6Cb36W9tApv3l+APJvngCfPmG5jhdwVTlngrDnUFXMVn8UtXovFAZNs4ui6cJMGGQZ7jWVVolcJByguzQYRVmqLve9PM2CPzQWUNCW5T8GD2HAc1WQ7sfB/NFDh2EKAhu5ZPOOw8pzjWTMiBxfp3pTtZDlg8aO7oLDOPpiIJOjZ+wB0ZgsbDSePkebC/B6Io8ChLdG2LvZT64Rb+GsAba9Sp2bTzydoAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.yellowCircle",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1190,
+        "y": 140,
+        "wires": [
+            [
+                "c29adb54bd2ad773"
+            ]
+        ]
+    },
+    {
+        "id": "4be09e59bb01dcb7",
+        "type": "function",
+        "z": "9c8ed30fb778bd08",
+        "name": "circle",
+        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string'){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 4) {\n    if (typeof msg.circle4 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle4 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle4 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle4 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle4 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle4 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle4 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle4 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle4 not supported color: \" + msg.circle4);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2670,
+        "y": 1760,
+        "wires": [
+            [
+                "1cb6ef5669cc67cc"
+            ],
+            [
+                "8cf9a97aeb579219"
+            ]
+        ],
+        "outputLabels": [
+            "draw circle",
+            "no circle"
+        ]
+    },
+    {
+        "id": "1cb6ef5669cc67cc",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "draw circle",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "circleImage",
+        "parameter1Type": "msg",
+        "parameter2": "1",
+        "parameter2Type": "num",
+        "parameter3": "yCircle",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2810,
+        "y": 1740,
+        "wires": [
+            [
+                "8cf9a97aeb579219"
             ]
         ]
     }
