@@ -63,7 +63,7 @@ Smart-home image:
 - Mehr und freie icon auswahl
 - Freie Zeilen möglich
 - Beschriftung/Überschrift für jede Zeile
-- 3 Zeilen pro icon wenn wert und einheit auf klein gesetzt ist   
+- 3 Zeilen pro icon wenn Wert und Einheit auf klein gesetzt ist   
 - Einheit pro Wert   
 ![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
 - Bunte Kreise   
