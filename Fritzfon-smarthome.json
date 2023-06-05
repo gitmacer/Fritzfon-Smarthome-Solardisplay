@@ -3,7 +3,7 @@
         "id": "9c8ed30fb778bd08",
         "type": "subflow",
         "name": "Fritzfon smarthome image",
-        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for unit conversation must be numbers   \r\n- msg.info\r\n- msg.value11\r\n- msg.value12\r\n- msg.value13   \r\n- msg.value21\r\n- msg.value22\r\n- msg.value23   \r\n- msg.value31\r\n- msg.value32\r\n- msg.value33   \r\n- msg.value41\r\n- msg.value42\r\n- msg.value43   \r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.unitXX  \r\n example: msg.unit11 = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.outUnitXX   \r\n example: msg.outUnit11 = \"kWh\"   \r\n\r\n ## Override label (as String)   \r\nmsg.labelX   \r\nexample: msg.label1 = \"TV\"\r\n\r\n ## Override headline (as String)   \r\nmsg.headlineX   \r\nexample: msg.headline2 = \"TV\"\r\n\r\n ## color circle   \r\nmsg.circleX   \r\navailable colors:   \r\nblue, green, grey, orange, red, white and yellow   \r\nexample: circle1 = \"green\"   \r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode (\"\", \"Round\" or \"To fixed\" as string)   \r\nmsg.roundModeXX   \r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
+        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for unit conversation must be numbers   \r\n- msg.info\r\n- msg.value11\r\n- msg.value12\r\n- msg.value13   \r\n- msg.value21\r\n- msg.value22\r\n- msg.value23   \r\n- msg.value31\r\n- msg.value32\r\n- msg.value33   \r\n- msg.value41\r\n- msg.value42\r\n- msg.value43   \r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.unitXX  \r\n example: msg.unit11 = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.outUnitXX   \r\n example: msg.outUnit11 = \"kWh\"   \r\n\r\n ## Override label (as String)   \r\nmsg.labelX   \r\nexample: msg.label1 = \"TV\"\r\n\r\n ## Override headline (as String)   \r\nmsg.headlineX   \r\nexample: msg.headline2 = \"TV\"\r\n\r\n ## color circle   \r\nmsg.circleX   \r\navailable colors:   \r\nblue, green, grey, orange, red, white and yellow   \r\nexample: msg.circle1 = \"green\"   \r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode (\"\", \"Round\" or \"To fixed\" as string)   \r\nmsg.roundModeXX   \r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
         "category": "image tools",
         "in": [
             {
@@ -11,7 +11,7 @@
                 "y": 860,
                 "wires": [
                     {
-                        "id": "39ef3745791f7551"
+                        "id": "f4ecd810ed73063a"
                     }
                 ]
             }
@@ -4331,7 +4331,7 @@
             }
         ],
         "meta": {
-            "version": "0.1.1",
+            "version": "0.1.2",
             "author": "Tim Oberle",
             "desc": "Show power and energy information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -5673,7 +5673,7 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 110,
+        "x": 230,
         "y": 860,
         "wires": [
             [
@@ -5767,7 +5767,7 @@
         "y": 1780,
         "wires": [
             [
-                "805993d5fcc49183"
+                "97104b378191e09e"
             ],
             [
                 "8ec961975f4b4f03"
@@ -8130,7 +8130,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1250,
         "y": 860,
         "wires": [
             [
@@ -8236,7 +8236,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 620,
         "y": 860,
         "wires": [
             [
@@ -8255,7 +8255,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 360,
         "y": 860,
         "wires": [
             [
@@ -9341,7 +9341,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1290,
+        "x": 1410,
         "y": 860,
         "wires": [
             [
@@ -9479,7 +9479,7 @@
         "y": 320,
         "wires": [
             [
-                "f7010be8cd5175fd"
+                "f6d05eeeeef5372b"
             ],
             [
                 "09a5c892437e5ac9"
@@ -13341,7 +13341,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
+        "x": 1060,
         "y": 860,
         "wires": [
             [
@@ -13876,7 +13876,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
+        "x": 890,
         "y": 860,
         "wires": [
             [
@@ -13895,7 +13895,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 750,
         "y": 860,
         "wires": [
             [
@@ -21646,7 +21646,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
+        "x": 490,
         "y": 860,
         "wires": [
             [
@@ -22250,6 +22250,36 @@
         "wires": [
             [
                 "8cf9a97aeb579219"
+            ]
+        ]
+    },
+    {
+        "id": "f4ecd810ed73063a",
+        "type": "change",
+        "z": "9c8ed30fb778bd08",
+        "name": "delete",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "iconNumber",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "subNumber",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [
+                "39ef3745791f7551"
             ]
         ]
     }
