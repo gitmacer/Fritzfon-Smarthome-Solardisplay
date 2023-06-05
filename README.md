@@ -45,22 +45,33 @@ Füge ein "http in" node hinzu und vergebe eine Adresse.
 [InfluxDB](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#influxdb)   
 
 # Fritz!Dect 200/210:   
-Füge unter System/FRITZ!Box-Benutzer über die Fritzbox Oberfläche ein neuen benutzer hinzu mit nur SmartHome rechten.
+Füge unter System/FRITZ!Box-Benutzer über die Fritzbox Oberfläche ein neuen benutzer hinzu mit nur SmartHome rechten.   
 Melde die Steckdose an der Fritzbox an wenn noch nicht geschehen.   
 Notiere die ain ohne leerzeichen unter Smart Home/Geräte und Gruppen/Stift oder vom Gerätegehäuse.   
 Installiere "node-red-contrib-fritzapi" über Palette wie du die image-tools installiert hast.   
 Füge ein change node hinzu und setze ain auf die notierte nummer.   
 ![Add Fritz ain change](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ac329e2b-1d08-44e3-b3a8-393acd6b034a)   
 
-Solar image:   
+### Solar image:   
 Füge ein outlet node hinzu und setze die Zugangsdaten und Action auf "get power".
 ![Add Fritz outlet](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ab8ac073-1f4a-471e-aece-e29aa4c1e0c3)   
 Füge ein change node hinzu welches msg.solar auf msg.payload setzt.   
 ![Add payload to solar](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/f40010ac-787c-4377-9d56-bd18b15d37d9)   
 Füge ein solar image node hinzu und konfiguriere ihn nach deinen Wünschen.   
-![Add solar node](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/5f0320f6-43e0-490e-befa-ea7d05fc58c4)
+![Add solar node](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/5f0320f6-43e0-490e-befa-ea7d05fc58c4)   
 
-[Verfügbare Variablen](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#eingangs-variabeln)
+### smart-home:   
+Importiere folgenden Subflow und setze die Zugangsdaten.   
+```
+[{"id":"3f152da42a676d42","type":"subflow","name":"Dect 200/210","info":"# override options\r\nmsg.ain as string","category":"","in":[{"x":60,"y":40,"wires":[{"id":"d77040f4713bfce5"}]}],"out":[{"x":1940,"y":40,"wires":[{"id":"99465cf54a644259","port":0}]}],"env":[{"name":"ain","type":"str","value":"","ui":{"type":"input","opts":{"types":["str"]}}}],"meta":{"version":"0.0.2","author":"Tim Oberle","keywords":"fritz"},"color":"#2E90DD","icon":"node-red-contrib-fritzapi/fritz.png"},{"id":"1f0a79874e2a8d70","type":"fritz-outlet","z":"3f152da42a676d42","connection":"4064abf62c97a123","name":"online","action":"getSwitchPresence","x":290,"y":40,"wires":[["853c5c722062d483"]]},{"id":"853c5c722062d483","type":"function","z":"3f152da42a676d42","name":"msg.online","func":"msg.online = msg.payload == 1\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":430,"y":40,"wires":[["a17d2148153105fe"]]},{"id":"a17d2148153105fe","type":"fritz-outlet","z":"3f152da42a676d42","connection":"4064abf62c97a123","name":"state","action":"getSwitchState","x":570,"y":40,"wires":[["016ff3e84df1a818"]]},{"id":"016ff3e84df1a818","type":"function","z":"3f152da42a676d42","name":"msg.state","func":"msg.state = msg.payload == 1\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":700,"y":40,"wires":[["268c337afbfc4e5d"]]},{"id":"268c337afbfc4e5d","type":"function","z":"3f152da42a676d42","name":"circle","func":"msg.circle = msg.state ? \"green\" : \"red\";\n\nif(msg.online == true){}\nelse{\n    delete msg.circle;\n}\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":830,"y":40,"wires":[["60fb6b3b6514189c"]]},{"id":"60fb6b3b6514189c","type":"fritz-outlet","z":"3f152da42a676d42","connection":"4064abf62c97a123","name":"power","action":"getSwitchPower","x":950,"y":40,"wires":[["a86270d47a8a3c11"]]},{"id":"a86270d47a8a3c11","type":"function","z":"3f152da42a676d42","name":"msg.power","func":"msg.power = msg.payload;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1090,"y":40,"wires":[["3a61caa56fda9e4e"]]},{"id":"3a61caa56fda9e4e","type":"fritz-outlet","z":"3f152da42a676d42","connection":"4064abf62c97a123","name":"energy","action":"getSwitchEnergy","x":1240,"y":40,"wires":[["8df7066bef1ab277"]]},{"id":"8df7066bef1ab277","type":"function","z":"3f152da42a676d42","name":"msg.energy","func":"msg.energy = msg.payload;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1390,"y":40,"wires":[["a45259d717a93231"]]},{"id":"a45259d717a93231","type":"fritz-outlet","z":"3f152da42a676d42","connection":"4064abf62c97a123","name":"temp","action":"getTemperature","x":1530,"y":40,"wires":[["d744c1e9f07ca30d"]]},{"id":"d744c1e9f07ca30d","type":"function","z":"3f152da42a676d42","name":"msg.temperature","func":"msg.temperature = msg.payload;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1690,"y":40,"wires":[["99465cf54a644259"]]},{"id":"d77040f4713bfce5","type":"function","z":"3f152da42a676d42","name":"env ain","func":"if (msg.ain === undefined){\n    msg.ain = env.get(\"ain\");\n}\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":160,"y":40,"wires":[["1f0a79874e2a8d70"]]},{"id":"99465cf54a644259","type":"change","z":"3f152da42a676d42","name":"delete","rules":[{"t":"delete","p":"iconNumber","pt":"msg"},{"t":"delete","p":"payload","pt":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":1850,"y":40,"wires":[[]]},{"id":"4064abf62c97a123","type":"fritz-api","name":"","host":"http://fritz.box","strictSSL":true}]
+```
+![smarthome fritz subflow](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/b3b1f8e0-4c25-4fe1-9a58-03130a8bfdc6)   
+Füge ein change node hinzu welches die Werte auf die richtige variable setzt. Eine Liste der variablen finden Sie weiter unten.   
+![grafik](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/481df9a3-da3a-4158-8385-05ad69ea7507)   
+Füge ein smart-home image node ein und konfiguriere ihn.
+![smarthome image](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/d3edddd9-fde1-48b4-a6c8-c6106bc4d5b8)   
+
+[Nächster Schritt: Verfügbare Variablen](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#eingangs-variabeln)
 
 # InfluxDB:
 Installiere InfluxDB nodes.   
