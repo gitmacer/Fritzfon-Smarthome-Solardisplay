@@ -15,15 +15,54 @@ Es sind viele Anleitungen zur Inbetriebnahme von Node-Red verfügbar daher wird 
 Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).   
 ![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
-Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay/releases) herunter.   
+# Solar image vs smart-home image:   
+Solar:
+- Nur Solar anzeige kann gewählt werden   
+![Solar-Power](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/9f91daf3-7c41-4d00-b749-84b94d2290a1)
+- Solar zu Haus Anzeige   
+![SolarToHouse Marked](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ee503f7c-7d6a-434d-b161-d5f1fe88661e)
+- Zu Haus und Haus berechnung
+- Kwh zu € berechnung
+
+Smart-home image:
+- Mehr und freie icon auswahl
+- Freie Zeilen möglich
+- Beschriftung/Überschrift für jede Zeile
+- 3 Zeilen pro icon wenn Wert und Einheit auf klein gesetzt ist   
+- Einheit pro Wert   
+![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
+- Bunte Kreise   
+![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
+
+Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay/releases) herunter und importiere diese (solar und/oder Smarthome image).   
 ![2  import](https://user-images.githubusercontent.com/37345589/228585979-1c44dbf8-88cb-423e-a701-2452e1fb4e81.gif)
 
 Füge ein "http in" node hinzu und vergebe eine Adresse.   
 ![3  SolarPower](https://user-images.githubusercontent.com/37345589/228586648-7bfe8aad-392e-4944-a9c8-b1b907f3c9d0.gif)
 
+# Daten Quellen:
+[Fritz Dect 200/210](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#fritzdect-200210)   
+[InfluxDB](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#influxdb)   
 
+# Fritz!Dect 200/210:   
+Füge unter System/FRITZ!Box-Benutzer über die Fritzbox Oberfläche ein neuen benutzer hinzu mit nur SmartHome rechten.
+Melde die Steckdose an der Fritzbox an wenn noch nicht geschehen.   
+Notiere die ain ohne leerzeichen unter Smart Home/Geräte und Gruppen/Stift oder vom Gerätegehäuse.   
+Installiere "node-red-contrib-fritzapi" über Palette wie du die image-tools installiert hast.   
+Füge ein change node hinzu und setze ain auf die notierte nummer.   
+![Add Fritz ain change](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ac329e2b-1d08-44e3-b3a8-393acd6b034a)   
 
-# Daten von InfluxDB:
+Solar image:   
+Füge ein outlet node hinzu und setze die Zugangsdaten und Action auf "get power".
+![Add Fritz outlet](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ab8ac073-1f4a-471e-aece-e29aa4c1e0c3)   
+Füge ein change node hinzu welches msg.solar auf msg.payload setzt.   
+![Add payload to solar](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/f40010ac-787c-4377-9d56-bd18b15d37d9)   
+Füge ein solar image node hinzu und konfiguriere ihn nach deinen Wünschen.   
+![Add solar node](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/5f0320f6-43e0-490e-befa-ea7d05fc58c4)
+
+[Verfügbare Variablen](https://github.com/gitmacer/Fritzfon-Solardisplay/tree/main#eingangs-variabeln)
+
+# InfluxDB:
 Installiere InfluxDB nodes.   
 ![4  influxdb installation](https://user-images.githubusercontent.com/37345589/228587498-278a7f3d-b5b7-4b83-9a84-1a09f5d58356.gif)
 
@@ -49,26 +88,6 @@ from(bucket: "bucket")
 Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen.   
 Influxdb 1.X: `msg.payload.0.last`   
 Influxdb 2.X: `msg.payload[0]._value`    
-
-# Solar image vs smart-home image:   
-Solar:
-- Nur Solar anzeige kann gewählt werden   
-![Solar-Power](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/9f91daf3-7c41-4d00-b749-84b94d2290a1)
-- Solar zu Haus Anzeige   
-![SolarToHouse Marked](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/ee503f7c-7d6a-434d-b161-d5f1fe88661e)
-- Zu Haus und Haus berechnung
-- Kwh zu € berechnung
-
-Smart-home image:
-- Mehr und freie icon auswahl
-- Freie Zeilen möglich
-- Beschriftung/Überschrift für jede Zeile
-- 3 Zeilen pro icon wenn Wert und Einheit auf klein gesetzt ist   
-- Einheit pro Wert   
-![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
-- Bunte Kreise   
-![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
-
 
 # Eingangs Variabeln
 Solar image:   
