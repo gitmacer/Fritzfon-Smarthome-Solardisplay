@@ -1,4 +1,4 @@
-[Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay/edit/main/README.md#anleitung)   
+[Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay#anleitung)   
 [English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay/blob/main/README.md#guide)
 
 # Donationware: a small donation is gladly received and expected. Nothing against trying out first 
