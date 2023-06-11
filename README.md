@@ -1,5 +1,5 @@
 [Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay#anleitung)   
-[English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay/blob/main/README.md#guide)
+[English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay#guide)
 
 # Donationware: a small donation is gladly received and expected. Nothing against trying out first 
 www.paypal.me/TimOberle
@@ -147,7 +147,7 @@ Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor de
 ![Screenshot 2023-03-29 180119](https://user-images.githubusercontent.com/37345589/228598469-35785386-3213-4023-b37c-20af269b8c4d.png)
 
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
-Tipp: Du kannst Live-Bilder zu den Favoriten hinzufügen für schnelleren zugriff.   
+Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schnelleren zugriff.   
 
 # Extra Funktionen:   
 - msg.circleX als String auf blue, green, grey, orange, red, white oder yellow setzen.  
