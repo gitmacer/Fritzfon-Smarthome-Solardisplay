@@ -3,12 +3,12 @@
         "id": "9c8ed30fb778bd08",
         "type": "subflow",
         "name": "Fritzfon smarthome image",
-        "info": "Show power and energy info on your fritzfone\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n#  string or number for unit conversation must be numbers   \r\n- msg.info\r\n- msg.value11\r\n- msg.value12\r\n- msg.value13   \r\n- msg.value21\r\n- msg.value22\r\n- msg.value23   \r\n- msg.value31\r\n- msg.value32\r\n- msg.value33   \r\n- msg.value41\r\n- msg.value42\r\n- msg.value43   \r\n\r\n # Following only works with numbers:\r\n #  input unit \r\n ## Override \"Input unit\" per data   \r\n msg.unitXX  \r\n example: msg.unit11 = \"kWh\"\r\n\r\n #  output unit\r\n ## Override \"out unit\" per data   \r\n msg.outUnitXX   \r\n example: msg.outUnit11 = \"kWh\"   \r\n\r\n ## Override label (as String)   \r\nmsg.labelX   \r\nexample: msg.label1 = \"TV\"\r\n\r\n ## Override headline (as String)   \r\nmsg.headlineX   \r\nexample: msg.headline2 = \"TV\"\r\n\r\n ## color circle   \r\nmsg.circleX   \r\navailable colors:   \r\nblue, green, grey, orange, red, white and yellow   \r\nexample: msg.circle1 = \"green\"   \r\n\r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode (\"\", \"Round\" or \"To fixed\" as string)   \r\nmsg.roundModeXX   \r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
+        "info": "Show power, energy and temperature on a fritzfon\r\n\r\n#  Need to be \"http in\" (Get) node originated\r\n- msg.info (string)   \r\n- msg.valueXX (number for all features or string)   \r\n(1. X=iconNumber 2. X=valueNumber)   \r\n\r\n## Override \"Input unit\" per data   \r\nmsg.unitXX (string)   \r\nexample: msg.unit11 = \"kWh\"\r\n\r\n## Override \"out unit\" per data   \r\nmsg.outUnitXX (string)   \r\nexample: msg.outUnit11 = \"kWh\"   \r\n\r\n## Override label   \r\nmsg.labelX (string)   \r\nexample: msg.label1 = \"TV\"\r\n\r\n## Override headline   \r\nmsg.headlineX (string)   \r\nexample: msg.headline2 = \"TV\"\r\n\r\n## color circle   \r\nmsg.circleX   \r\navailable colors:   \r\nblue, green, grey, orange, red, white and yellow   \r\nexample: msg.circle1 = \"green\"   \r\n\r\n## mini icons\r\nmsg.miniIconX (string)   \r\navailable icons:   \r\n\"battery\", \"batteryX\", \"batteryFlash\", \"happy\", \"sceptic\", \"sad\", \"warn\", \"signal\", \"signalNoConnection\", \"signal0\" to \"signal4\"   \r\n\r\nmsg.miniIconXPercent (number 0-100)   \r\n\"battery\", \"batteryX\", \"batteryFlash\"  or \"signal\" icon   \r\n\r\nmsg.miniIconXDBm (number -100-0)   \r\n\"signal\" icon   \r\n\r\nmsg.miniIconXColor (string)   \r\navailable colors:   \r\nred, orange, yellow, greenYellow and green   \r\n\"battery\", \"batteryX\" or \"batteryFlash\" icon   \r\n# Rounding\r\n## Round modes:\r\nRound = no unnecessary zeros.  \r\nTo fixed = add zeros to fit selected decemals.\r\n## Override round mode \r\nmsg.roundModeXX (string)   \r\n\"\", \"Round\" or \"To fixed\"\r\nexample: msg.roundMode11 = \"To fixed\"   \r\n## Override round decimals\r\nmsg.decimalsXX   \r\nexample: msg.decimals11 = 2",
         "category": "image tools",
         "in": [
             {
                 "x": 20,
-                "y": 860,
+                "y": 1280,
                 "wires": [
                     {
                         "id": "f4ecd810ed73063a"
@@ -2084,6 +2084,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh",
                                     "en-US": "Wh"
                                 },
@@ -2185,6 +2191,12 @@
                                     "en-US": "kW"
                                 },
                                 "v": "kW"
+                            },
+                            {
+                                "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
                             },
                             {
                                 "l": {
@@ -2292,6 +2304,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh",
                                     "en-US": "Wh"
                                 },
@@ -2394,6 +2412,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh"
                                 },
                                 "v": "Wh"
@@ -2490,6 +2514,12 @@
                                     "en-US": "kW"
                                 },
                                 "v": "kW"
+                            },
+                            {
+                                "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
                             },
                             {
                                 "l": {
@@ -2598,6 +2628,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh",
                                     "en-US": "Wh"
                                 },
@@ -2700,6 +2736,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh"
                                 },
                                 "v": "Wh"
@@ -2796,6 +2838,12 @@
                                     "en-US": "kW"
                                 },
                                 "v": "kW"
+                            },
+                            {
+                                "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
                             },
                             {
                                 "l": {
@@ -2904,6 +2952,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh",
                                     "en-US": "Wh"
                                 },
@@ -3006,6 +3060,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh"
                                 },
                                 "v": "Wh"
@@ -3102,6 +3162,12 @@
                                     "en-US": "kW"
                                 },
                                 "v": "kW"
+                            },
+                            {
+                                "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
                             },
                             {
                                 "l": {
@@ -3210,6 +3276,12 @@
                             },
                             {
                                 "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
+                            },
+                            {
+                                "l": {
                                     "de": "Wh",
                                     "en-US": "Wh"
                                 },
@@ -3309,6 +3381,12 @@
                                     "de": "kW"
                                 },
                                 "v": "kW"
+                            },
+                            {
+                                "l": {
+                                    "de": "Wmin"
+                                },
+                                "v": "Wmin"
                             },
                             {
                                 "l": {
@@ -4331,7 +4409,7 @@
             }
         ],
         "meta": {
-            "version": "0.1.2",
+            "version": "0.2.0",
             "author": "Tim Oberle",
             "desc": "Show power and energy information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -4347,7 +4425,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 4320,
-        "y": 360,
+        "y": 780,
         "wires": [
             [
                 "ffed084d7942ed0a"
@@ -4359,7 +4437,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 4260,
-        "y": 1900,
+        "y": 2320,
         "wires": [
             [
                 "d9388c428e44fa2d"
@@ -4371,7 +4449,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 4260,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "64bb3d6ac4cf2f52"
@@ -4383,7 +4461,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 3960,
-        "y": 800,
+        "y": 1220,
         "wires": [
             [
                 "2353ac6241f06900"
@@ -4394,8 +4472,8 @@
         "id": "23b16d0948c9de96",
         "type": "junction",
         "z": "9c8ed30fb778bd08",
-        "x": 3960,
-        "y": 160,
+        "x": 3980,
+        "y": 600,
         "wires": [
             [
                 "80eec1ba521fc179"
@@ -4407,7 +4485,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 4260,
-        "y": 980,
+        "y": 1400,
         "wires": [
             [
                 "64bb3d6ac4cf2f52"
@@ -4419,7 +4497,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 3900,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "2e5538b8f26a51b9"
@@ -4431,7 +4509,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 3600,
-        "y": 2280,
+        "y": 2700,
         "wires": [
             [
                 "3144406fbfcbfc3e"
@@ -4443,7 +4521,7 @@
         "type": "junction",
         "z": "9c8ed30fb778bd08",
         "x": 3900,
-        "y": 2460,
+        "y": 2880,
         "wires": [
             [
                 "2e5538b8f26a51b9"
@@ -4451,47 +4529,15 @@
         ]
     },
     {
-        "id": "5b562b6edd51ef8c",
-        "type": "inject",
+        "id": "4dcbef64d7b186e4",
+        "type": "junction",
         "z": "9c8ed30fb778bd08",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "0",
-        "topic": "",
-        "x": 90,
-        "y": 20,
+        "x": 4500,
+        "y": 640,
         "wires": [
             [
-                "fa43cc9bf32318e1"
+                "f6d05eeeeef5372b"
             ]
-        ]
-    },
-    {
-        "id": "fa43cc9bf32318e1",
-        "type": "change",
-        "z": "9c8ed30fb778bd08",
-        "name": "Load images",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Solardisplay.Blank",
-                "pt": "flow",
-                "to": "iVBORw0KGgoAAAANSUhEUgAAANIAAADmBAMAAABSXMbKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURf///6fEG8gAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAvSURBVHja7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4qgFfPAABcWsZnQAAAABJRU5ErkJggg==",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 230,
-        "y": 20,
-        "wires": [
-            []
         ]
     },
     {
@@ -4506,7 +4552,7 @@
         "onceDelay": "0",
         "topic": "",
         "x": 90,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "f026475fae4fcd5b"
@@ -4652,7 +4698,7 @@
         "to": "",
         "reg": false,
         "x": 3280,
-        "y": 60,
+        "y": 20,
         "wires": [
             []
         ]
@@ -4692,7 +4738,7 @@
             "parameters": []
         },
         "x": 1330,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "8f4cef2cc893ae26"
@@ -4734,7 +4780,7 @@
             "parameters": []
         },
         "x": 1490,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "89cebfbb03c87f74"
@@ -4776,7 +4822,7 @@
             "parameters": []
         },
         "x": 2110,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "3c17b203d4dd1cf4"
@@ -4818,7 +4864,7 @@
             "parameters": []
         },
         "x": 1650,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "3bb6d429555f3562"
@@ -4860,7 +4906,7 @@
             "parameters": []
         },
         "x": 2370,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "71e4c4604f85216f"
@@ -4902,7 +4948,7 @@
             "parameters": []
         },
         "x": 2490,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "853ce89ef74b189a"
@@ -4944,7 +4990,7 @@
             "parameters": []
         },
         "x": 1810,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "258c2104141c93d2"
@@ -4986,7 +5032,7 @@
             "parameters": []
         },
         "x": 1960,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "7537e2cc73ebf40b"
@@ -5005,7 +5051,7 @@
         "onceDelay": "0",
         "topic": "",
         "x": 90,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "7e44c784e98ca3ea"
@@ -5047,7 +5093,7 @@
             "parameters": []
         },
         "x": 830,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "07f58ef4c430e906"
@@ -5089,7 +5135,7 @@
             "parameters": []
         },
         "x": 1000,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "e6ba011ec1d61ee4"
@@ -5131,7 +5177,7 @@
             "parameters": []
         },
         "x": 1330,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "7b663fa526723f90"
@@ -5173,7 +5219,7 @@
             "parameters": []
         },
         "x": 1490,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "84dadc85daee94de"
@@ -5215,7 +5261,7 @@
             "parameters": []
         },
         "x": 1650,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "cd1cc693cad3dcba"
@@ -5257,7 +5303,7 @@
             "parameters": []
         },
         "x": 1810,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "a7821cf91cf04b71"
@@ -5299,7 +5345,7 @@
             "parameters": []
         },
         "x": 1960,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "2aa0422bf76d871f"
@@ -5341,7 +5387,7 @@
             "parameters": []
         },
         "x": 2110,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "c3830dfd4d594832"
@@ -5466,7 +5512,7 @@
         "to": "",
         "reg": false,
         "x": 2920,
-        "y": 100,
+        "y": 60,
         "wires": [
             []
         ]
@@ -5506,7 +5552,7 @@
             "parameters": []
         },
         "x": 2250,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "b83ea153b1f41f37"
@@ -5548,7 +5594,7 @@
             "parameters": []
         },
         "x": 650,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "874d15f8775195fc"
@@ -5590,7 +5636,7 @@
             "parameters": []
         },
         "x": 1170,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "1fc24e7506f5c62c"
@@ -5632,7 +5678,7 @@
             "parameters": []
         },
         "x": 2270,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "3b7fbaeed127a732"
@@ -5644,8 +5690,8 @@
         "type": "jimp-image",
         "z": "9c8ed30fb778bd08",
         "name": "Blank",
-        "data": "Solardisplay.Blank",
-        "dataType": "flow",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAANIAAADmBAMAAABSXMbKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURf///6fEG8gAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAvSURBVHja7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4qgFfPAABcWsZnQAAAABJRU5ErkJggg==",
+        "dataType": "str",
         "ret": "img",
         "parameter1": "",
         "parameter1Type": "msg",
@@ -5674,7 +5720,7 @@
             "parameters": []
         },
         "x": 230,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "57626b9c14b42dbc"
@@ -5763,8 +5809,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 14,
-        "x": 1510,
-        "y": 1780,
+        "x": 850,
+        "y": 2200,
         "wires": [
             [
                 "97104b378191e09e"
@@ -5821,8 +5867,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
-        "y": 1780,
+        "x": 290,
+        "y": 2200,
         "wires": [
             [
                 "1a61ee95063b3a91"
@@ -5911,8 +5957,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 1720,
+        "x": 1050,
+        "y": 2140,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -5998,8 +6044,8 @@
                 }
             ]
         },
-        "x": 1730,
-        "y": 1800,
+        "x": 1070,
+        "y": 2220,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -6017,8 +6063,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1970,
-        "y": 1780,
+        "x": 1310,
+        "y": 2200,
         "wires": [
             [
                 "ad98a78ca2f62e40"
@@ -6115,8 +6161,8 @@
                 }
             ]
         },
-        "x": 2110,
-        "y": 1780,
+        "x": 1450,
+        "y": 2200,
         "wires": [
             [
                 "deb14670a3a3b505"
@@ -6209,8 +6255,8 @@
                 }
             ]
         },
-        "x": 2250,
-        "y": 1780,
+        "x": 1590,
+        "y": 2200,
         "wires": [
             [
                 "ad98a78ca2f62e40"
@@ -6303,8 +6349,8 @@
                 }
             ]
         },
-        "x": 2230,
-        "y": 1820,
+        "x": 1570,
+        "y": 2240,
         "wires": [
             [
                 "ad98a78ca2f62e40"
@@ -6390,8 +6436,8 @@
                 }
             ]
         },
-        "x": 2100,
-        "y": 1820,
+        "x": 1440,
+        "y": 2240,
         "wires": [
             [
                 "4fefe11ff07f92b7"
@@ -6421,7 +6467,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3580,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "0886b754267033d6"
@@ -6497,7 +6543,7 @@
         "repair": false,
         "outputs": 11,
         "x": 3730,
-        "y": 1900,
+        "y": 2320,
         "wires": [
             [
                 "4d8fd473c210c1b6"
@@ -6560,7 +6606,7 @@
         "repair": false,
         "outputs": 3,
         "x": 3730,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "db3d32f53414346f"
@@ -6585,7 +6631,7 @@
         "finalize": "",
         "libs": [],
         "x": 3860,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "4d8fd473c210c1b6"
@@ -6682,7 +6728,7 @@
             ]
         },
         "x": 3860,
-        "y": 1720,
+        "y": 2140,
         "wires": [
             [
                 "b353aed04fd64894"
@@ -6769,7 +6815,7 @@
             ]
         },
         "x": 3980,
-        "y": 1720,
+        "y": 2140,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -6863,7 +6909,7 @@
             ]
         },
         "x": 3990,
-        "y": 1800,
+        "y": 2220,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -6957,7 +7003,7 @@
             ]
         },
         "x": 3900,
-        "y": 1840,
+        "y": 2260,
         "wires": [
             [
                 "f0fd118e38072ae3"
@@ -7051,7 +7097,7 @@
             ]
         },
         "x": 4020,
-        "y": 1840,
+        "y": 2260,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -7145,7 +7191,7 @@
             ]
         },
         "x": 3900,
-        "y": 1880,
+        "y": 2300,
         "wires": [
             [
                 "e9a0b67dc6360f5e"
@@ -7239,7 +7285,7 @@
             ]
         },
         "x": 4030,
-        "y": 1880,
+        "y": 2300,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -7333,7 +7379,7 @@
             ]
         },
         "x": 3900,
-        "y": 1920,
+        "y": 2340,
         "wires": [
             [
                 "62f6af4ef75f97f7"
@@ -7427,7 +7473,7 @@
             ]
         },
         "x": 4030,
-        "y": 1920,
+        "y": 2340,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -7521,7 +7567,7 @@
             ]
         },
         "x": 3900,
-        "y": 1960,
+        "y": 2380,
         "wires": [
             [
                 "1f4bffab20faae0d"
@@ -7615,7 +7661,7 @@
             ]
         },
         "x": 4030,
-        "y": 1960,
+        "y": 2380,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -7709,7 +7755,7 @@
             ]
         },
         "x": 3900,
-        "y": 2000,
+        "y": 2420,
         "wires": [
             [
                 "8e12ea91f09c9b35"
@@ -7796,7 +7842,7 @@
             ]
         },
         "x": 4020,
-        "y": 2000,
+        "y": 2420,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -7815,7 +7861,7 @@
         "finalize": "",
         "libs": [],
         "x": 3850,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "db3d32f53414346f"
@@ -7912,7 +7958,7 @@
             ]
         },
         "x": 3890,
-        "y": 2040,
+        "y": 2460,
         "wires": [
             [
                 "522f0ed14cc22fd7"
@@ -7999,7 +8045,7 @@
             ]
         },
         "x": 4130,
-        "y": 2040,
+        "y": 2460,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -8093,7 +8139,7 @@
             ]
         },
         "x": 4010,
-        "y": 2040,
+        "y": 2460,
         "wires": [
             [
                 "07d1efdccd099980"
@@ -8105,14 +8151,14 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "y 1.",
-        "func": "var spacing = 52;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar headlineBaseY = 13;\n\nvar circleBaseY = 56;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\nvar heatPumpIconBaseY = 33;\nvar solarIconBaseY = 30;\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
+        "func": "var spacing = 52;\n\nvar labelBaseY = 56;\nvar labelTextBaseY = 54;\n\nvar headlineBaseY = 13;\n\nvar circleBaseY = 56;\nvar miniIconBaseY = 28;\n\nvar defaultIconBaseY = 28; //For 40x40 icons\nvar heatPumpIconBaseY = 33;\nvar solarIconBaseY = 30;\n\nvar fromIconBaseY = 28;\nvar toIconBaseY = 53;\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yMiniIcon = miniIconBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
-        "y": 1780,
+        "x": 430,
+        "y": 2200,
         "wires": [
             [
                 "572a8ee6afcc489a"
@@ -8131,7 +8177,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "97c70253fbd8ded1"
@@ -8217,8 +8263,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 1760,
+        "x": 1050,
+        "y": 2180,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -8237,7 +8283,7 @@
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "69bb69d7f3b21d53"
@@ -8256,7 +8302,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "8a80e1a6e47395da"
@@ -8342,8 +8388,8 @@
                 }
             ]
         },
-        "x": 1720,
-        "y": 1840,
+        "x": 1060,
+        "y": 2260,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -8437,7 +8483,7 @@
             ]
         },
         "x": 3890,
-        "y": 2080,
+        "y": 2500,
         "wires": [
             [
                 "1c2e8ca10f921cfc"
@@ -8531,7 +8577,7 @@
             ]
         },
         "x": 4010,
-        "y": 2080,
+        "y": 2500,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -8617,8 +8663,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 1880,
+        "x": 1050,
+        "y": 2300,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -8704,8 +8750,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 1920,
+        "x": 1050,
+        "y": 2340,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -8791,8 +8837,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 1960,
+        "x": 1050,
+        "y": 2380,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -8878,8 +8924,8 @@
                 }
             ]
         },
-        "x": 1720,
-        "y": 2040,
+        "x": 1060,
+        "y": 2460,
         "wires": [
             [
                 "bb12648298e86b26"
@@ -8965,8 +9011,8 @@
                 }
             ]
         },
-        "x": 1890,
-        "y": 2040,
+        "x": 1230,
+        "y": 2460,
         "wires": [
             [
                 "8b24f03a3efdb918"
@@ -9052,8 +9098,8 @@
                 }
             ]
         },
-        "x": 2040,
-        "y": 2040,
+        "x": 1380,
+        "y": 2460,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -9139,8 +9185,8 @@
                 }
             ]
         },
-        "x": 1710,
-        "y": 2080,
+        "x": 1050,
+        "y": 2500,
         "wires": [
             [
                 "445a4243cc3fec84"
@@ -9226,8 +9272,8 @@
                 }
             ]
         },
-        "x": 1890,
-        "y": 2080,
+        "x": 1230,
+        "y": 2500,
         "wires": [
             [
                 "4796c2b7ed99774a"
@@ -9313,8 +9359,8 @@
                 }
             ]
         },
-        "x": 2040,
-        "y": 2080,
+        "x": 1380,
+        "y": 2500,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -9342,7 +9388,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1410,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "f7010be8cd5175fd"
@@ -9363,8 +9409,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 320,
+        "x": 310,
+        "y": 740,
         "wires": [
             [
                 "514aceef68378d63"
@@ -9379,14 +9425,14 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "y 1.",
-        "func": "var spacing = 70;\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar headlineBaseY = 11;\n\nvar circleBaseY = 71;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
+        "func": "var spacing = 70;\n\nvar labelBaseY = 72;\nvar labelTextBaseY = 70;\n\nvar headlineBaseY = 11;\n\nvar circleBaseY = 71;\nvar miniIconBaseY = 26;\n\nvar heatPumpIconBaseY = 32;\nvar solarIconBaseY = 29;\n\nvar defaultIconBaseY = 26; //For 58x58 icons\n\nvar fromIconBaseY = 30; //27 == even\nvar toIconBaseY = 60; //63 == even\n\nmsg.icon = env.get(msg.iconNumber.toString() + \". icon\");\nif (msg.icon == \"HeatPump\") {\n    msg.yIcon = heatPumpIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse if (msg.icon == \"Solar\") {\n    msg.yIcon = solarIconBaseY + (spacing * (msg.iconNumber - 1));\n}\nelse{\n    msg.yIcon = defaultIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yFromIcon = fromIconBaseY + (spacing * (msg.iconNumber - 1));\n    msg.yToIcon = toIconBaseY + (spacing * (msg.iconNumber - 1));\n}\n\nmsg.yLabel = labelBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yLabelText = labelTextBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yHeadline = headlineBaseY + (spacing * (msg.iconNumber - 1));\n\nmsg.yCircle = circleBaseY + (spacing * (msg.iconNumber - 1));\nmsg.yMiniIcon = miniIconBaseY + (spacing * (msg.iconNumber - 1));\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 320,
+        "x": 450,
+        "y": 740,
         "wires": [
             [
                 "13dd14da2b66fbf2"
@@ -9475,11 +9521,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 14,
-        "x": 1430,
-        "y": 320,
+        "x": 870,
+        "y": 740,
         "wires": [
             [
-                "f6d05eeeeef5372b"
+                "4dcbef64d7b186e4"
             ],
             [
                 "09a5c892437e5ac9"
@@ -9533,8 +9579,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2010,
-        "y": 320,
+        "x": 1450,
+        "y": 740,
         "wires": [
             [
                 "ec887324bfc26401"
@@ -9635,8 +9681,8 @@
                 }
             ]
         },
-        "x": 2170,
-        "y": 320,
+        "x": 1610,
+        "y": 740,
         "wires": [
             [
                 "8a71bbb8b5bf4bcc"
@@ -9729,8 +9775,8 @@
                 }
             ]
         },
-        "x": 2310,
-        "y": 320,
+        "x": 1750,
+        "y": 740,
         "wires": [
             [
                 "ec887324bfc26401"
@@ -9823,8 +9869,8 @@
                 }
             ]
         },
-        "x": 2290,
-        "y": 360,
+        "x": 1730,
+        "y": 780,
         "wires": [
             [
                 "ec887324bfc26401"
@@ -9910,8 +9956,8 @@
                 }
             ]
         },
-        "x": 2160,
-        "y": 360,
+        "x": 1600,
+        "y": 780,
         "wires": [
             [
                 "cbd95765adf86614"
@@ -9941,7 +9987,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3700,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "021613b4f789af31"
@@ -10017,7 +10063,7 @@
         "repair": false,
         "outputs": 11,
         "x": 3850,
-        "y": 440,
+        "y": 860,
         "wires": [
             [
                 "abdf55e49348949a"
@@ -10080,7 +10126,7 @@
         "repair": false,
         "outputs": 3,
         "x": 3850,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "727d603262328055"
@@ -10105,7 +10151,7 @@
         "finalize": "",
         "libs": [],
         "x": 3980,
-        "y": 340,
+        "y": 760,
         "wires": [
             [
                 "abdf55e49348949a"
@@ -10202,7 +10248,7 @@
             ]
         },
         "x": 3980,
-        "y": 260,
+        "y": 680,
         "wires": [
             [
                 "a539fd382552b596"
@@ -10289,7 +10335,7 @@
             ]
         },
         "x": 4100,
-        "y": 260,
+        "y": 680,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -10383,7 +10429,7 @@
             ]
         },
         "x": 4110,
-        "y": 340,
+        "y": 760,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -10477,7 +10523,7 @@
             ]
         },
         "x": 4020,
-        "y": 380,
+        "y": 800,
         "wires": [
             [
                 "1d1377ebc516474c"
@@ -10571,7 +10617,7 @@
             ]
         },
         "x": 4140,
-        "y": 380,
+        "y": 800,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -10665,7 +10711,7 @@
             ]
         },
         "x": 4020,
-        "y": 420,
+        "y": 840,
         "wires": [
             [
                 "0c76131b1a3d0ddd"
@@ -10759,7 +10805,7 @@
             ]
         },
         "x": 4140,
-        "y": 420,
+        "y": 840,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -10853,7 +10899,7 @@
             ]
         },
         "x": 4020,
-        "y": 460,
+        "y": 880,
         "wires": [
             [
                 "8aeebbfdb50d2302"
@@ -10947,7 +10993,7 @@
             ]
         },
         "x": 4140,
-        "y": 460,
+        "y": 880,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -11041,7 +11087,7 @@
             ]
         },
         "x": 4020,
-        "y": 500,
+        "y": 920,
         "wires": [
             [
                 "b0780d66ed9deb20"
@@ -11135,7 +11181,7 @@
             ]
         },
         "x": 4140,
-        "y": 500,
+        "y": 920,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -11229,7 +11275,7 @@
             ]
         },
         "x": 4020,
-        "y": 540,
+        "y": 960,
         "wires": [
             [
                 "f6d0a2d4867fc5ac"
@@ -11316,7 +11362,7 @@
             ]
         },
         "x": 4140,
-        "y": 540,
+        "y": 960,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -11335,7 +11381,7 @@
         "finalize": "",
         "libs": [],
         "x": 3970,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "727d603262328055"
@@ -11432,7 +11478,7 @@
             ]
         },
         "x": 4010,
-        "y": 580,
+        "y": 1000,
         "wires": [
             [
                 "fec74a118b439883"
@@ -11519,7 +11565,7 @@
             ]
         },
         "x": 4250,
-        "y": 580,
+        "y": 1000,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -11613,7 +11659,7 @@
             ]
         },
         "x": 4130,
-        "y": 580,
+        "y": 1000,
         "wires": [
             [
                 "e8c8026beaf1e670"
@@ -11707,7 +11753,7 @@
             ]
         },
         "x": 4010,
-        "y": 620,
+        "y": 1040,
         "wires": [
             [
                 "b865d94d2c981602"
@@ -11801,7 +11847,7 @@
             ]
         },
         "x": 4130,
-        "y": 620,
+        "y": 1040,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -11843,7 +11889,7 @@
             "parameters": []
         },
         "x": 650,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "0dc790a89c222322"
@@ -11885,7 +11931,7 @@
             "parameters": []
         },
         "x": 830,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "f948f568c4a4f19e"
@@ -11927,7 +11973,7 @@
             "parameters": []
         },
         "x": 1000,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "b4a4da1bad90c392"
@@ -11969,7 +12015,7 @@
             "parameters": []
         },
         "x": 1170,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "9926464c509b7874"
@@ -12055,8 +12101,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 380,
+        "x": 1090,
+        "y": 800,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12098,7 +12144,7 @@
             "parameters": []
         },
         "x": 2630,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "895ea225b3c556f4"
@@ -12184,8 +12230,8 @@
                 }
             ]
         },
-        "x": 2160,
-        "y": 400,
+        "x": 1600,
+        "y": 820,
         "wires": [
             [
                 "3ba8119c995ea792"
@@ -12278,8 +12324,8 @@
                 }
             ]
         },
-        "x": 2290,
-        "y": 400,
+        "x": 1730,
+        "y": 820,
         "wires": [
             [
                 "ec887324bfc26401"
@@ -12365,8 +12411,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 220,
+        "x": 1090,
+        "y": 640,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12452,8 +12498,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 260,
+        "x": 1090,
+        "y": 680,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12539,8 +12585,8 @@
                 }
             ]
         },
-        "x": 1670,
-        "y": 300,
+        "x": 1110,
+        "y": 720,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12626,8 +12672,8 @@
                 }
             ]
         },
-        "x": 1660,
-        "y": 340,
+        "x": 1100,
+        "y": 760,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12713,8 +12759,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 420,
+        "x": 1090,
+        "y": 840,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12800,8 +12846,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 460,
+        "x": 1090,
+        "y": 880,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -12887,8 +12933,8 @@
                 }
             ]
         },
-        "x": 1660,
-        "y": 540,
+        "x": 1100,
+        "y": 960,
         "wires": [
             [
                 "c37bbc330cb48c88"
@@ -12974,8 +13020,8 @@
                 }
             ]
         },
-        "x": 1830,
-        "y": 540,
+        "x": 1270,
+        "y": 960,
         "wires": [
             [
                 "211d19bfc41606a0"
@@ -13061,8 +13107,8 @@
                 }
             ]
         },
-        "x": 1980,
-        "y": 540,
+        "x": 1420,
+        "y": 960,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -13148,8 +13194,8 @@
                 }
             ]
         },
-        "x": 1650,
-        "y": 580,
+        "x": 1090,
+        "y": 1000,
         "wires": [
             [
                 "51da4c98ab0297ff"
@@ -13235,8 +13281,8 @@
                 }
             ]
         },
-        "x": 1830,
-        "y": 580,
+        "x": 1270,
+        "y": 1000,
         "wires": [
             [
                 "666f03b88ac5acaa"
@@ -13322,8 +13368,8 @@
                 }
             ]
         },
-        "x": 1980,
-        "y": 580,
+        "x": 1420,
+        "y": 1000,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -13342,7 +13388,7 @@
         "finalize": "",
         "libs": [],
         "x": 1060,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "d374a59e8a6c2f75"
@@ -13384,7 +13430,7 @@
             "parameters": []
         },
         "x": 2830,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "0e0810520f365eb4"
@@ -13470,8 +13516,8 @@
                 }
             ]
         },
-        "x": 1690,
-        "y": 620,
+        "x": 1130,
+        "y": 1040,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -13513,7 +13559,7 @@
             "parameters": []
         },
         "x": 2470,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "caf2617c52b8c040"
@@ -13599,8 +13645,8 @@
                 }
             ]
         },
-        "x": 1750,
-        "y": 2120,
+        "x": 1090,
+        "y": 2540,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -13642,7 +13688,7 @@
             "parameters": []
         },
         "x": 3070,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "84e7bd0eb5e4ee56"
@@ -13728,8 +13774,8 @@
                 }
             ]
         },
-        "x": 1690,
-        "y": 660,
+        "x": 1130,
+        "y": 1080,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -13771,7 +13817,7 @@
             "parameters": []
         },
         "x": 2710,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "08a7bb81422f3d05"
@@ -13857,8 +13903,8 @@
                 }
             ]
         },
-        "x": 1750,
-        "y": 2160,
+        "x": 1090,
+        "y": 2580,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -13870,14 +13916,14 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "unit convert",
-        "func": "if (Number.isFinite(msg.value11)) {\n    var valueBefore = msg.value11;\n    var converted = unitConvert(msg.value11, msg.unit11, msg.outUnit11);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value11 = converted;\n        msg.unit11 = msg.outUnit11;\n    }\n}\nif (Number.isFinite(msg.value12)) {\n    var valueBefore = msg.value12;\n    var converted = unitConvert(msg.value12, msg.unit12, msg.outUnit12);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value12 = converted;\n        msg.unit12 = msg.outUnit12;\n    }\n}\nif (Number.isFinite(msg.value13)) {\n    var valueBefore = msg.value13;\n    var converted = unitConvert(msg.value13, msg.unit13, msg.outUnit13);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value13 = converted;\n        msg.unit13 = msg.outUnit13;\n    }\n}\n\nif (Number.isFinite(msg.value21)) {\n    var valueBefore = msg.value21;\n    var converted = unitConvert(msg.value21, msg.unit21, msg.outUnit21);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value21 = converted;\n        msg.unit21 = msg.outUnit21;\n    }\n}\nif (Number.isFinite(msg.value22)) {\n    var valueBefore = msg.value22;\n    var converted = unitConvert(msg.value22, msg.unit22, msg.outUnit22);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value22 = converted;\n        msg.unit22 = msg.outUnit22;\n    }\n}\nif (Number.isFinite(msg.value23)) {\n    var valueBefore = msg.value23;\n    var converted = unitConvert(msg.value23, msg.unit23, msg.outUnit23);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value23 = converted;\n        msg.unit23 = msg.outUnit23;\n    }\n}\n\nif (Number.isFinite(msg.value31)) {\n    var valueBefore = msg.value31;\n    var converted = unitConvert(msg.value31, msg.unit31, msg.outUnit31);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value31 = converted;\n        msg.unit31 = msg.outUnit31;\n    }\n}\nif (Number.isFinite(msg.value32)) {\n    var valueBefore = msg.value32;\n    var converted = unitConvert(msg.value32, msg.unit32, msg.outUnit32);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value32 = converted;\n        msg.unit32 = msg.outUnit32;\n    }\n}\nif (Number.isFinite(msg.value33)) {\n    var valueBefore = msg.value33;\n    var converted = unitConvert(msg.value33, msg.unit33, msg.outUnit33);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value33 = converted;\n        msg.unit33 = msg.outUnit33;\n    }\n}\n\nif (Number.isFinite(msg.value41)) {\n    var valueBefore = msg.value41;\n    var converted = unitConvert(msg.value41, msg.unit41, msg.outUnit41);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value41 = converted;\n        msg.unit41 = msg.outUnit41;\n    }\n}\nif (Number.isFinite(msg.value42)) {\n    var valueBefore = msg.value42;\n    var converted = unitConvert(msg.value42, msg.unit42, msg.outUnit42);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value42 = converted;\n        msg.unit42 = msg.outUnit42;\n    }\n}\nif (Number.isFinite(msg.value43)) {\n    var valueBefore = msg.value43;\n    var converted = unitConvert(msg.value43, msg.unit43, msg.outUnit43);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value43 = converted;\n        msg.unit43 = msg.outUnit43;\n    }\n}\n\nreturn msg;\n\nfunction unitConvert(num, inputUnit, outputUnit) {\n    if (inputUnit == outputUnit) { return num; }\n    \n    else if (inputUnit == \"0-1%\") {\n        if (outputUnit == \"%\") { return num * 100; }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"W\") {\n        if (outputUnit == \"kW\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"kW\") {\n        if (outputUnit == \"W\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"Wh\") {\n        if (outputUnit == \"kWh\") { return powerOfTen(num, -3); }\n        else if (outputUnit == \"MWh\") { return powerOfTen(num, -6); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"kWh\") {\n        if (outputUnit == \"Wh\") { return powerOfTen(num, 3); }\n        else if (outputUnit == \"MWh\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"MWh\") {\n        if (outputUnit == \"Wh\") { return powerOfTen(num, 6); }\n        else if (outputUnit == \"kWh\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"€\") {\n        if (outputUnit == \"T€\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"T€\") {\n        if (outputUnit == \"€\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"°C\") {\n        if (outputUnit == \"°F\") { return num * 1.8 + 32 }\n        else if (outputUnit == \"K\") { return num + 273.15 }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"°F\") {\n        if (outputUnit == \"°C\") { return (num - 32) * 5/9 }\n        else if (outputUnit == \"K\") { return (num - 32) * 5/9 + 273.15}\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"K\") {\n        if (outputUnit == \"°C\") { return num - 273.15 }\n        else if (outputUnit == \"°F\") { return (num - 32) * 5/9 }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n}\n\nfunction powerOfTen(num, po10) {\n    return +(num + \"e\" + po10);\n}",
+        "func": "if (Number.isFinite(msg.value11)) {\n    var valueBefore = msg.value11;\n    var converted = unitConvert(msg.value11, msg.unit11, msg.outUnit11);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value11 = converted;\n        msg.unit11 = msg.outUnit11;\n    }\n}\nif (Number.isFinite(msg.value12)) {\n    var valueBefore = msg.value12;\n    var converted = unitConvert(msg.value12, msg.unit12, msg.outUnit12);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value12 = converted;\n        msg.unit12 = msg.outUnit12;\n    }\n}\nif (Number.isFinite(msg.value13)) {\n    var valueBefore = msg.value13;\n    var converted = unitConvert(msg.value13, msg.unit13, msg.outUnit13);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value13 = converted;\n        msg.unit13 = msg.outUnit13;\n    }\n}\n\nif (Number.isFinite(msg.value21)) {\n    var valueBefore = msg.value21;\n    var converted = unitConvert(msg.value21, msg.unit21, msg.outUnit21);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value21 = converted;\n        msg.unit21 = msg.outUnit21;\n    }\n}\nif (Number.isFinite(msg.value22)) {\n    var valueBefore = msg.value22;\n    var converted = unitConvert(msg.value22, msg.unit22, msg.outUnit22);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value22 = converted;\n        msg.unit22 = msg.outUnit22;\n    }\n}\nif (Number.isFinite(msg.value23)) {\n    var valueBefore = msg.value23;\n    var converted = unitConvert(msg.value23, msg.unit23, msg.outUnit23);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value23 = converted;\n        msg.unit23 = msg.outUnit23;\n    }\n}\n\nif (Number.isFinite(msg.value31)) {\n    var valueBefore = msg.value31;\n    var converted = unitConvert(msg.value31, msg.unit31, msg.outUnit31);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value31 = converted;\n        msg.unit31 = msg.outUnit31;\n    }\n}\nif (Number.isFinite(msg.value32)) {\n    var valueBefore = msg.value32;\n    var converted = unitConvert(msg.value32, msg.unit32, msg.outUnit32);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value32 = converted;\n        msg.unit32 = msg.outUnit32;\n    }\n}\nif (Number.isFinite(msg.value33)) {\n    var valueBefore = msg.value33;\n    var converted = unitConvert(msg.value33, msg.unit33, msg.outUnit33);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value33 = converted;\n        msg.unit33 = msg.outUnit33;\n    }\n}\n\nif (Number.isFinite(msg.value41)) {\n    var valueBefore = msg.value41;\n    var converted = unitConvert(msg.value41, msg.unit41, msg.outUnit41);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value41 = converted;\n        msg.unit41 = msg.outUnit41;\n    }\n}\nif (Number.isFinite(msg.value42)) {\n    var valueBefore = msg.value42;\n    var converted = unitConvert(msg.value42, msg.unit42, msg.outUnit42);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value42 = converted;\n        msg.unit42 = msg.outUnit42;\n    }\n}\nif (Number.isFinite(msg.value43)) {\n    var valueBefore = msg.value43;\n    var converted = unitConvert(msg.value43, msg.unit43, msg.outUnit43);\n\n    if (converted != valueBefore && converted !== undefined) {\n        msg.value43 = converted;\n        msg.unit43 = msg.outUnit43;\n    }\n}\n\nreturn msg;\n\nfunction unitConvert(num, inputUnit, outputUnit) {\n    if (inputUnit == outputUnit) { return num; }\n    \n    else if (inputUnit == \"0-1%\") {\n        if (outputUnit == \"%\") { return num * 100; }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"W\") {\n        if (outputUnit == \"kW\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"kW\") {\n        if (outputUnit == \"W\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"Wmin\") {\n        num /= 60;\n        if (outputUnit == \"Wh\") { num; }\n        else if (outputUnit == \"kWh\") { return powerOfTen(num, -3); }\n        else if (outputUnit == \"MWh\") { return powerOfTen(num, -6); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"Wh\") {\n        if (outputUnit == \"kWh\") { return powerOfTen(num, -3); }\n        else if (outputUnit == \"MWh\") { return powerOfTen(num, -6); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"kWh\") {\n        if (outputUnit == \"Wh\") { return powerOfTen(num, 3); }\n        else if (outputUnit == \"MWh\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"MWh\") {\n        if (outputUnit == \"Wh\") { return powerOfTen(num, 6); }\n        else if (outputUnit == \"kWh\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"€\") {\n        if (outputUnit == \"T€\") { return powerOfTen(num, -3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"T€\") {\n        if (outputUnit == \"€\") { return powerOfTen(num, 3); }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n\n    else if (inputUnit == \"°C\") {\n        if (outputUnit == \"°F\") { return num * 1.8 + 32 }\n        else if (outputUnit == \"K\") { return num + 273.15 }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"°F\") {\n        if (outputUnit == \"°C\") { return (num - 32) * 5/9 }\n        else if (outputUnit == \"K\") { return (num - 32) * 5/9 + 273.15}\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n    else if (inputUnit == \"K\") {\n        if (outputUnit == \"°C\") { return num - 273.15 }\n        else if (outputUnit == \"°F\") { return (num - 32) * 5/9 }\n        else { node.error(\"can't convert \" + inputUnit + \" to \" + outputUnit); }\n    }\n}\n\nfunction powerOfTen(num, po10) {\n    return +(num + \"e\" + po10);\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "fee83ea36dde3c43"
@@ -13896,7 +13942,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "c76ae7901c418b73"
@@ -13938,7 +13984,7 @@
             "parameters": []
         },
         "x": 460,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "edbc3a4abfddfec4"
@@ -13980,7 +14026,7 @@
             "parameters": []
         },
         "x": 460,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "bb91676d5212cd13"
@@ -14066,8 +14112,8 @@
                 }
             ]
         },
-        "x": 1660,
-        "y": 180,
+        "x": 1100,
+        "y": 600,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -14153,8 +14199,8 @@
                 }
             ]
         },
-        "x": 1720,
-        "y": 1680,
+        "x": 1060,
+        "y": 2100,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -14196,7 +14242,7 @@
             "parameters": []
         },
         "x": 260,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "0570554745b66e00"
@@ -14238,7 +14284,7 @@
             "parameters": []
         },
         "x": 260,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "58c4991ee1d88db3"
@@ -14324,8 +14370,8 @@
                 }
             ]
         },
-        "x": 1680,
-        "y": 500,
+        "x": 1120,
+        "y": 920,
         "wires": [
             [
                 "56d3ba254d1a348b"
@@ -14411,8 +14457,8 @@
                 }
             ]
         },
-        "x": 1740,
-        "y": 2000,
+        "x": 1080,
+        "y": 2420,
         "wires": [
             [
                 "4af66b2c2ea967f6"
@@ -14506,7 +14552,7 @@
             ]
         },
         "x": 4010,
-        "y": 660,
+        "y": 1080,
         "wires": [
             [
                 "5c3399c19e43b510"
@@ -14600,7 +14646,7 @@
             ]
         },
         "x": 4130,
-        "y": 660,
+        "y": 1080,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -14694,7 +14740,7 @@
             ]
         },
         "x": 4010,
-        "y": 700,
+        "y": 1120,
         "wires": [
             [
                 "a92203dc43e282d0"
@@ -14788,7 +14834,7 @@
             ]
         },
         "x": 4130,
-        "y": 700,
+        "y": 1120,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -14882,7 +14928,7 @@
             ]
         },
         "x": 4010,
-        "y": 740,
+        "y": 1160,
         "wires": [
             [
                 "172c6daf65f45214"
@@ -14976,7 +15022,7 @@
             ]
         },
         "x": 4130,
-        "y": 740,
+        "y": 1160,
         "wires": [
             [
                 "fa50d6ef0dbb492d"
@@ -15070,7 +15116,7 @@
             ]
         },
         "x": 3890,
-        "y": 2120,
+        "y": 2540,
         "wires": [
             [
                 "8c28c6b043f849be"
@@ -15164,7 +15210,7 @@
             ]
         },
         "x": 4010,
-        "y": 2120,
+        "y": 2540,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -15258,7 +15304,7 @@
             ]
         },
         "x": 3890,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "a5a3edd1594cdd04"
@@ -15352,7 +15398,7 @@
             ]
         },
         "x": 4010,
-        "y": 2160,
+        "y": 2580,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -15446,7 +15492,7 @@
             ]
         },
         "x": 3890,
-        "y": 2200,
+        "y": 2620,
         "wires": [
             [
                 "cd746040e735026b"
@@ -15540,7 +15586,7 @@
             ]
         },
         "x": 4010,
-        "y": 2200,
+        "y": 2620,
         "wires": [
             [
                 "1e50f3b0f775f4ef"
@@ -15558,8 +15604,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
-        "y": 320,
+        "x": 580,
+        "y": 740,
         "wires": [
             [
                 "f39471e6d049a831"
@@ -15577,8 +15623,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 1780,
+        "x": 560,
+        "y": 2200,
         "wires": [
             [
                 "74d6129f38b338b8"
@@ -15671,8 +15717,8 @@
                 }
             ]
         },
-        "x": 2600,
-        "y": 300,
+        "x": 2040,
+        "y": 720,
         "wires": [
             [
                 "298039377051edac"
@@ -15690,8 +15736,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1290,
-        "y": 320,
+        "x": 730,
+        "y": 740,
         "wires": [
             [
                 "5b88893408be01a0"
@@ -15784,8 +15830,8 @@
                 }
             ]
         },
-        "x": 2540,
-        "y": 1760,
+        "x": 1880,
+        "y": 2180,
         "wires": [
             [
                 "4be09e59bb01dcb7"
@@ -15803,8 +15849,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1370,
-        "y": 1780,
+        "x": 710,
+        "y": 2200,
         "wires": [
             [
                 "a082d8631cba47d7"
@@ -15833,8 +15879,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2390,
-        "y": 1760,
+        "x": 1730,
+        "y": 2180,
         "wires": [
             [
                 "84e4f4dabc1131e4"
@@ -15930,8 +15976,8 @@
                 }
             ]
         },
-        "x": 2540,
-        "y": 1800,
+        "x": 1880,
+        "y": 2220,
         "wires": [
             [
                 "4be09e59bb01dcb7"
@@ -15960,8 +16006,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2470,
-        "y": 300,
+        "x": 1910,
+        "y": 720,
         "wires": [
             [
                 "a2ebdbb32bcdfde4"
@@ -16057,8 +16103,8 @@
                 }
             ]
         },
-        "x": 2600,
-        "y": 340,
+        "x": 2040,
+        "y": 760,
         "wires": [
             [
                 "298039377051edac"
@@ -16077,7 +16123,7 @@
         "finalize": "",
         "libs": [],
         "x": 3330,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "f54b5bedd55e7c3e"
@@ -16096,7 +16142,7 @@
         "finalize": "",
         "libs": [],
         "x": 4440,
-        "y": 360,
+        "y": 780,
         "wires": [
             [
                 "23b16d0948c9de96"
@@ -16122,7 +16168,7 @@
         "finalize": "",
         "libs": [],
         "x": 4650,
-        "y": 360,
+        "y": 780,
         "wires": [
             [
                 "ca5c0aebf27f2968"
@@ -16223,7 +16269,7 @@
             ]
         },
         "x": 4810,
-        "y": 340,
+        "y": 760,
         "wires": [
             [
                 "9aa8590b742cc2b1"
@@ -16241,7 +16287,7 @@
             "content-type": "image/png"
         },
         "x": 4930,
-        "y": 340,
+        "y": 760,
         "wires": []
     },
     {
@@ -16256,7 +16302,7 @@
         "finalize": "",
         "libs": [],
         "x": 3210,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "8b059ee1f1cfe94c"
@@ -16275,7 +16321,7 @@
         "finalize": "",
         "libs": [],
         "x": 4360,
-        "y": 1900,
+        "y": 2320,
         "wires": [
             [
                 "9fab398c2b76b716"
@@ -16301,7 +16347,7 @@
         "finalize": "",
         "libs": [],
         "x": 4570,
-        "y": 1920,
+        "y": 2340,
         "wires": [
             [
                 "732b2afc84bb9577"
@@ -16402,7 +16448,7 @@
             ]
         },
         "x": 4730,
-        "y": 1900,
+        "y": 2320,
         "wires": [
             [
                 "1a4855daf05f4eff"
@@ -16420,7 +16466,7 @@
             "content-type": "image/png"
         },
         "x": 4850,
-        "y": 1900,
+        "y": 2320,
         "wires": []
     },
     {
@@ -16435,7 +16481,7 @@
         "finalize": "",
         "libs": [],
         "x": 3450,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "7e33c825161146ad"
@@ -16454,7 +16500,7 @@
         "finalize": "",
         "libs": [],
         "x": 3570,
-        "y": 300,
+        "y": 720,
         "wires": [
             [
                 "5c4a8fdf2a27f1eb"
@@ -16473,7 +16519,7 @@
         "finalize": "",
         "libs": [],
         "x": 3330,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "9ee3ebfad089b04f"
@@ -16492,7 +16538,7 @@
         "finalize": "",
         "libs": [],
         "x": 3450,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "c33c175c4dda818b"
@@ -16511,7 +16557,7 @@
         "finalize": "",
         "libs": [],
         "x": 3330,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "fcef17a87bf94d09"
@@ -16530,7 +16576,7 @@
         "finalize": "",
         "libs": [],
         "x": 3450,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "80aed16f8a0d6e5c"
@@ -16549,7 +16595,7 @@
         "finalize": "",
         "libs": [],
         "x": 3570,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "974a7b90a804ea47"
@@ -16582,7 +16628,7 @@
         "repair": false,
         "outputs": 3,
         "x": 3850,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "916f99cefe30c0fc"
@@ -16607,7 +16653,7 @@
         "finalize": "",
         "libs": [],
         "x": 3970,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "916f99cefe30c0fc"
@@ -16704,7 +16750,7 @@
             ]
         },
         "x": 3970,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "549426739277735a"
@@ -16791,7 +16837,7 @@
             ]
         },
         "x": 4090,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "b55453037c947a65"
@@ -16820,8 +16866,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 3120,
-        "y": 300,
+        "x": 3160,
+        "y": 720,
         "wires": [
             [
                 "80eec1ba521fc179"
@@ -16918,7 +16964,7 @@
             ]
         },
         "x": 4110,
-        "y": 940,
+        "y": 1360,
         "wires": [
             [
                 "b55453037c947a65"
@@ -16937,7 +16983,7 @@
         "finalize": "",
         "libs": [],
         "x": 3980,
-        "y": 940,
+        "y": 1360,
         "wires": [
             [
                 "4cc1523e5e964c9d"
@@ -16959,7 +17005,7 @@
         "finalize": "",
         "libs": [],
         "x": 4400,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "5e3c96613217f4f0"
@@ -16996,7 +17042,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3700,
-        "y": 900,
+        "y": 1320,
         "wires": [
             [
                 "55489a3693082948"
@@ -17072,7 +17118,7 @@
         "repair": false,
         "outputs": 11,
         "x": 3850,
-        "y": 1040,
+        "y": 1460,
         "wires": [
             [],
             [
@@ -17194,7 +17240,7 @@
             ]
         },
         "x": 4020,
-        "y": 980,
+        "y": 1400,
         "wires": [
             [
                 "bf70bafde9641f8d"
@@ -17288,7 +17334,7 @@
             ]
         },
         "x": 4140,
-        "y": 980,
+        "y": 1400,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -17382,7 +17428,7 @@
             ]
         },
         "x": 4020,
-        "y": 1020,
+        "y": 1440,
         "wires": [
             [
                 "d6e99f8600a1dd89"
@@ -17476,7 +17522,7 @@
             ]
         },
         "x": 4140,
-        "y": 1020,
+        "y": 1440,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -17570,7 +17616,7 @@
             ]
         },
         "x": 4020,
-        "y": 1060,
+        "y": 1480,
         "wires": [
             [
                 "2255a36001816c2b"
@@ -17664,7 +17710,7 @@
             ]
         },
         "x": 4140,
-        "y": 1060,
+        "y": 1480,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -17758,7 +17804,7 @@
             ]
         },
         "x": 4020,
-        "y": 1100,
+        "y": 1520,
         "wires": [
             [
                 "383220245af72784"
@@ -17852,7 +17898,7 @@
             ]
         },
         "x": 4140,
-        "y": 1100,
+        "y": 1520,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -17946,7 +17992,7 @@
             ]
         },
         "x": 4020,
-        "y": 1140,
+        "y": 1560,
         "wires": [
             [
                 "4c946c788473a1b1"
@@ -18033,7 +18079,7 @@
             ]
         },
         "x": 4140,
-        "y": 1140,
+        "y": 1560,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -18127,7 +18173,7 @@
             ]
         },
         "x": 4010,
-        "y": 1180,
+        "y": 1600,
         "wires": [
             [
                 "3a7ac5227da9163e"
@@ -18214,7 +18260,7 @@
             ]
         },
         "x": 4250,
-        "y": 1180,
+        "y": 1600,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -18308,7 +18354,7 @@
             ]
         },
         "x": 4130,
-        "y": 1180,
+        "y": 1600,
         "wires": [
             [
                 "23b9c8d8d28371e0"
@@ -18402,7 +18448,7 @@
             ]
         },
         "x": 4010,
-        "y": 1220,
+        "y": 1640,
         "wires": [
             [
                 "b979b8790cd03666"
@@ -18496,7 +18542,7 @@
             ]
         },
         "x": 4130,
-        "y": 1220,
+        "y": 1640,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -18590,7 +18636,7 @@
             ]
         },
         "x": 4010,
-        "y": 1260,
+        "y": 1680,
         "wires": [
             [
                 "f9efdbc95aae465e"
@@ -18684,7 +18730,7 @@
             ]
         },
         "x": 4130,
-        "y": 1260,
+        "y": 1680,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -18778,7 +18824,7 @@
             ]
         },
         "x": 4010,
-        "y": 1300,
+        "y": 1720,
         "wires": [
             [
                 "f556eb43a1f44449"
@@ -18872,7 +18918,7 @@
             ]
         },
         "x": 4130,
-        "y": 1300,
+        "y": 1720,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -18966,7 +19012,7 @@
             ]
         },
         "x": 4010,
-        "y": 1340,
+        "y": 1760,
         "wires": [
             [
                 "07b42fdcfaf45541"
@@ -19060,7 +19106,7 @@
             ]
         },
         "x": 4130,
-        "y": 1340,
+        "y": 1760,
         "wires": [
             [
                 "d77aeb8d2bcaf8ec"
@@ -19093,7 +19139,7 @@
         "repair": false,
         "outputs": 3,
         "x": 3490,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "39f1636b2ae4cc4a"
@@ -19118,7 +19164,7 @@
         "finalize": "",
         "libs": [],
         "x": 3610,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "39f1636b2ae4cc4a"
@@ -19215,7 +19261,7 @@
             ]
         },
         "x": 3610,
-        "y": 2340,
+        "y": 2760,
         "wires": [
             [
                 "ef582f0cbdaa3a88"
@@ -19302,7 +19348,7 @@
             ]
         },
         "x": 3730,
-        "y": 2340,
+        "y": 2760,
         "wires": [
             [
                 "c07293f3ca813eab"
@@ -19396,7 +19442,7 @@
             ]
         },
         "x": 3750,
-        "y": 2420,
+        "y": 2840,
         "wires": [
             [
                 "c07293f3ca813eab"
@@ -19415,7 +19461,7 @@
         "finalize": "",
         "libs": [],
         "x": 3620,
-        "y": 2420,
+        "y": 2840,
         "wires": [
             [
                 "46f44fd5ad91a9e3"
@@ -19437,7 +19483,7 @@
         "finalize": "",
         "libs": [],
         "x": 4040,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "cb1f21d13ebd334b"
@@ -19474,7 +19520,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3340,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "d8cbfee5aec3fee0"
@@ -19550,7 +19596,7 @@
         "repair": false,
         "outputs": 11,
         "x": 3490,
-        "y": 2520,
+        "y": 2940,
         "wires": [
             [],
             [
@@ -19672,7 +19718,7 @@
             ]
         },
         "x": 3660,
-        "y": 2460,
+        "y": 2880,
         "wires": [
             [
                 "7b46b95292a6b69d"
@@ -19766,7 +19812,7 @@
             ]
         },
         "x": 3780,
-        "y": 2460,
+        "y": 2880,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -19860,7 +19906,7 @@
             ]
         },
         "x": 3660,
-        "y": 2500,
+        "y": 2920,
         "wires": [
             [
                 "1b4fac35ca7dac39"
@@ -19954,7 +20000,7 @@
             ]
         },
         "x": 3780,
-        "y": 2500,
+        "y": 2920,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -20048,7 +20094,7 @@
             ]
         },
         "x": 3660,
-        "y": 2540,
+        "y": 2960,
         "wires": [
             [
                 "e094bd93a7fb7760"
@@ -20142,7 +20188,7 @@
             ]
         },
         "x": 3780,
-        "y": 2540,
+        "y": 2960,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -20236,7 +20282,7 @@
             ]
         },
         "x": 3660,
-        "y": 2580,
+        "y": 3000,
         "wires": [
             [
                 "1d84a4ef15803118"
@@ -20330,7 +20376,7 @@
             ]
         },
         "x": 3780,
-        "y": 2580,
+        "y": 3000,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -20424,7 +20470,7 @@
             ]
         },
         "x": 3660,
-        "y": 2620,
+        "y": 3040,
         "wires": [
             [
                 "b8f8b491bc5085ee"
@@ -20511,7 +20557,7 @@
             ]
         },
         "x": 3780,
-        "y": 2620,
+        "y": 3040,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -20605,7 +20651,7 @@
             ]
         },
         "x": 3650,
-        "y": 2660,
+        "y": 3080,
         "wires": [
             [
                 "d5709393165fce09"
@@ -20692,7 +20738,7 @@
             ]
         },
         "x": 3890,
-        "y": 2660,
+        "y": 3080,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -20786,7 +20832,7 @@
             ]
         },
         "x": 3770,
-        "y": 2660,
+        "y": 3080,
         "wires": [
             [
                 "1cf7746debc497ec"
@@ -20880,7 +20926,7 @@
             ]
         },
         "x": 3650,
-        "y": 2700,
+        "y": 3120,
         "wires": [
             [
                 "1e3fc5e7b57dbe7f"
@@ -20974,7 +21020,7 @@
             ]
         },
         "x": 3770,
-        "y": 2700,
+        "y": 3120,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -21068,7 +21114,7 @@
             ]
         },
         "x": 3650,
-        "y": 2740,
+        "y": 3160,
         "wires": [
             [
                 "24dbf267c9173c06"
@@ -21162,7 +21208,7 @@
             ]
         },
         "x": 3770,
-        "y": 2740,
+        "y": 3160,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -21256,7 +21302,7 @@
             ]
         },
         "x": 3650,
-        "y": 2780,
+        "y": 3200,
         "wires": [
             [
                 "fdd74cc34272c51c"
@@ -21350,7 +21396,7 @@
             ]
         },
         "x": 3770,
-        "y": 2780,
+        "y": 3200,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -21444,7 +21490,7 @@
             ]
         },
         "x": 3650,
-        "y": 2820,
+        "y": 3240,
         "wires": [
             [
                 "380163b5bfaddc22"
@@ -21538,7 +21584,7 @@
             ]
         },
         "x": 3770,
-        "y": 2820,
+        "y": 3240,
         "wires": [
             [
                 "0837ec2ea7edc563"
@@ -21568,7 +21614,7 @@
         "repair": false,
         "outputs": 2,
         "x": 3000,
-        "y": 1760,
+        "y": 2180,
         "wires": [
             [
                 "9fab398c2b76b716"
@@ -21590,7 +21636,7 @@
         "finalize": "",
         "libs": [],
         "x": 2970,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "12aec9ec37cc1523"
@@ -21609,7 +21655,7 @@
         "finalize": "",
         "libs": [],
         "x": 3090,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "c12ef30897396cc8"
@@ -21628,7 +21674,7 @@
         "finalize": "",
         "libs": [],
         "x": 3210,
-        "y": 2380,
+        "y": 2800,
         "wires": [
             [
                 "b4e98bbc6be4d80c"
@@ -21647,7 +21693,7 @@
         "finalize": "",
         "libs": [],
         "x": 490,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "0dbd01a1e3e46319"
@@ -21666,7 +21712,7 @@
         "onceDelay": "0",
         "topic": "",
         "x": 90,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "19abbf87e31ee486"
@@ -21708,7 +21754,7 @@
             "parameters": []
         },
         "x": 880,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "b653cd2479c7bcbf"
@@ -21719,7 +21765,7 @@
         "id": "c29adb54bd2ad773",
         "type": "change",
         "z": "9c8ed30fb778bd08",
-        "name": "",
+        "name": "Images to flow",
         "rules": [
             {
                 "t": "set",
@@ -21769,8 +21815,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
-        "y": 140,
+        "x": 1360,
+        "y": 100,
         "wires": [
             []
         ]
@@ -21854,11 +21900,11 @@
                 }
             ]
         },
-        "x": 2890,
-        "y": 280,
+        "x": 2330,
+        "y": 700,
         "wires": [
             [
-                "5833f7f8341ea4dd"
+                "b0935d4e2255a18d"
             ]
         ]
     },
@@ -21867,20 +21913,20 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "circle",
-        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string'){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
+        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string' || msg.miniIcon.length <= 0){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2730,
-        "y": 300,
+        "x": 2170,
+        "y": 720,
         "wires": [
             [
                 "fa6af9d4bb619e80"
             ],
             [
-                "5833f7f8341ea4dd"
+                "b0935d4e2255a18d"
             ]
         ],
         "outputLabels": [
@@ -21923,7 +21969,7 @@
             "parameters": []
         },
         "x": 720,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "bc5f1df5de93e93d"
@@ -21965,7 +22011,7 @@
             "parameters": []
         },
         "x": 230,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "8cfcf505f9599137"
@@ -22007,7 +22053,7 @@
             "parameters": []
         },
         "x": 390,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "3ff82a9ad618f04c"
@@ -22049,7 +22095,7 @@
             "parameters": []
         },
         "x": 550,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "638685f06354c031"
@@ -22091,7 +22137,7 @@
             "parameters": []
         },
         "x": 1030,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "484821ac8cf93ce7"
@@ -22133,7 +22179,7 @@
             "parameters": []
         },
         "x": 1190,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "c29adb54bd2ad773"
@@ -22145,20 +22191,20 @@
         "type": "function",
         "z": "9c8ed30fb778bd08",
         "name": "circle",
-        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string'){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 4) {\n    if (typeof msg.circle4 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle4 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle4 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle4 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle4 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle4 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle4 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle4 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle4 not supported color: \" + msg.circle4);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
+        "func": "if (msg.iconNumber == 1) {\n    if (typeof msg.circle1 != 'string' || msg.miniIcon.length <= 0){\n        return [null, msg]\n    }\n\n    if (msg.circle1 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle1 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle1 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle1 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle1 == \"red\"){\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle1 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle1 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else{\n        node.warn(\"msg.circle1 not supported color: \" + msg.circle1);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 2) {\n    if (typeof msg.circle2 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle2 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle2 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle2 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle2 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle2 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle2 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle2 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle2 not supported color: \" + msg.circle2);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 3) {\n    if (typeof msg.circle3 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle3 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle3 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle3 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle3 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle3 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle3 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle3 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle3 not supported color: \" + msg.circle3);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nif (msg.iconNumber == 4) {\n    if (typeof msg.circle4 != 'string') {\n        return [null, msg]\n    }\n\n    if (msg.circle4 == \"blue\") {\n        msg.circleImage = flow.get(\"Solardisplay.blueCircle\")\n    }\n    else if (msg.circle4 == \"green\") {\n        msg.circleImage = flow.get(\"Solardisplay.greenCircle\")\n    }\n    else if (msg.circle4 == \"grey\") {\n        msg.circleImage = flow.get(\"Solardisplay.greyCircle\")\n    }\n    else if (msg.circle4 == \"orange\") {\n        msg.circleImage = flow.get(\"Solardisplay.orangeCircle\")\n    }\n    else if (msg.circle4 == \"red\") {\n        msg.circleImage = flow.get(\"Solardisplay.redCircle\")\n    }\n    else if (msg.circle4 == \"white\") {\n        msg.circleImage = flow.get(\"Solardisplay.whiteCircle\")\n    }\n    else if (msg.circle4 == \"yellow\") {\n        msg.circleImage = flow.get(\"Solardisplay.yellowCircle\")\n    }\n    else {\n        node.warn(\"msg.circle4 not supported color: \" + msg.circle4);\n        return [null, msg]\n    }\n\n    return [msg, null]\n}\nreturn [null, msg]",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2670,
-        "y": 1760,
+        "x": 2010,
+        "y": 2180,
         "wires": [
             [
                 "1cb6ef5669cc67cc"
             ],
             [
-                "8cf9a97aeb579219"
+                "d5e3bc1e2a5cf3ae"
             ]
         ],
         "outputLabels": [
@@ -22245,11 +22291,11 @@
                 }
             ]
         },
-        "x": 2810,
-        "y": 1740,
+        "x": 2150,
+        "y": 2160,
         "wires": [
             [
-                "8cf9a97aeb579219"
+                "d5e3bc1e2a5cf3ae"
             ]
         ]
     },
@@ -22276,10 +22322,1700 @@
         "to": "",
         "reg": false,
         "x": 110,
-        "y": 860,
+        "y": 1280,
         "wires": [
             [
                 "39ef3745791f7551"
+            ]
+        ]
+    },
+    {
+        "id": "02fd996e4398c91e",
+        "type": "inject",
+        "z": "9c8ed30fb778bd08",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "b2fe8e75630c2291"
+            ]
+        ]
+    },
+    {
+        "id": "b2fe8e75630c2291",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "2020Background",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAADUExURf///6fEG8gAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBjTYxi2gIEBAADcAAEEch+YAAAAAElFTkSuQmCC",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.2020Background",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "732f4788b7fb9afe"
+            ]
+        ]
+    },
+    {
+        "id": "732f4788b7fb9afe",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20SignalNoConnection",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAG6SURBVDhPrZS/S1tRGIZPpKFaHAopiBgoVOJSqA5F8A9QJwcdUupQk0lwMRSKOEsmodSlLg5CoYiouIq0s1JaoRRBIggi/hgCthVcNPq859wD96a5jagPPHzfOZ778t1zMea+SQS1Fg1YcW08pVLpBWUCt/C9HhIv8Ruu41McxJ/4CZvxf3zEYZzGfj/hCipEHGAKm+zKmFe46NooTNdI+YXtdsOYvJ/we1BFGn3YOe66NpbwtVR8YBG/uDbCJP5wrZ0ohUOoa6mJDxzAHtdGyGOLGkIeUJZwGb8qnHqBEXzgKD5ybYRO7HWtacVu15pn2IGXdhXCB64G9S++xhm7MmYfN1xr+SegGh84h89REy1gAbuy2aymi/soV0GN4APFNu6p4X6S+LZYLG5Sp7QHNQOqCQeG0aRv8DEWCH1Crfu6Ii7wYVCFJku6tj5xgTd6vVo08DoJHMd51Ie5E5qwDz/gCM6iuP2E2OZaS1oTU8M/azrj98JX5PvInhZHrrccZjIZTVdG/1V/45/AU22A/lYOzh7bHceJAtfwHX7GMTQc3KHkUP+7OdZnMrSXD84IPaNnlaGs+8SYa9gNeDxkCBMGAAAAAElFTkSuQmCC",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20SignalNoConnection",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "8355d4bf9b8be12e"
+            ]
+        ]
+    },
+    {
+        "id": "8355d4bf9b8be12e",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Signal0",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAFASURBVDhPrZQ/S8NQFMVfi0VHQUFFQRDiIujm4u7g6AfQunbRRfwA7uLmqouTfgAXJ3dnyeDmn6Gg4qjV33nvBpI2sU3MgR/n3tuXw30pratbDfPKiuN4FTuCezipI/AO2wid22paUUmETWCzofOa+VegqWcu9UoFstEUbMOijQY0ciAhY9gVXMOtwvEvyKjMhnOwHkq3BMvw7buUyr7DgYB+/RnItSatzNOPeUa5gQS14ILyET8O0/yAfhVtuAY7oA0PCJ3Gh15XKgocN5e0WSuUw1UUONL18tTkOg3Yh3NYsXllacNNOIVdOAOp+oYwH0qvBW2Mp/+FdCaZpV9RUmdmap5D7fUURZG260Lyrb7Dh/GmAdJnXTv74idBrwq8gUO4hA44Dj5gbdBvt03/KVKzPTsj6Rk9qwxl1SnnfgGqXmFZDeFAUQAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Signal0",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "a0f5fb06c4b19ec3"
+            ]
+        ]
+    },
+    {
+        "id": "a0f5fb06c4b19ec3",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Signal1",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAE9SURBVDhPrZM9S8NQGEavxWJHQcEPKIIQF0E3F3cHR3+A1lVBXMQf4C44ueqii/4AFyd3VyWDk6CgoOIiaPU8uW8gTRPbNDlweN572z7cmxJXNUOWAxOG4QKxj7d4WEXhDbHsV261ZsNAUNYgJv0qYqJUodG2FO1ChZxoDNdwxra66LuQkmHiAi/xWuXkN3ZQ5IRTuORHN4tz+BOtEhR9hl0Faf4t5FqjNmbxa9lBZiFFdTxlfCAP/G52QZq8Ey7iOuqEu5SOkz2vK/IKRyyFTlb3Y2/yCvu6XhYq1Pu8gyc4j6VQ4Qoe4QYeYylU2PRjxDTq+SUfRXwLmd5Ppqhp8ejniCf8wheM/9V3/DDftAH67DUIAj1r/SbmWYVXuIfnuI2OL94RLdS722L9KRN7m6zvSbGFZ6gOdVWJc3+SHlMXwi3C+wAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Signal1",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 800,
+        "y": 140,
+        "wires": [
+            [
+                "561c5abf35a3b90c"
+            ]
+        ]
+    },
+    {
+        "id": "561c5abf35a3b90c",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Signal2",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAExSURBVDhPrZQxS8NAGIbPothR6FAVRBDiUtDNxd3B0R+gdrWgk/gD3AUnV1100R/g4uTuLBmcBB0K1lmrz5v7Aolt8NLkgYf37tq8XI5eXd1MWU5MHMdrxAk+4VkdhY/Epp+57YYNJoKyJjHvZwntSoXG0FIMSxWyoxbu4LItjRBcSMk0cYt3+KBy8gtzlNnhAm74oVvBVfxOZhnKnuFIwV/+K5yzHMePZY6iwhm8whc81UIoRYXruIva4RG2MYiiwllLoVfTjoMoKhx7PiGoUPf5EC+xg5VQ4Rae4x5eoKi0wyU/TFi0zP4LaZyaPaJ0nFvT5NWPE94s+5j+iD/NAX5oAfRZP4oivUn6jHhX4T0e4w32UDxjF3VvlQMeVuE+6j53mes74gCvUR3qqhPnfgEBnENmFbvDigAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Signal2",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 940,
+        "y": 140,
+        "wires": [
+            [
+                "9fdd07087aaa4365"
+            ]
+        ]
+    },
+    {
+        "id": "9fdd07087aaa4365",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Signal3",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAE7SURBVDhPrZQ9S8NQGEavX1hcFEQqgghCXASdnNwdHP0B+g/iKAidnFwEJ1cVR/0LTo6Cg4sQ0ElQxEUcRLB6nnvfQIIJbZocOH3ee9s+JE0a1zRDlgOTJMkKsYd3eNRE4Q2xHlZuc9iGgaCsRcyGladdq9DoWopu1cJp3MIFvyqgSuEoXuIVXuMM/qNKYRvXwugWcSmMeaoU6o74CaPn1zJHr8IpS6GCwpIsZYVjeIZPeKCNfikrXMVt1BHuoq5u9nRLKSsctxQ6TR1xz9MVZYV9fbkIFerqxXiKy1gLFW7gMe7gCYpaRzgfRs+cZfYplM7K7E+Uzrk9LZ7D7HmxfMf0qn7gp6lZ6L23KIq+yPQ74nWEl0fUh1Wyr02bdQ/qSdLBB/zGe5zAQ9T/2cVxfEtM4jleaK9BnPsDuFc7it/lXLwAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Signal3",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1080,
+        "y": 140,
+        "wires": [
+            [
+                "ad15cef2f04743a6"
+            ]
+        ]
+    },
+    {
+        "id": "ad15cef2f04743a6",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Signal4",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAEvSURBVDhPrZSxSgNBFEXXaBRSBYIEBZGksElhlV8QbP2A+AfaC1ZWVmKVVsVSfyFVCot0NlZaiYZgI1aCMefuvpFNMou7TA4c3tuXyWU2O9lo0SxbDWEXL7CBDxqE0sdfc7+kSQCruJ60MRuhgWJsVYyLBtbwALfjKw9FAlfwDu+xhwr/wSmKBNaxnbRRE3cwKHAJ5wJm+S+walW4o+FI939kBZbxGl/wTIO8ZAXq9HdQOzxG7wPwkRW4ZlXo1rRj7y3OkhWY68s+FKind4RX2MIgFLiHl3iIXRR5dqiNzKHAraSN2bSaXux61fRP5ObpWUkXr0kf8271A91T/cQvU73QZ1ojRlbFm16wz6jFWnCCQ+t1BvUmOcUn/MZHrOA56v8sBqjjdYO3GiyQKJoAYtg0h1swTlEAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Signal4",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1220,
+        "y": 140,
+        "wires": [
+            [
+                "ee9cd46804526032"
+            ]
+        ]
+    },
+    {
+        "id": "ee9cd46804526032",
+        "type": "change",
+        "z": "9c8ed30fb778bd08",
+        "name": "Images to flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Solardisplay.2020Background",
+                "pt": "flow",
+                "to": "Solardisplay.2020Background",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20SignalNoConnection",
+                "pt": "flow",
+                "to": "Solardisplay.20SignalNoConnection",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Signal0",
+                "pt": "flow",
+                "to": "Solardisplay.20Signal0",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Signal1",
+                "pt": "flow",
+                "to": "Solardisplay.20Signal1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Signal2",
+                "pt": "flow",
+                "to": "Solardisplay.20Signal2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Signal3",
+                "pt": "flow",
+                "to": "Solardisplay.20Signal3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Signal4",
+                "pt": "flow",
+                "to": "Solardisplay.20Signal4",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1380,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0935d4e2255a18d",
+        "type": "function",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon",
+        "func": "delete msg.miniIconImage;\nmsg.miniIcon = eval('msg.miniIcon' + msg.iconNumber);\n\nif (typeof msg.miniIcon != 'string' || msg.miniIcon.length <= 0) {\n    return [null, msg];\n}\n\nif (msg.miniIcon == \"battery\"\n    || msg.miniIcon == \"batteryX\"\n    || msg.miniIcon == \"batteryFlash\") {\n    msg.miniIconBackground = flow.get(\"Solardisplay.2010Background\");\n\n    msg.miniIconPercent = eval('msg.miniIcon' + msg.iconNumber + 'Percent');\n    if (!Number.isFinite(msg.miniIconPercent)) {\n        msg.miniIconPercent = 100;\n    }\n    msg.batteryWidth = 17 * (msg.miniIconPercent / 100) + 1;\n\n    msg.batteryColor = eval('msg.miniIcon' + msg.iconNumber + \"Color\");\n\n    if (msg.batteryColor == \"red\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryRed\")\n    }\n    else if (msg.batteryColor == \"orange\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryOrange\")\n    }\n    else if (msg.batteryColor == \"yellow\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryYellow\")\n    }\n    else if (msg.batteryColor == \"greenYellow\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryGreenYellow\")\n    }\n    else {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryGreen\")\n    }\n\n}\nelse {\n    msg.miniIconBackground = flow.get(\"Solardisplay.2020Background\");\n}\n\nif (msg.miniIcon == \"signalNoConnection\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n}\nelse if (msg.miniIcon == \"signal0\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n}\nelse if (msg.miniIcon == \"signal1\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n}\nelse if (msg.miniIcon == \"signal2\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n}\nelse if (msg.miniIcon == \"signal3\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n}\nelse if (msg.miniIcon == \"signal4\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n}\nelse if (msg.miniIcon == \"signal\") {\n    msg.miniIconDBm = eval('msg.miniIcon' + msg.iconNumber + 'DBm');\n    if (Number.isFinite(msg.miniIconDBm)) {\n\n        if (msg.miniIconDBm <= -100) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n        }\n        else if (msg.miniIconDBm < -80) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n        }\n        else if (msg.miniIconDBm < -70) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n        }\n        else if (msg.miniIconDBm < -67) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n        }\n        else if (msg.miniIconDBm < -30) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n        }\n        else {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n        }\n    }\n    else {\n        msg.miniIconPercent = eval('msg.miniIcon' + msg.iconNumber + 'Percent');\n        if (msg.miniIconPercent <= 0) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n        }\n        else if (msg.miniIconPercent < 20) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n        }\n        else if (msg.miniIconPercent < 40) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n        }\n        else if (msg.miniIconPercent < 60) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n        }\n        else if (msg.miniIconPercent < 80) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n        }\n        else {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n        }\n    }\n}\nelse if (msg.miniIcon == \"warn\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Warn\");\n}\nelse if (msg.miniIcon == \"happy\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Happy\");\n}\nelse if (msg.miniIcon == \"sceptic\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Sceptic\");\n}\nelse if (msg.miniIcon == \"sad\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Sad\");\n}\nelse if (msg.miniIcon == \"battery\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Battery\");\n}\nelse if (msg.miniIcon == \"batteryX\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20BatteryX\");\n}\nelse if (msg.miniIcon == \"batteryFlash\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20BatteryFlash\");\n}\nelse {\n    node.warn(\"msg.miniIcon\" + msg.iconNumber + \" not supported icon: \" + msg.miniIcon);\n    return [null, msg];\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2480,
+        "y": 720,
+        "wires": [
+            [
+                "b952bb7485bfdc49"
+            ],
+            [
+                "5833f7f8341ea4dd"
+            ]
+        ],
+        "outputLabels": [
+            "mini icon",
+            "No mini icon"
+        ]
+    },
+    {
+        "id": "b952bb7485bfdc49",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon background",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "miniIconBackground",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2660,
+        "y": 700,
+        "wires": [
+            [
+                "2e80180cdc41241e"
+            ]
+        ]
+    },
+    {
+        "id": "91cde4a245ccc0ef",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "miniIconImage",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 3000,
+        "y": 700,
+        "wires": [
+            [
+                "5833f7f8341ea4dd"
+            ]
+        ]
+    },
+    {
+        "id": "51b396d4a1b7f99e",
+        "type": "inject",
+        "z": "9c8ed30fb778bd08",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "91a52a58badfb0a8"
+            ]
+        ]
+    },
+    {
+        "id": "b3f80f2646e3c3b9",
+        "type": "change",
+        "z": "9c8ed30fb778bd08",
+        "name": "Images to flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Solardisplay.20Warn",
+                "pt": "flow",
+                "to": "Solardisplay.20Warn",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Happy",
+                "pt": "flow",
+                "to": "Solardisplay.20Happy",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Sceptic",
+                "pt": "flow",
+                "to": "Solardisplay.20Sceptic",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Sad",
+                "pt": "flow",
+                "to": "Solardisplay.20Sad",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.2010Background",
+                "pt": "flow",
+                "to": "Solardisplay.2010Background",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20Battery",
+                "pt": "flow",
+                "to": "Solardisplay.20Battery",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryX",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryX",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryFlash",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryFlash",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryRed",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryRed",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryOrange",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryOrange",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryYellow",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryYellow",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryGreenYellow",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryGreenYellow",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Solardisplay.20BatteryGreen",
+                "pt": "flow",
+                "to": "Solardisplay.20BatteryGreen",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2420,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91a52a58badfb0a8",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Warn",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGmSURBVDhPrZO/asJQFMZvWhAKQinSJ7BQHNoxDh3FJ1C72bjVPoKLQ6hrJ6E6qoOT9AlcCiIOvkEUHDJ3CFoRkvR8956oNaFV2x983HPPn49LOBF7csb6Fx5JUxbiP3GXSqX88XgshRg5VTqO916v5wcgRk6VDuehUCj48/ncYz8ZI0c1Q7XszzlpOhwO2WoDcqhxz948VyoV33Vd+TrHcaQAcqihR7X+zjXJsSxLGoButysVgBp6uPcbJ3xuYzabzXgymcSQhF4lFYBao9GIU2iqzIZdw2w6nb7P5XKINZkhNE2T2kLL5/MCvRRnVUqxNtR1/ZSOWrVaFYlEQiV/AD3oJWo8G6JcKpX85XK5XpOAVqsltQt6DcPApykriw2XJBt/QxSDwUAqCsxglj3WvJimiXrodWC1WnkQX3fxMAsPZSXELelzNptxPUy9XnchvobALDzYS7y1220uRTOZTFyIr5HAA14wXNi2zenjgQe8sFyjTqejZzIZQXmpQwh2tN/vi2KxONJisdgNffBXql2RPNl1ONhni7yettf/gs9j+RBCiC8tLigVz9EE/gAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Warn",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "01e5a5ec325350c9"
+            ]
+        ]
+    },
+    {
+        "id": "d5e3bc1e2a5cf3ae",
+        "type": "function",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon",
+        "func": "delete msg.miniIconImage;\nmsg.miniIcon = eval('msg.miniIcon' + msg.iconNumber);\n\nif (typeof msg.miniIcon != 'string' || msg.miniIcon.length <= 0) {\n    return [null, msg];\n}\n\nif (msg.miniIcon == \"battery\"\n    || msg.miniIcon == \"batteryX\" \n    || msg.miniIcon == \"batteryFlash\") {\n    msg.miniIconBackground = flow.get(\"Solardisplay.2010Background\");\n    \n    msg.miniIconPercent = eval('msg.miniIcon' + msg.iconNumber + 'Percent');\n    if (!Number.isFinite(msg.miniIconPercent)) {\n        msg.miniIconPercent = 100;\n    }\n    msg.batteryWidth = 17 * (msg.miniIconPercent / 100) + 1;\n\n    msg.batteryColor = eval('msg.miniIcon' + msg.iconNumber + \"Color\");\n\n    if (msg.batteryColor == \"red\"){\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryRed\")\n    }\n    else if (msg.batteryColor == \"orange\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryOrange\")\n    }\n    else if (msg.batteryColor == \"yellow\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryYellow\")\n    }\n    else if (msg.batteryColor == \"greenYellow\") {\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryGreenYellow\")\n    }\n    else{\n        msg.batteryColorImage = flow.get(\"Solardisplay.20BatteryGreen\")\n    }\n\n}\nelse{\n    msg.miniIconBackground = flow.get(\"Solardisplay.2020Background\");\n}\n\nif (msg.miniIcon == \"signalNoConnection\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n}\nelse if (msg.miniIcon == \"signal0\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n}\nelse if (msg.miniIcon == \"signal1\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n}\nelse if (msg.miniIcon == \"signal2\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n}\nelse if (msg.miniIcon == \"signal3\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n}\nelse if (msg.miniIcon == \"signal4\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n}\nelse if (msg.miniIcon == \"signal\") {\n    msg.miniIconDBm = eval('msg.miniIcon' + msg.iconNumber + 'DBm');\n    if (Number.isFinite(msg.miniIconDBm)) {\n\n        if (msg.miniIconDBm <= -100) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n        }\n        else if (msg.miniIconDBm < -80) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n        }\n        else if (msg.miniIconDBm < -70) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n        }\n        else if (msg.miniIconDBm < -67) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n        }\n        else if (msg.miniIconDBm < -30) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n        }\n        else {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n        }\n    }\n    else {\n        msg.miniIconPercent = eval('msg.miniIcon' + msg.iconNumber + 'Percent');\n        if (msg.miniIconPercent <= 0) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20SignalNoConnection\");\n        }\n        else if (msg.miniIconPercent < 20) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal0\");\n        }\n        else if (msg.miniIconPercent < 40) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal1\");\n        }\n        else if (msg.miniIconPercent < 60) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal2\");\n        }\n        else if (msg.miniIconPercent < 80) {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal3\");\n        }\n        else {\n            msg.miniIconImage = flow.get(\"Solardisplay.20Signal4\");\n        }\n    }\n}\nelse if (msg.miniIcon == \"warn\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Warn\");\n}\nelse if (msg.miniIcon == \"happy\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Happy\");\n}\nelse if (msg.miniIcon == \"sceptic\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Sceptic\");\n}\nelse if (msg.miniIcon == \"sad\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Sad\");\n}\nelse if (msg.miniIcon == \"battery\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20Battery\");\n}\nelse if (msg.miniIcon == \"batteryX\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20BatteryX\");\n}\nelse if (msg.miniIcon == \"batteryFlash\") {\n    msg.miniIconImage = flow.get(\"Solardisplay.20BatteryFlash\");\n}\nelse {\n    node.warn(\"msg.miniIcon\" + msg.iconNumber + \" not supported icon: \" + msg.miniIcon);\n    return [null, msg];\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2300,
+        "y": 2180,
+        "wires": [
+            [
+                "3ddc2abaaffa4d3b"
+            ],
+            [
+                "8cf9a97aeb579219"
+            ]
+        ],
+        "outputLabels": [
+            "mini icon",
+            "No mini icon"
+        ]
+    },
+    {
+        "id": "3ddc2abaaffa4d3b",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon background",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "miniIconBackground",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2480,
+        "y": 2160,
+        "wires": [
+            [
+                "d887236875dd5716"
+            ]
+        ]
+    },
+    {
+        "id": "16bfe15fd5149e2e",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "mini icon",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "miniIconImage",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "none",
+        "parameter5": "",
+        "parameter5Type": "none",
+        "parameter6": "",
+        "parameter6Type": "none",
+        "parameter7": "",
+        "parameter7Type": "none",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2860,
+        "y": 2160,
+        "wires": [
+            [
+                "8cf9a97aeb579219"
+            ]
+        ]
+    },
+    {
+        "id": "8c7739dfe1cdce8d",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Sad",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADdYAAA3WAZBveZwAAAGGSURBVDhPtdW9ShxRGMbx1UYEAwGbRQvBe0htSKe1pdUWWkog8RYsvAB7kTTpUwrehyDbaJOAiqipkuc3zoHZmR1ZBR/4u++8X+fMmXOOgx59CKPwK4zD3xo2n5icjubq36Z2wlFYDIrPg0a0FjbCVngM38Np6NVx+BcOwzJHj8TkyFUzVQJP4Uv1NJvkquk09ZpGe02zIjVq9ahkca+DVyiytpvhU/U0KT6x5vqr1aP6UL7YTWiumQKj3oYVjlpsPjE5RWr1GM3nz3bwNf+Eot/hLlyGB45abD4xOUVq9dCr2hJ7jJbMZunZnBBfc9ZFeozNcMjgaekqKN4PJzVsPrG29Bhq2KfdcBEOwscaNp9Yr6a9sgILr8ECRy02n1i7afXKDIv5g1FrNdwHhX0SkyO3SA+9Otvma7CnmjNrS0yOXJrYNj+Dg/4t0Ho4C26XPonJkUtq9dCrUvPoGWTq1dSSHLmdo1fkgBv5c/U0m+SqefHGMdqbr693v2CLrM8b/gUMBv8B/ABrM+eK7W4AAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Sad",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "08be37c35f758e83"
+            ]
+        ]
+    },
+    {
+        "id": "01e5a5ec325350c9",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Happy",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADdYAAA3WAZBveZwAAAGASURBVDhPtZWxLkRBFECXRhREoqPwFWqJCrVStQWlij8QhQ+g3qiUCr2P0BKF2IIEEWzFObNzZd7b9wThJMfOu/fOfTvz5q1OC1PYxTO8xkHWsTFz1owwlj9LNvAAJ9HJ52gjWcAlXMNX3MFjbOUQ33EfZw20YM4aa53TiIk3XE5X38Na54w0dZne7SfNAuc41x4JN/cWXULg3q7iYrqqYsxcuf/OtUd6UD6xByz3zAne9RHnDGQcGzNnTeBce3TH+bOOPs17DO7wCa/wxUDGsTFz1gTOtYe90pHYclDDbzMzHFYwVn7rwB7peHlgVxxkprHx0NawxtrAHgOXXGcPj4bDL7HG2go27KNvQHCJHoWJdNWMOWusDezRt+EF+joFJ+hyttNVM+assTawh70aj80mejR2sfymjo2Zsyb4PDZeeKf6wRYnPOMNnmYdGyubSeVgS9urN48ur5d1bKxk5NUL/vTHITDh3VxCuad1zFljbaXZv//ABm7uL/4FdDof5QxnmyApMDYAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Happy",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "dd3ead5296d262f1"
+            ]
+        ]
+    },
+    {
+        "id": "dd3ead5296d262f1",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Sceptic",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADdYAAA3WAZBveZwAAAFWSURBVDhPtZWxSgNBEEBPOwtBsBPBwlJba8FKrS2t0tgLfoOFYOsPiJ+QPh8iIghaKKiImkL0vXVH9pI7MPF88Mzezs5cdm9yVi3MYw/7eI3DrGPnjLlmjJn8WbKPJziHJg/QQrKCm7iLb3iE59jKGX7iMS460YIx17jWnEYMvONWuvodrjVnrKjb9G6TFAvMMdcaCQ/3Ft1C4Nnu4Ea6quOcsfL8zbVGelA+sUcsz8wE7/qES05kHDtnzDWBudbozfJnD32aDxjc4zNe4asTGcfOGXNNYK41rJVa4sDBCH6bhe9hDefKbx1YI7WXDbvt4I9YY+iWO8WCd+gvoMRtreNai8ZGj8Ma1kqHeeGgwJ76wJcWjf30XcYafXvJtjnFVYwn7d2X0fZowrwbtFXEtrnEQy+aGntSao0tnf70gk5fDoEB7+YWpnp9/fsLNvBwp/gXUFVfK6xint9ywS0AAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Sceptic",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "8c7739dfe1cdce8d"
+            ]
+        ]
+    },
+    {
+        "id": "18812b20f189c827",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryFlash",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD4SURBVDhPhdIxq0FhHMfx44bhKqNBDKKYpJTVZpDZO7jxBiwyWgxYKMUog7JRNpN4BWK8d73v4CZ8f+d0bqfTOc6vPqfnOUd/z/PvHzIMY4wE/qC9Ow/ovdc35Yk4VtjoxVqPN/Er5EwWEy0+oJPZqaCIiLmzMkXHWvpGNTKoq6AzaRywRR9NJKETDBGFV3QLtabjLqgeNKCP3/jEBW0cMYf+wJ0wrri5CyontFDFL7oYIIYzFijDM14FlR98oYYZclCfUtC199BN7NxRQF6bpR5v0sPIWppRwRKcp1Tvd6hrEzQ2StDo/I+Nfhg02Bpc8WuPY7CNzQtaZiuECxVqtAAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryFlash",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1280,
+        "y": 180,
+        "wires": [
+            [
+                "55f62b36d81b733c"
+            ]
+        ]
+    },
+    {
+        "id": "50426e5979e266de",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20Battery",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABxSURBVDhPY2RgYOgHYjEg/gXEID6p4D8Q8wHxMiBeCxJYBSIoBMpAPAXEYAJikMsoBSAzFIHYC2QgNQAoqP4BcSm1DGQB4htAfJNaBsIBtQz8A8QaQKxOLQNBSQdkVjeIYAOJUAhAZtwH4m1UTtgMawEsmhNymJ3imAAAAABJRU5ErkJggg==",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20Battery",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 960,
+        "y": 180,
+        "wires": [
+            [
+                "faf7c2fb92fd643d"
+            ]
+        ]
+    },
+    {
+        "id": "faf7c2fb92fd643d",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryX",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVDhPfdI9agJBGMbx149IJJ2QMgSsxCJgIdjlDh7BQklI6nQewEoIJJDKIsRCEk9gZaOeIOBFNN//Z3YHdifrPvDbmXdGXsd1CmY2xhk+kcwvtO+j+U80tSK073OCKV5UvOmRkUo8hlGzMDrQoybaDE/mc4t+NHUp4wFtV6XzjXN0s77N5x4t9FwVNdtg7ap09Do+cJfXUB+4wgVWWGCCrOj0W7znNVS0X8Ieh95pKnkNq3iCfuIlOhggK19ooJnX8BpLPLvK7AZNqHEYf4WGeszd9H+O4zHMUTwmU4e7Nvp3RjjFTguJhBdb8SdJrmuthlczm/0BJsgl3yJBw40AAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryX",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1110,
+        "y": 180,
+        "wires": [
+            [
+                "18812b20f189c827"
+            ]
+        ]
+    },
+    {
+        "id": "1d31b223d75ab866",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryGreen",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAqSURBVDhPY6A2YAQRXts4/oN5FIBtXj/AZjGBeVQEowZSDga/gVQGDAwA4JsEEHQfg0UAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryGreen",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 2240,
+        "y": 180,
+        "wires": [
+            [
+                "b3f80f2646e3c3b9"
+            ]
+        ]
+    },
+    {
+        "id": "08be37c35f758e83",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "2010Background",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAcSURBVChTY/z//z8DuYAJSpMFRjWTCIakZgYGADN/AxESPgPTAAAAAElFTkSuQmCC",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.2010Background",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "50426e5979e266de"
+            ]
+        ]
+    },
+    {
+        "id": "d887236875dd5716",
+        "type": "switch",
+        "z": "9c8ed30fb778bd08",
+        "name": "battery",
+        "property": "miniIcon",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "battery",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2660,
+        "y": 2160,
+        "wires": [
+            [
+                "63e5e020321e7273"
+            ],
+            [
+                "16bfe15fd5149e2e"
+            ]
+        ]
+    },
+    {
+        "id": "63e5e020321e7273",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "battery color",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "batteryColorImage",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "0",
+        "parameter4Type": "num",
+        "parameter5": "0",
+        "parameter5Type": "num",
+        "parameter6": "batteryWidth",
+        "parameter6Type": "msg",
+        "parameter7": "10",
+        "parameter7Type": "num",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 2830,
+        "y": 2120,
+        "wires": [
+            [
+                "16bfe15fd5149e2e"
+            ]
+        ]
+    },
+    {
+        "id": "2e80180cdc41241e",
+        "type": "switch",
+        "z": "9c8ed30fb778bd08",
+        "name": "battery",
+        "property": "miniIcon",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "battery",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2840,
+        "y": 700,
+        "wires": [
+            [
+                "f92e89933aefb7f2"
+            ],
+            [
+                "91cde4a245ccc0ef"
+            ]
+        ]
+    },
+    {
+        "id": "c4e303e675b6badd",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryGreenYellow",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAqSURBVDhPY6A2YAQR6y+Z/gfzKACBeqfBZjGBeVQEowZSDga/gVQGDAwADuIEEH4+VKsAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryGreenYellow",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 2040,
+        "y": 180,
+        "wires": [
+            [
+                "1d31b223d75ab866"
+            ]
+        ]
+    },
+    {
+        "id": "55f62b36d81b733c",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryRed",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAqSURBVDhPY6A2YAQRb92D/oN5FADhnevAZjGBeVQEowZSDga/gVQGDAwAAiIEEDQW/6IAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryRed",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1460,
+        "y": 180,
+        "wires": [
+            [
+                "d617b2976641e0cc"
+            ]
+        ]
+    },
+    {
+        "id": "d617b2976641e0cc",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryOrange",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAqSURBVDhPY6A2YAQR36fI/gfzKACcOY/BZjGBeVQEowZSDga/gVQGDAwACyoEEDeI91QAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryOrange",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1650,
+        "y": 180,
+        "wires": [
+            [
+                "5f2222543757b8ab"
+            ]
+        ]
+    },
+    {
+        "id": "5f2222543757b8ab",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "20BatteryYellow",
+        "data": "iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAqSURBVDhPY6A2YAQRL57L/gfzKAASko/BZjGBeVQEowZSDga/gVQGDAwAHToEEE7rotQAAAAASUVORK5CYII=",
+        "dataType": "str",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "Solardisplay.20BatteryYellow",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1840,
+        "y": 180,
+        "wires": [
+            [
+                "c4e303e675b6badd"
+            ]
+        ]
+    },
+    {
+        "id": "f92e89933aefb7f2",
+        "type": "jimp-image",
+        "z": "9c8ed30fb778bd08",
+        "name": "battery color",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "batteryColorImage",
+        "parameter1Type": "msg",
+        "parameter2": "0",
+        "parameter2Type": "num",
+        "parameter3": "yMiniIcon",
+        "parameter3Type": "msg",
+        "parameter4": "0",
+        "parameter4Type": "num",
+        "parameter5": "0",
+        "parameter5Type": "num",
+        "parameter6": "batteryWidth",
+        "parameter6Type": "msg",
+        "parameter7": "10",
+        "parameter7Type": "num",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 7,
+        "jimpFunction": "blit",
+        "selectedJimpFunction": {
+            "name": "blit",
+            "fn": "blit",
+            "description": "blit the image with another Jimp image at x, y, optionally cropped",
+            "parameters": [
+                {
+                    "name": "src",
+                    "type": "",
+                    "required": true,
+                    "hint": "the source image (a Jimp instance)",
+                    "defaultType": "msg",
+                    "defaultValue": "payload"
+                },
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x position to blit the image"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y position to blit the image"
+                },
+                {
+                    "name": "srcx",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the x position from which to crop the source image"
+                },
+                {
+                    "name": "srcy",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the y position from which to crop the source image"
+                },
+                {
+                    "name": "srcw",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the width to which to crop the source image"
+                },
+                {
+                    "name": "srch",
+                    "type": "num",
+                    "required": false,
+                    "hint": "the height to which to crop the source image"
+                }
+            ]
+        },
+        "x": 3010,
+        "y": 660,
+        "wires": [
+            [
+                "91cde4a245ccc0ef"
             ]
         ]
     }
