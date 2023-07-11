@@ -101,35 +101,28 @@ Influxdb 1.X: `msg.payload.0.last`
 Influxdb 2.X: `msg.payload[0]._value`    
 
 # Eingangs Variabeln
-Solar image:   
- - msg.info (obere Leiste) (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
- - msg.house (Haus) (Wenn nicht gesetzt wird errechnet)
- - msg.toHouse (Solar zu Haus) (Wenn nicht gesetzt wird errechnet)
- - msg.solar (Solar)
- - msg.solarPercent (Solar-Prozent) (Wenn nicht gesetzt wird errechnet)
- - msg.fromGrid (vom Stromnetz)
- - msg.toGrid (zum Stromnetz)
- - msg.car (zum Auto)
- - msg.carPercent (Auto-Prozent)
- - msg.heatPump (zur Wärmepumpe)
- - msg.fromBattery (von der Batterie)
- - msg.toBattery (zu der Batterie)
- - msg.batteryPercent (Batterie-Prozent)
- 
- Smart-home image:   
- - msg.info (Wenn nicht gesetzt Datum/Uhr wird angezeigt)
- - msg.value11   
- - msg.value12   
- - msg.value13   
- - msg.value21   
- - msg.value22   
- - msg.value23   
- - msg.value31   
- - msg.value32   
- - msg.value33  
- - msg.value41   
- - msg.value42   
- - msg.value43   
+## Solar image:   
+| Var-Name           | Beschreibung     | Datentyp                                                        | Info                                        |
+| ------------------ | ---------------- | --------------------------------------------------------------- | ------------------------------------------- |
+| msg.info           | Obere Leiste     | String                                                          | Wenn nicht gesetzt Datum/Uhr wird angezeigt |
+| msg.house          | Haus             | String oder Number<br>Number für alle Funktionen wie umrechnen  | Wenn nicht gesetzt wird errechnet           |
+| msg.toHouse        | Solar zu Haus    | String oder Number<br>Number für alle Funktionen wie umrechnen  | Wenn nicht gesetzt wird errechnet           |
+| msg.solar          | Solar            | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.solarPercent   | Solar-Prozent    | String oder Number<br>Number für alle Funktionen wie umrechnen  | Wenn nicht gesetzt wird errechnet           |
+| msg.fromGrid       | Vom Stromnetz    | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.toGrid         | Zum Stromnetz    | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.car            | Zum Auto         | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.carPercent     | Auto-Prozent     | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.heatPump       | Zur Wärmepumpe   | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.fromBattery    | Von der Batterie | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.toBattery      | Zu der Batterie  | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+| msg.batteryPercent | Batterie-Prozent | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
+
+ ## Smart-home image:   
+| Var-Name           | Beschreibung                             | Datentyp                                                        | Info                                        |
+| ------------------ | ---------------------------------------- | --------------------------------------------------------------- | ------------------------------------------- |
+| msg.info           | Obere Leiste                             | String                                                          | Wenn nicht gesetzt Datum/Uhr wird angezeigt |
+| msg.valueXX        | 1. X=Icon Nummer<br>2. X=Zeilen Nummer      | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
