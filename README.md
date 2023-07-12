@@ -158,10 +158,6 @@ Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor de
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
 Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schnelleren zugriff.   
 
-# Extra Funktionen:   
-- msg.circleX als String auf blue, green, grey, orange, red, white oder yellow setzen.  
-Beispiel: msg.circle1 = "green"
-
 # Donationware:
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
 www.paypal.me/TimOberle
