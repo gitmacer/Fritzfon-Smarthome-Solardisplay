@@ -160,7 +160,7 @@ Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor de
 ![Screenshot 2023-03-29 180119](https://user-images.githubusercontent.com/37345589/228598469-35785386-3213-4023-b37c-20af269b8c4d.png)
 
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
-Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schnelleren zugriff.   
+Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schnelleren Zugriff.   
 
 # Donationware:
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
