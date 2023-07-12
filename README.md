@@ -1,19 +1,16 @@
+![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
+
 [Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay#anleitung)   
 [English Guide](https://github.com/gitmacer/Fritzfon-Solardisplay#guide)
 
-# Donationware: a small donation is gladly received and expected. Nothing against trying out first 
+# Donationware:   
+Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
+Bei Problemen bitte ein Github-Issue erstellen.   
+
+A small donation is gladly received and expected. Nothing against trying out first.   
+If you experience problems or need help feelfree to create a Github issue.   
 www.paypal.me/TimOberle
-# If you experience problems or need help feelfree to create a Github issue.
-# Fritzfon-Solardisplay
 
-Show information about your solarsystem and powermeter on your Fritzfons by using the ability to show webcam images and Node-Red.   
-![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
-
-# Anleitung:
-Es sind viele Anleitungen zur Inbetriebnahme von Node-Red verfügbar daher wird dieser Schritt übersprungen.
-
-Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).   
-![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
 # Solar image vs smart-home image:   
 Solar:
@@ -33,6 +30,12 @@ Smart-home image:
 ![Smat-home demo](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c25822db-7d0e-4c7b-8c77-589de90fc3eb)
 - Bunte Kreise   
 ![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
+
+# Anleitung:
+Es sind viele Anleitungen zur Inbetriebnahme von Node-Red verfügbar daher wird dieser Schritt übersprungen.
+
+Installiere [Node-Red image tools](https://flows.nodered.org/node/node-red-contrib-image-tools).   
+![Jimp installation](https://user-images.githubusercontent.com/37345589/228313961-9bf6407b-8946-4bc2-8907-313227f4a952.gif)
 
 Lade die neuste Version [hier](https://github.com/gitmacer/Fritzfon-Solardisplay/releases) herunter und importiere diese (solar und/oder Smarthome image).   
 ![2  import](https://user-images.githubusercontent.com/37345589/228585979-1c44dbf8-88cb-423e-a701-2452e1fb4e81.gif)
