@@ -226,35 +226,43 @@ Smart-home image:
 ![circle](https://github.com/gitmacer/Fritzfon-Solardisplay/assets/37345589/c1300398-43e4-4751-a4a0-1c1009513d40)
 
 # Input variables
-Solar image:   
- - msg.info (if not provided clock will be shown)
- - msg.house (if not provided will get calculated)
- - msg.toHouse (if not provided will get calculated)
- - msg.solar
- - msg.solarPercent (if not provided will get calculated)
- - msg.fromGrid
- - msg.toGrid
- - msg.car
- - msg.carPercent
- - msg.heatPump
- - msg.fromBattery
- - msg.toBattery
- - msg.batteryPercent
- 
-Smart-home image:   
- - msg.info (if not provided clock will be shown)
- - msg.value11   
- - msg.value12   
- - msg.value13   
- - msg.value21   
- - msg.value22   
- - msg.value23   
- - msg.value31   
- - msg.value32   
- - msg.value33   
- - msg.value41   
- - msg.value42   
- - msg.value43   
+## Solar image:   
+| Var-name              | Description                             | Data-type                                                      | Info                                        |
+| --------------------- | --------------------------------------- | -------------------------------------------------------------- | ------------------------------------------- |
+| msg.info              | Top bar                                 | String                                                         | If not provided date and time will be shown |
+| msg.house             | house                                   | String oder Number<br>Number for all features like converting  | If not provided will get calculated         |
+| msg.toHouse           | Solar to House                          | String oder Number<br>Number for all features like converting  | If not provided will get calculated         |
+| msg.solar             | Solar                                   | String oder Number<br>Number for all features like converting  |                                             |
+| msg.solarPercent      | Solar percent                           | String oder Number<br>Number for all features like converting  | If not provided will get calculated         |
+| msg.fromGrid          | From grid                               | String oder Number<br>Number for all features like converting  |                                             |
+| msg.toGrid            | To grid                                 | String oder Number<br>Number for all features like converting  |                                             |
+| msg.car               | To car                                  | String oder Number<br>Number for all features like converting  |                                             |
+| msg.carPercent        | Car percent                             | String oder Number<br>Number for all features like converting  |                                             |
+| msg.heatPump          | To heatpump                             | String oder Number<br>Number for all features like converting  |                                             |
+| msg.fromBattery       | From battery                            | String oder Number<br>Number for all features like converting  |                                             |
+| msg.toBattery         | To battery                              | String oder Number<br>Number for all features like converting  |                                             |
+| msg.batteryPercent    | Battery percent                         | String oder Number<br>Number for all features like converting  |                                             |
+| msg.(var name)Unit    | Input-Unit                              | String: "", W, kW, Wmin, Wh, kWh, MWh, € r T€                  | Example: msg.houseUnit = "kWh"              |
+| msg.(var name)OutUnit | Shown-Unit                              | String: "", W, kW, kWh, MWh, € or T€                           | Example: msg.houseOutUnit = "kWh"           |
+| msg.solarMax          | Max Value to calculate msg.solarPercent | Number (Unit W)                                                |                                             |
+| msg.label             | Label                                   | String                                                         |                                             |
+
+ ## Smart-home image:   
+| Var-name             | Description                                               | Data-type                                                         | Info                                        |
+| -------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------- |
+| msg.info             | Top bar                                                   | String                                                            | If not provided date and time will be shown |
+| msg.valueXX          | Value<br>1. X=icon number<br>2. X=row nummer              | String or Number<br>Number for all features like converting       |                                             |
+| msg.unitXX           | Input unit<br>1. X=icon number<br>2. X=row number         | String: "", W, kW, Wmin, Wh, kWh, MWh, €, T€, 0-1%, °C, °F or K   | Example: msg.unit11 = "kWh"                |
+| msg.outUnitXX        | Shown unit<br>1. X=icon number<br>2. X=row number         | String: "", W, kW, kWh, MWh, €, T€, %, °C, °F or K                | Example: msg.outUnit11 = "kWh"             |
+| msg.labelX           | Label<br>X=icon number                                    | String                                                            | Example: msg.label1 = "TV"                 |
+| msg.headlineX        | Headline<br>X=icon number                                 | String                                                            | Example: msg.headline2 = "Steckdosen"      |
+| msg.circleX          | colored-circle<br>X=icon number                           | String: blue, green, grey, orange, red, white oder yellow         | Example: msg.circle1 = "green"             |
+| msg.miniIconX        | mini icon<br>X=icon number                                | String: battery, batteryX, batteryFlash, happy, sceptic, sad, warn, signal, signalNoConnection or signal0 to signal4 | |
+| msg.miniIconXPercent | Battery and signal percent                                | Number: 0-100                                                     |                                             |
+| msg.miniIconXDBm     | signal strength                                           | Number: -100-0                                                    |                                             |
+| msg.miniIconXColor   | Batterie Farbe                                            | String: red, orange, yellow, greenYellow or green                 |                                             |
+| msg.roundModeXX      | Rounding mode<br>1. X=icon number<br>2. X=row number      | String: "", Round oder To fixed                                   |                                             |
+| msg.decimalsXX       | Decimals<br>1. X=icon number<br>2. X=row number           | Number: -1-∞                                                      | -1 for standard                             |
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
@@ -273,10 +281,6 @@ Set a unique name, url you chosed before (Add hostname or fixed IP of the Node-R
 
 After applying you should be able to show the image on your Fritzfon under "Menu/Home Network/Live Image".
 Tipp: you can add Live-Bild to favourites  for faster access.
-
-# Extra features:   
-- set msg.circleX as String to blue, green, grey, orange, red, white or yellow   
-example: msg.circle1 = "green"
 
 # Donationware:
 Feel free to try my Project first and decide how much it is worths to you afterwards.   
