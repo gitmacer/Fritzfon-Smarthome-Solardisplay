@@ -5,9 +5,11 @@
 
 # Donationware:   
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
+Bereits 1€ macht einen großen unterschied und sollte jeder ausgeben können.   
 Bei Problemen bitte ein Github-Issue erstellen.   
 
 A small donation is gladly received and expected. Nothing against trying out first.   
+I am already glad to receive as low as 1€.   
 If you experience problems or need help feelfree to create a Github issue.   
 www.paypal.me/TimOberle
 
