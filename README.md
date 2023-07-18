@@ -168,6 +168,9 @@ Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schneller
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
 www.paypal.me/TimOberle
 
+# Weitere Beispiele:
+![Temperatur](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/f207cb81-e4a4-4f2d-bf21-44c4c890f47a)
+
 # Guide:
 There are many guids how to install Node-Red available so this step is skipped here.   
 
