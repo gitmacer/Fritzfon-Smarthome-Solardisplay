@@ -133,7 +133,7 @@ Setze Server und Querry.
 Beispiel query:   
 Influxdb 1.X (InfluxQL):
 ```
-SELECT last("Measurement") FROM "Database";
+SELECT last(*) FROM "Measurement";
 ```
 Influxdb 2.X (flux):
 ```
@@ -143,11 +143,14 @@ from(bucket: "bucket")
     |> last()
 ```
 
-![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)
+![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)   
 
 Füge ein "change" node hinzu um die daten auf die richtige Variable zu setzen.   
+Ich empfehle mithilfe eines Debug-Nodes die richtige Pfad herauszufinden.   
+![Debug Pfad](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/49a6721b-167b-4103-a7ce-89c2e25efcd4)   
+
 z.B. msg.value11 auf   
-Influxdb 1.X: `msg.payload.0.last`    
+Influxdb 1.X: `msg.payload[0].last_value`    
 Influxdb 2.X: `msg.payload[0]._value`    
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
@@ -196,7 +199,7 @@ Configure Server and querry.
 Example querry: 
 Influxdb 1.X (InfluxQL):
 ```
-SELECT last("Measurement") FROM "Database";
+SELECT last(*) FROM "Measurement";
 ```
 Influxdb 2.X (flux):
 ```
@@ -208,8 +211,11 @@ from(bucket: "bucket")
 
 ![6  influxdb](https://user-images.githubusercontent.com/37345589/228588128-2f0f2d29-5f13-400f-81e7-aa7a94a745d8.png)
 
-Add a "change" node to set the queried data to one of the following variables.   
-Influxdb 1.X: `msg.payload.0.last`   
+Add a "change" node to set the queried data to right variable.   
+I recommend to use a debug node to find the right path.
+![Debug Pfad](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/3014aece-135c-45b0-a749-3a30585643d4)
+
+Influxdb 1.X: `msg.payload[0].last_value`   
 Influxdb 2.X: `msg.payload[0]._value`   
 
 # Solar image vs smart-home image:   
