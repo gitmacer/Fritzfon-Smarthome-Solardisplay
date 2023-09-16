@@ -135,6 +135,8 @@ Influxdb 1.X (InfluxQL):
 ```
 SELECT last(*) FROM "Measurement";
 ```
+"*" für alle gespeicherten Variablen.   
+
 Influxdb 2.X (flux):
 ```
 from(bucket: "bucket")
@@ -201,6 +203,8 @@ Influxdb 1.X (InfluxQL):
 ```
 SELECT last(*) FROM "Measurement";
 ```
+"*" for all field keys.   
+
 Influxdb 2.X (flux):
 ```
 from(bucket: "bucket")
