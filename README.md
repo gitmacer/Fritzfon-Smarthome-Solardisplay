@@ -1,7 +1,7 @@
 ![Demo](https://github.com/gitmacer/Fritzfon-Solardisplay/raw/main/Demo-Images/Demo.jpg)
 # Examples/Beispiele:
 ![SolarDisplay Battery](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/fce7350f-7f46-4603-8784-0f61328b2df2)
-![Solar+House+FromToGrid-Today](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/ec5c1fd2-ff3a-4f85-935e-a39a93d1569e)
+![Solar+ToHouse+House+FromToGrid-Today](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/2d71dd87-4ab7-41e0-8c07-4111b19c373e)
 ![Temperatur](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/f207cb81-e4a4-4f2d-bf21-44c4c890f47a)
 
 [Deutsche Anleitung](https://github.com/gitmacer/Fritzfon-Solardisplay#anleitung)   
