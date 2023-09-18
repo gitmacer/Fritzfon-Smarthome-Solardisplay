@@ -10,11 +10,12 @@
 # Donationware:   
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
 Bereits 1€ macht einen großen unterschied und sollte jeder ausgeben können.   
-Bei Problemen bitte ein Github-Issue erstellen.   
+Bei Problemen bitte ein Github-Issue erstellen und bei gefallen ein Github Stern vergeben.   
 
 A small donation is gladly received and expected. Nothing against trying out first.   
 I am already glad to receive as low as 1€.   
 If you experience problems or need help feelfree to create a Github issue.   
+Also if you like my Projekt please give it a Github-star.   
 www.paypal.me/TimOberle
 
 
