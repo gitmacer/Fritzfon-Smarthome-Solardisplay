@@ -4535,7 +4535,7 @@
             }
         ],
         "meta": {
-            "version": "0.3.4",
+            "version": "0.3.5",
             "author": "Tim Oberle",
             "desc": "Show power, energy and temperature on a fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -13322,8 +13322,8 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 970,
-        "y": 680,
+        "x": 1050,
+        "y": 600,
         "wires": [
             [
                 "d0098d744447509f"
@@ -13383,11 +13383,11 @@
                 }
             ]
         },
-        "x": 1110,
-        "y": 680,
+        "x": 1070,
+        "y": 640,
         "wires": [
             [
-                "8fbd791bacd74a34"
+                "538a685597bda2f7"
             ]
         ]
     },
@@ -13403,10 +13403,10 @@
         "finalize": "",
         "libs": [],
         "x": 840,
-        "y": 680,
+        "y": 640,
         "wires": [
             [
-                "0e086a59a345beec"
+                "a16f09be3013a057"
             ]
         ]
     },
@@ -13421,7 +13421,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
+        "x": 1210,
         "y": 680,
         "wires": [
             [
@@ -13463,8 +13463,8 @@
             "description": "Just loads the image.",
             "parameters": []
         },
-        "x": 970,
-        "y": 2120,
+        "x": 1090,
+        "y": 2040,
         "wires": [
             [
                 "c93154e33fee6bab"
@@ -13525,10 +13525,10 @@
             ]
         },
         "x": 1110,
-        "y": 2120,
+        "y": 2080,
         "wires": [
             [
-                "d9a255dfbe7e19f3"
+                "2d59778903fb2ea8"
             ]
         ]
     },
@@ -13543,11 +13543,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 2120,
+        "x": 860,
+        "y": 2080,
         "wires": [
             [
-                "b05731eaa4a5edab"
+                "5fd1879a20dab7c1"
             ]
         ]
     },
@@ -13587,6 +13587,281 @@
             [
                 "356253d5d2299fb5"
             ]
+        ]
+    },
+    {
+        "id": "a16f09be3013a057",
+        "type": "function",
+        "z": "32842d881f7f6e29",
+        "name": "get cached",
+        "func": "let i = msg.iconNumber;\n\nlet cachedCustomIconString = flow.get(\"58customIconString\" + i);\nif (msg.tempCustomIcon == cachedCustomIconString){\n    msg.image = flow.get(\"58customIcon\" + i);\n    return [null, msg];\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 680,
+        "wires": [
+            [
+                "0e086a59a345beec"
+            ],
+            [
+                "55b238fd367aacc0"
+            ]
+        ],
+        "outputLabels": [
+            "Not cached",
+            "Cached"
+        ]
+    },
+    {
+        "id": "55b238fd367aacc0",
+        "type": "jimp-image",
+        "z": "32842d881f7f6e29",
+        "name": "",
+        "data": "image",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "image",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1050,
+        "y": 680,
+        "wires": [
+            [
+                "8fbd791bacd74a34"
+            ]
+        ]
+    },
+    {
+        "id": "538a685597bda2f7",
+        "type": "jimp-image",
+        "z": "32842d881f7f6e29",
+        "name": "buffer",
+        "data": "image",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "imageBuffer",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1210,
+        "y": 640,
+        "wires": [
+            [
+                "2a3782d1d519625a"
+            ]
+        ]
+    },
+    {
+        "id": "2a3782d1d519625a",
+        "type": "function",
+        "z": "32842d881f7f6e29",
+        "name": "cache image",
+        "func": "let i = msg.iconNumber;\n\nflow.set(\"58customIconString\" + i, msg.tempCustomIcon);\nflow.set(\"58customIcon\" + i, msg.imageBuffer);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1350,
+        "y": 640,
+        "wires": [
+            [
+                "8fbd791bacd74a34"
+            ]
+        ]
+    },
+    {
+        "id": "2d59778903fb2ea8",
+        "type": "jimp-image",
+        "z": "32842d881f7f6e29",
+        "name": "buffer",
+        "data": "image",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "imageBuffer",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1250,
+        "y": 2080,
+        "wires": [
+            [
+                "218a046efd56160a"
+            ]
+        ]
+    },
+    {
+        "id": "218a046efd56160a",
+        "type": "function",
+        "z": "32842d881f7f6e29",
+        "name": "cache image",
+        "func": "let i = msg.iconNumber;\n\nflow.set(\"40customIconString\" + i, msg.tempCustomIcon);\nflow.set(\"40customIcon\" + i, msg.imageBuffer);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 2080,
+        "wires": [
+            [
+                "d9a255dfbe7e19f3"
+            ]
+        ]
+    },
+    {
+        "id": "5fd1879a20dab7c1",
+        "type": "function",
+        "z": "32842d881f7f6e29",
+        "name": "get cached",
+        "func": "let i = msg.iconNumber;\n\nlet cachedCustomIconString = flow.get(\"40customIconString\" + i);\nif (msg.tempCustomIcon == cachedCustomIconString){\n    msg.image = flow.get(\"40customIcon\" + i);\n    return [null, msg];\n}\n\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 2120,
+        "wires": [
+            [
+                "b05731eaa4a5edab"
+            ],
+            [
+                "104172f27908b309"
+            ]
+        ],
+        "outputLabels": [
+            "Not cached",
+            "Cached"
+        ]
+    },
+    {
+        "id": "104172f27908b309",
+        "type": "jimp-image",
+        "z": "32842d881f7f6e29",
+        "name": "",
+        "data": "image",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "image",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 1090,
+        "y": 2120,
+        "wires": [
+            [
+                "d9a255dfbe7e19f3"
+            ]
+        ]
+    },
+    {
+        "id": "2e26d45fe516c64a",
+        "type": "function",
+        "z": "32842d881f7f6e29",
+        "name": "delete cached images on stop",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "for (let i = 1; i <= 4; i++) {\n    flow.set(\"58customIconString\" + i, undefined);\n    flow.set(\"58customIcon\" + i, undefined);\n\n    flow.set(\"40customIconString\" + i, undefined);\n    flow.set(\"40customIcon\" + i, undefined);\n}",
+        "libs": [],
+        "x": 150,
+        "y": 140,
+        "wires": [
+            []
         ]
     }
 ]
