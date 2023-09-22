@@ -82,6 +82,7 @@ Smart-home image:
 | msg.decimalsXX       | Kommastellen                                              | Number: -1-∞                                                      | -1 für Standart                             |
 | msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            |                                             |
 | msg.customIcon       | If msg.customIconX isn't provided                         | String file path, URL or base64 string                            |                                             |
+
 [Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
 
 
