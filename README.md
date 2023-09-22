@@ -61,21 +61,27 @@ Smart-home image:
 | msg.label             | Beschriftung                              | String                                                          |                                             |
 
  ## Smart-home image:   
+ 1. X=Icon Nummer   
+ 2. X=Zeilen Nummer
+
 | Var-Name             | Beschreibung                                              | Datentyp                                                          | Info                                        |
 | -------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------- |
 | msg.info             | Obere Leiste                                              | String                                                            | Wenn nicht gesetzt Datum/Uhr wird angezeigt |
-| msg.valueXX          | Wert<br>1. X=Icon Nummer<br>2. X=Zeilen Nummer            | String oder Number<br>Number für alle Funktionen wie umrechnen    |                                             |
-| msg.unitXX           | Einheit<br>1. X=Icon Nummer<br>2. X=Zeilen Nummer         | String: "", W, kW, Wmin, Wh, kWh, MWh, €, T€, 0-1%, °C, °F oder K | Beispiel: msg.unit11 = "kWh"                |
-| msg.outUnitXX        | Anzeige-Einheit<br>1. X=Icon Nummer<br>2. X=Zeilen Nummer | String: "", W, kW, kWh, MWh, €, T€, %, °C, °F oder K              | Beispiel: msg.outUnit11 = "kWh"             |
-| msg.labelX           | Beschriftung<br>X=Icon Nummer                             | String                                                            | Beispiel: msg.label1 = "TV"                 |
-| msg.headlineX        | Überschrift<br>X=Icon Nummer                              | String                                                            | Beispiel: msg.headline2 = "Steckdosen"      |
-| msg.circleX          | Bunter-Kreis<br>X=Icon Nummer                             | String: blue, green, grey, orange, red, white oder yellow         | Beispiel: msg.circle1 = "green"             |
-| msg.miniIconX        | Mini-Icon<br>X=Icon Nummer                                | String: battery, batteryX, batteryFlash, happy, sceptic, sad, warn, signal, signalNoConnection oder signal0 bis signal4 | |
+| msg.valueXX          | Wert                                                      | String oder Number<br>Number für alle Funktionen wie umrechnen    |                                             |
+| msg.negativeValueXX  | Wird abgezogen nutzlich wenn z.B. Netz zu/aus getrennt ist | Number                                                            |                                             |
+| msg.unitXX           | Einheit                                                   | String: "", W, kW, Wmin, Wh, kWh, MWh, €, T€, 0-1%, °C, °F oder K | Beispiel: msg.unit11 = "kWh"                |
+| msg.outUnitXX        | Anzeige-Einheit                                           | String: "", W, kW, kWh, MWh, €, T€, %, °C, °F oder K              | Beispiel: msg.outUnit11 = "kWh"             |
+| msg.labelX           | Beschriftung                                              | String                                                            | Beispiel: msg.label1 = "TV"                 |
+| msg.headlineX        | Überschrift                                               | String                                                            | Beispiel: msg.headline2 = "Steckdosen"      |
+| msg.circleX          | Bunter-Kreis                                              | String: blue, green, grey, orange, red, white oder yellow         | Beispiel: msg.circle1 = "green"             |
+| msg.miniIconX        | Mini-Icon                                                 | String: battery, batteryX, batteryFlash, happy, sceptic, sad, warn, signal, signalNoConnection oder signal0 bis signal4 | |
 | msg.miniIconXPercent | Batterie/Signal Prozent                                   | Number: 0-100                                                     |                                             |
 | msg.miniIconXDBm     | Signalstärke                                              | Number: -100-0                                                    |                                             |
 | msg.miniIconXColor   | Batterie Farbe                                            | String: red, orange, yellow, greenYellow oder green               |                                             |
-| msg.roundModeXX      | Rundungsmodus<br>1. X=Icon Nummer<br>2. X=Zeilen Nummer   | String: "", Round oder To fixed                                   |                                             |
-| msg.decimalsXX       | Kommastellen<br>1. X=Icon Nummer<br>2. X=Zeilen Nummer    | Number: -1-∞                                                      | -1 für Standart                             |
+| msg.roundModeXX      | Rundungsmodus                                             | String: "", Round oder To fixed                                   |                                             |
+| msg.decimalsXX       | Kommastellen                                              | Number: -1-∞                                                      | -1 für Standart                             |
+| msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            | [Base64 string umwandler](https://base64.guru/converter/encode/file)|
+
 
 
 # Anleitung:
