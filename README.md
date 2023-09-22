@@ -80,8 +80,9 @@ Smart-home image:
 | msg.miniIconXColor   | Batterie Farbe                                            | String: red, orange, yellow, greenYellow oder green               |                                             |
 | msg.roundModeXX      | Rundungsmodus                                             | String: "", Round oder To fixed                                   |                                             |
 | msg.decimalsXX       | Kommastellen                                              | Number: -1-∞                                                      | -1 für Standart                             |
-| msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            | [Base64 string umwandler](https://base64.guru/converter/encode/file)|
-
+| msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            |                                             |
+| msg.customIcon       | If msg.customIconX isn't provided                         | String file path, URL or base64 string                            |                                             |
+[Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
 
 
 # Anleitung:
