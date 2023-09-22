@@ -61,7 +61,7 @@ Smart-home image:
 | msg.label             | Beschriftung                              | String                                                          |                                             |
 
  ## Smart-home image:   
- 1. X=Icon Nummer   
+ 1. X=Icon Nummer
  2. X=Zeilen Nummer
 
 | Var-Name             | Beschreibung                                              | Datentyp                                                          | Info                                        |
@@ -81,7 +81,7 @@ Smart-home image:
 | msg.roundModeXX      | Rundungsmodus                                             | String: "", Round oder To fixed                                   |                                             |
 | msg.decimalsXX       | Kommastellen                                              | Number: -1-∞                                                      | -1 für Standart                             |
 | msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            |                                             |
-| msg.customIcon       | If msg.customIconX isn't provided                         | String file path, URL or base64 string                            |                                             |
+| msg.customIcon       | Wenn msg.customIconX nicht übergeben wird                 | String file path, URL or base64 string                            |                                             |
 
 [Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
 
@@ -273,21 +273,30 @@ Smart-home image:
 | msg.label             | Label                                   | String                                                         |                                             |
 
  ## Smart-home image:   
+1. X=icon number
+2. X=row number
+ 
 | Var-name             | Description                                               | Data-type                                                         | Info                                        |
 | -------------------- | --------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------- |
 | msg.info             | Top bar                                                   | String                                                            | If not provided date and time will be shown |
-| msg.valueXX          | Value<br>1. X=icon number<br>2. X=row nummer              | String or Number<br>Number for all features like converting       |                                             |
-| msg.unitXX           | Input unit<br>1. X=icon number<br>2. X=row number         | String: "", W, kW, Wmin, Wh, kWh, MWh, €, T€, 0-1%, °C, °F or K   | Example: msg.unit11 = "kWh"                |
-| msg.outUnitXX        | Shown unit<br>1. X=icon number<br>2. X=row number         | String: "", W, kW, kWh, MWh, €, T€, %, °C, °F or K                | Example: msg.outUnit11 = "kWh"             |
-| msg.labelX           | Label<br>X=icon number                                    | String                                                            | Example: msg.label1 = "TV"                 |
-| msg.headlineX        | Headline<br>X=icon number                                 | String                                                            | Example: msg.headline2 = "Steckdosen"      |
-| msg.circleX          | colored-circle<br>X=icon number                           | String: blue, green, grey, orange, red, white oder yellow         | Example: msg.circle1 = "green"             |
-| msg.miniIconX        | mini icon<br>X=icon number                                | String: battery, batteryX, batteryFlash, happy, sceptic, sad, warn, signal, signalNoConnection or signal0 to signal4 | |
+| msg.valueXX          | Value                                                     | String or Number<br>Number for all features like converting       |                                             |
+| msg.negativeValueXX  | Will get subtracted. Helps wenn to/from are seperated     | Number                                                            |                                             |
+| msg.unitXX           | Input unit                                                | String: "", W, kW, Wmin, Wh, kWh, MWh, €, T€, 0-1%, °C, °F or K   | Example: msg.unit11 = "kWh"                 |
+| msg.outUnitXX        | Shown unit                                                | String: "", W, kW, kWh, MWh, €, T€, %, °C, °F or K                | Example: msg.outUnit11 = "kWh"              |
+| msg.labelX           | Label                                                     | String                                                            | Example: msg.label1 = "TV"                  |
+| msg.headlineX        | Headline                                                  | String                                                            | Example: msg.headline2 = "Steckdosen"       |
+| msg.circleX          | colored-circle                                            | String: blue, green, grey, orange, red, white oder yellow         | Example: msg.circle1 = "green"              |
+| msg.miniIconX        | mini icon                                                 | String: battery, batteryX, batteryFlash, happy, sceptic, sad, warn, signal, signalNoConnection or signal0 to signal4 | |
 | msg.miniIconXPercent | Battery and signal percent                                | Number: 0-100                                                     |                                             |
 | msg.miniIconXDBm     | signal strength                                           | Number: -100-0                                                    |                                             |
 | msg.miniIconXColor   | Batterie Farbe                                            | String: red, orange, yellow, greenYellow or green                 |                                             |
-| msg.roundModeXX      | Rounding mode<br>1. X=icon number<br>2. X=row number      | String: "", Round oder To fixed                                   |                                             |
-| msg.decimalsXX       | Decimals<br>1. X=icon number<br>2. X=row number           | Number: -1-∞                                                      | -1 for standard                             |
+| msg.roundModeXX      | Rounding mode                                             | String: "", Round oder To fixed                                   |                                             |
+| msg.decimalsXX       | Decimals                                                  | Number: -1-∞                                                      | -1 for standard                             |
+| msg.customIconX      | Custom Icon                                               | String file path, URL or base64 string                            |                                             |
+| msg.customIcon       | Used if msg.customIconX isn't provided                    | String file path, URL or base64 string                            |                                             |
+
+
+[Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
