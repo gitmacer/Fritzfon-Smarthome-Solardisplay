@@ -83,7 +83,7 @@ Smart-home image:
 | msg.customIconX      | Eigenes Icon                                              | String file path, URL or base64 string                            |                                             |
 | msg.customIcon       | Wenn msg.customIconX nicht übergeben wird                 | String file path, URL or base64 string                            |                                             |
 
-[Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
+[Bild zu Base64 string Umwandler](https://base64.guru/converter/encode/file)
 
 
 # Anleitung:
@@ -295,8 +295,7 @@ Smart-home image:
 | msg.customIconX      | Custom Icon                                               | String file path, URL or base64 string                            |                                             |
 | msg.customIcon       | Used if msg.customIconX isn't provided                    | String file path, URL or base64 string                            |                                             |
 
-
-[Bild zu Base64 string umwandler](https://base64.guru/converter/encode/file)
+[Image to Base64 string converter](https://base64.guru/converter/encode/file)
 
 ![7  change node](https://user-images.githubusercontent.com/37345589/228590676-cb486b06-5e68-40da-a6bc-a8a43e861fc6.png)
 
