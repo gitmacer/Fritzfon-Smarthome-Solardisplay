@@ -56,7 +56,7 @@ Smart-home image:
 | msg.toBattery         | Zu der Batterie                           | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
 | msg.batteryPercent    | Batterie-Prozent                          | String oder Number<br>Number für alle Funktionen wie umrechnen  |                                             |
 | msg.(var name)Unit    | In-Einheit                                | String: "", W, kW, Wmin, Wh, kWh, MWh, € oder T€                | Beispiel: msg.houseUnit = "kWh"             |
-| msg.(var name)OutUnit | Out-Einheit                               | String: "", W, kW, kWh, MWh, € oder T€                          | Beispiel: msg.houseOutUnit = "kWh"          |
+| msg.(var name)OutUnit | Anzeige-Einheit                           | String: "", W, kW, kWh, MWh, € oder T€                          | Beispiel: msg.houseOutUnit = "kWh"          |
 | msg.solarMax          | Max-Wert um msg.solarPercent auszurechnen | Number (Einheit W)                                              |                                             |
 | msg.label             | Beschriftung                              | String                                                          |                                             |
 
