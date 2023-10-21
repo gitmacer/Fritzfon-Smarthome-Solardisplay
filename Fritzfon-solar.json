@@ -11,7 +11,7 @@
                 "y": 140,
                 "wires": [
                     {
-                        "id": "96c080c3c196de2a"
+                        "id": "63fc5dfacf242fc0"
                     }
                 ]
             }
@@ -115,15 +115,15 @@
                             },
                             {
                                 "l": {
-                                    "en-US": "ToBattery",
-                                    "de": "Zu Batterie"
+                                    "en-US": "ToBattery (To/From combined)",
+                                    "de": "Zu Batterie (Zu/Von kombiniert)"
                                 },
                                 "v": "ToBattery"
                             },
                             {
                                 "l": {
-                                    "en-US": "Battery%+ToBattery",
-                                    "de": "Battery% + Zu Batterie"
+                                    "en-US": "Battery%+ToBattery (To/From combined)",
+                                    "de": "Battery% + Zu Batterie (Zu/Von kombiniert)"
                                 },
                                 "v": "B%+ToBattery"
                             },
@@ -197,6 +197,37 @@
                 }
             },
             {
+                "name": "ToHouseIncludeBattery",
+                "type": "str",
+                "value": "Yes",
+                "ui": {
+                    "icon": "font-awesome/fa-battery",
+                    "label": {
+                        "de": "Zu Haus",
+                        "en-US": "To house"
+                    },
+                    "type": "select",
+                    "opts": {
+                        "opts": [
+                            {
+                                "l": {
+                                    "de": "Mit Batterie",
+                                    "en-US": "include Battery"
+                                },
+                                "v": "Yes"
+                            },
+                            {
+                                "l": {
+                                    "de": "Ohne Batterie",
+                                    "en-US": "exclude Battery"
+                                },
+                                "v": "No"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
                 "name": "3. multi icon",
                 "type": "str",
                 "value": "FromGrid",
@@ -207,8 +238,8 @@
                         "opts": [
                             {
                                 "l": {
-                                    "en-US": "FromGrid",
-                                    "de": "Von Netz"
+                                    "en-US": "FromGrid (From/To combined)",
+                                    "de": "Von Netz (Von/Zu kombiniert)"
                                 },
                                 "v": "FromGrid"
                             },
@@ -391,35 +422,6 @@
                                     "de": "T€"
                                 },
                                 "v": "T€"
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "name": "To battery input",
-                "type": "str",
-                "value": "NotInverted",
-                "ui": {
-                    "label": {
-                        "de": "Zu Batterie eingang"
-                    },
-                    "type": "select",
-                    "opts": {
-                        "opts": [
-                            {
-                                "l": {
-                                    "de": "Nicht invertiert",
-                                    "en-US": "Not Inverted"
-                                },
-                                "v": "NotInverted"
-                            },
-                            {
-                                "l": {
-                                    "de": "Invertiert",
-                                    "en-US": "Inverted"
-                                },
-                                "v": "Inverted"
                             }
                         ]
                     }
@@ -718,7 +720,7 @@
         ],
         "meta": {
             "module": "@gitmacer/node-red-fritzsolardisplay",
-            "version": "2.1.4",
+            "version": "2.2.2",
             "author": "Tim Oberle",
             "desc": "Show your current (solar) power information on your Fritzfon",
             "keywords": "energy,live,image,bild,solar,display,monitor,avm,fritzbox,fritzfon,power,meter,usage,phone,webcam,c5,c6,anzeige,photovoltaik,solaranzeige,gitmacer"
@@ -740,7 +742,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1810,
+        "x": 1770,
         "y": 140,
         "wires": [
             [
@@ -759,7 +761,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
+        "x": 1520,
         "y": 140,
         "wires": [
             [
@@ -829,7 +831,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
+        "x": 1180,
         "y": 140,
         "wires": [
             [
@@ -848,7 +850,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 860,
+        "x": 820,
         "y": 140,
         "wires": [
             [
@@ -861,13 +863,13 @@
         "type": "function",
         "z": "774cc0ad6b18a8e3",
         "name": "calculate toHouse",
-        "func": "if (msg.solarUnit == \"W\" && msg.fromGridUnit == \"W\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.fromGrid)) {\n    if (msg.fromGrid < 0){\n        msg.toHouse = msg.solar + msg.fromGrid;\n    }\n    else{\n        msg.toHouse = msg.solar\n    }\n    \n    if (msg.toBattery > 0 && Number.isFinite(msg.toBattery)) {\n        msg.toHouse = msg.toHouse - msg.toBattery;\n    }\n    msg.toHouseUnit = \"W\";\n}\nelse if (msg.solarUnit == \"kWh\" && msg.toGridUnit == \"kWh\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.toGrid))\n{\n    msg.toHouse = msg.solar - msg.toGrid;\n    msg.toHouseUnit = \"kWh\";\n}\nelse if (msg.solarUnit == \"€\" && msg.toGridUnit == \"€\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.toGrid)) {\n    msg.toHouse = msg.solar - msg.toGrid;\n    msg.toHouseUnit = \"€\";\n}\nreturn msg;",
+        "func": "let includeBattery = env.get(\"ToHouseIncludeBattery\") == \"Yes\";\n\nif (msg.solarUnit == \"W\" && msg.fromGridUnit == \"W\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.fromGrid)) {\n    msg.toHouse = msg.solar\n\n    if (msg.toHouse < 0) {\n        msg.toHouse = 0;\n    }\n\n    if (includeBattery && msg.toHouse > msg.house + msg.combinedToBattery) {\n        msg.toHouse = msg.house + msg.combinedToBattery;\n    }\n    else if (!includeBattery && msg.toHouse > msg.house){\n        msg.toHouse = msg.house;\n    }\n\n    msg.toHouseUnit = \"W\";\n}\nelse if (msg.solarUnit == \"kWh\" && msg.toGridUnit == \"kWh\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.toGrid))\n{\n    msg.toHouse = msg.solar - msg.toGrid;\n\n    if (!includeBattery && msg.toHouse > msg.house){\n        msg.toHouse = msg.house;\n    }\n\n    msg.toHouseUnit = \"kWh\";\n}\nelse if (msg.solarUnit == \"€\" && msg.toGridUnit == \"€\" && msg.toHouse === undefined && Number.isFinite(msg.solar) && Number.isFinite(msg.toGrid)) {\n    msg.toHouse = msg.solar - msg.toGrid;\n    msg.toHouseUnit = \"€\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
+        "x": 1010,
         "y": 140,
         "wires": [
             [
@@ -886,7 +888,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 120,
         "y": 140,
         "wires": [
             [
@@ -27112,7 +27114,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 610,
         "y": 140,
         "wires": [
             [
@@ -36758,11 +36760,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 270,
         "y": 140,
         "wires": [
             [
-                "57978a63f95fc33c"
+                "81b698f1cb92cd95"
             ]
         ]
     },
@@ -36777,7 +36779,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
+        "x": 1310,
         "y": 140,
         "wires": [
             [
@@ -50921,21 +50923,21 @@
         ]
     },
     {
-        "id": "96c080c3c196de2a",
+        "id": "81b698f1cb92cd95",
         "type": "function",
         "z": "774cc0ad6b18a8e3",
-        "name": "Invert toBattery",
-        "func": "if (Number.isFinite(msg.toBattery) && env.get(\"To battery input\") == \"Inverted\"){\n    msg.toBattery *= -1;\n}\n\nreturn msg;",
+        "name": "combine",
+        "func": "msg.combinedToBattery = msg.toBattery;\nif ((Number.isFinite(msg.toBattery) || Number.isFinite(msg.fromBattery))            //atleast one is a number\n    && typeof msg.toBattery != \"string\" && typeof msg.fromBattery != \"string\"       //none is a string\n    && msg.toBatteryUnit == msg.fromBatteryUnit)                                    //same unit\n{\n    msg.combinedToBattery = (msg.toBattery ?? 0) - (msg.fromBattery ?? 0);\n}\nmsg.combinedToBattery = msg.combinedToBattery ?? 0;\n\nlet combineBattery = env.get(\"1. multi icon\") != \"FromToBattery\";\nif (combineBattery                                                                  //combined selected\n    && (Number.isFinite(msg.toBattery) || Number.isFinite(msg.fromBattery))         //atleast one is a number\n    && typeof msg.toBattery != \"string\" && typeof msg.fromBattery != \"string\"       //none is a string\n    && msg.toBatteryUnit == msg.fromBatteryUnit)                                    //same unit\n{\n    msg.toBattery = (msg.toBattery ?? 0) - (msg.fromBattery ?? 0);\n    delete msg.fromBattery;\n}\n\nlet combineGrid = env.get(\"3. multi icon\") == \"FromGrid\";\nif (combineGrid                                                                     //combined selected\n    && (Number.isFinite(msg.fromGrid) || Number.isFinite(msg.toGrid))               //atleast one is a number\n    && typeof msg.fromGrid != \"string\" && typeof msg.toGrid != \"string\"             //none is a string\n    && msg.fromGridUnit == msg.toGridUnit)                                          //same unit\n{\n    msg.fromGrid = (msg.fromGrid ?? 0) - (msg.toGrid ?? 0);\n    delete msg.toGrid;\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 140,
+        "x": 420,
         "y": 140,
         "wires": [
             [
-                "63fc5dfacf242fc0"
+                "57978a63f95fc33c"
             ]
         ]
     }
