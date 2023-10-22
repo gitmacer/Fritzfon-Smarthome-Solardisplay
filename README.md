@@ -181,6 +181,8 @@ Vergebe einen Namen, Adresse (Hostname oder feste IP des Node-red Servers vor de
 
 Nachdem Bestätigen ist das Display unter "Menu/Heimnetz/Live-Bild" auf dem Fritzfon aufrufbar.   
 Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schnelleren Zugriff.   
+![grafik](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/8bcced33-67c4-4953-870f-30aebed2d1f2)
+
 
 # Donationware:
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
