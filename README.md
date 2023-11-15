@@ -10,13 +10,15 @@
 # Donationware:   
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
 Bereits 1€ macht einen großen unterschied und sollte jeder ausgeben können.   
-Bei Problemen bitte ein Github-Issue erstellen und bei gefallen ein Github Stern vergeben.   
+Bei Problemen bitte ein Github-Issue erstellen oder über [Discord](https://discord.gg/BhDSDgXvtD) kontaktieren und bei gefallen ein Github Stern vergeben.   
 
 A small donation is gladly received and expected. Nothing against trying out first.   
 I am already glad to receive as low as 1€.   
-If you experience problems or need help feelfree to create a Github issue.   
+If you experience problems or need help feelfree to create a Github issue or contact me over [Discord](https://discord.gg/BhDSDgXvtD).   
 Also if you like my Projekt please give it a Github-star.   
-www.paypal.me/TimOberle
+www.paypal.me/TimOberle   
+
+![paypal qr-code](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/15dc50af-bd36-4d3c-adf5-afe46b012c49)
 
 
 # Solar image vs smart-home image:   
