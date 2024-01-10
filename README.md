@@ -322,3 +322,5 @@ Tipp: you can add Live-Bild to favourites  for faster access.
 # Donationware:
 Feel free to try my Project first and decide how much it is worths to you afterwards.   
 www.paypal.me/TimOberle
+
+Please note that I don't allow selling this software without my permisson.
