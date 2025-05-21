@@ -13,12 +13,10 @@ Jeder macht einen großen unterschied.
 Bei Problemen bitte ein Github-Issue erstellen oder über [Discord](https://discord.gg/BhDSDgXvtD) kontaktieren und bei gefallen ein Github Stern vergeben.   
 
 A small donation is gladly received and expected. Nothing against trying out first.   
-I am already glad to receive any amount   
+Any amount for liking.   
 If you experience problems or need help feelfree to create a Github issue or contact me over [Discord](https://discord.gg/BhDSDgXvtD).   
 Also if you like my Projekt please give it a Github-star.   
-www.paypal.me/TimOberle   
-
-![paypal qr-code](https://github.com/gitmacer/Fritzfon-Smarthome-Solardisplay/assets/37345589/15dc50af-bd36-4d3c-adf5-afe46b012c49)
+[PayPal](https://www.paypal.com/donate/?hosted_button_id=2W63LVJLPV678)   
 
 
 # Solar image vs smart-home image:   
@@ -188,7 +186,7 @@ Tipp: Du kannst Live-Bilder zu den Fritzfon Favoriten hinzufügen für schneller
 
 # Donationware:
 Beachte, dass ein selbstgewählter Geldbetrag für die Nutzung erwartet wird.   
-www.paypal.me/TimOberle
+[PayPal](https://www.paypal.com/donate/?hosted_button_id=2W63LVJLPV678)
 
 # Guide:
 There are many guids how to install Node-Red available so this step is skipped here.   
@@ -321,6 +319,6 @@ Tipp: you can add Live-Bild to favourites  for faster access.
 
 # Donationware:
 Feel free to try my Project first and decide how much it is worths to you afterwards.   
-www.paypal.me/TimOberle
+[PayPal](https://www.paypal.com/donate/?hosted_button_id=2W63LVJLPV678)
 
 Please note that I don't allow selling this software without my permisson.
